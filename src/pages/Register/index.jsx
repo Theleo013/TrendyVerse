@@ -4,6 +4,7 @@ import { Link, useNavigate } from "react-router-dom";
 import Styles from "@/pages/Register/register.module.scss";
 import { urls } from "@/shared/urls";
 import { useRegisterUserMutation } from "@/redux/api/auth";
+// import { useRegisterUserMutation } from "@/redux/api/auth";
 
 const { Option } = Select;
 
