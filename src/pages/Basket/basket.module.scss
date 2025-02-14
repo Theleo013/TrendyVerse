@@ -1,0 +1,156 @@
+@use "../../styles/partials/fonts" as *;
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
+
+.basketContainer {
+  @include flexDirection(flex, column, null, 50px);
+  padding: $pa-page;
+  .basketNav {
+    @include flex-space(flex, center, 10px);
+    .homeLink {
+      font-size: $fs-lg;
+      color: $link-color;
+      text-decoration: underline;
+      font-family: Epilogue-Regular;
+    }
+    .basketLink {
+      font-size: $fs-lg;
+      color: $primary-color;
+      text-decoration: underline;
+      font-family: Epilogue-Regular;
+    }
+  }
+  .basketEmpty {
+    @include flexDirection(flex, column, null, 30px);
+    h3 {
+      font-family: Epilogue-Regular;
+    }
+    .startShopping {
+      @include w-h(218px, 56px);
+      @include flex-center;
+      background-color: $bg-color2;
+      border-radius: $br-s;
+
+      a {
+        font-family: Epilogue-Regular;
+        color: $primary-color;
+      }
+    }
+  }
+  .basketProduct {
+    @include flexDirection(flex, column, null, 30px);
+    .basketTitle {
+      @include space-between;
+      .titlePrice {
+        padding-left: 195px;
+      }
+    }
+    .basketItems {
+      @include flexDirection(flex, column, start, 30px);
+      border-top: $br-6;
+      border-bottom: $br-6;
+
+      .basketItemContainer {
+        @include align(flex, space-between, center);
+        width: 100%;
+        .basketContentContainer {
+          @include flex-space(flex, center, 10px);
+
+          .contentImage {
+            position: relative;
+            .imageContainer {
+              img {
+                @include w-h(80px, 115px);
+                object-fit: contain;
+              }
+            }
+            .removeButton {
+              position: absolute;
+              top: 0px;
+              left: 0px;
+              button {
+                border: none;
+                background: transparent;
+                cursor: pointer;
+              }
+            }
+          }
+          .contentTitle {
+            span {
+              font-size: $fs-md;
+              font-family: Epilogue-Regular;
+            }
+          }
+        }
+        // .priceContainer {
+        // }
+        .quantityContainer {
+          @include w-h(100px, 40px);
+          @include align(flex, center, center);
+          gap: 10px;
+          border: $br-5;
+          border-radius: $br-s;
+          button {
+            border: none;
+            background: transparent;
+            cursor: pointer;
+          }
+        }
+        // .totalContainer {
+        // }
+      }
+    }
+    .basketSummary {
+      @include align(flex, space-between, center);
+      .clearButton {
+        button {
+          @include w-h(120px, 40px);
+          font-family: Epilogue-Regular;
+          background: transparent;
+          color: $secondary-color;
+          border-radius: $br-s;
+          border: 1px solid $link-color;
+          cursor: pointer;
+        }
+      }
+      .basketCheckout {
+        @include flexDirection(flex, column, start, 20px);
+        .subTotal {
+          @include align(flex, space-between, center);
+          width: 100%;
+          span {
+            font-family: Epilogue-Regular;
+          }
+          //   .amount {
+
+          //   }
+        }
+        .description {
+          font-size: $fs-sm;
+          font-family: Epilogue-Regular;
+        }
+        .checkoutButton {
+          button {
+            @include w-h(218px, 56px);
+            @include flex-center;
+            border: none;
+            background-color: $btn-color;
+            border-radius: $br-s;
+            font-family: Epilogue-Regular;
+            color: $footer-color;
+            font-size: $fs-md;
+          }
+        }
+        .startShopping {
+          @include w-h(218px, 56px);
+          @include flex-center;
+          a {
+            font-family: Epilogue-Regular;
+            color: $primary-color;
+            font-size: $fs-md;
+          }
+        }
+      }
+    }
+  }
+}

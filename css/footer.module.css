@@ -1,0 +1,136 @@
+@font-face {
+  font-family: Epilogue-Regular;
+  src: url(@/assets/fonts/Epilogue-Regular.ttf);
+}
+.footerContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 400px;
+  background-color: rgb(9, 8, 8);
+  margin-top: 30px;
+}
+.footerContainer .innerContainer {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+}
+.footerContainer .innerContainer .sectionLogo {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.footerContainer .innerContainer .sectionLogo .trendyVerse {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.footerContainer .innerContainer .sectionLogo .trendyVerse h3 {
+  font-family: Epilogue-Regular;
+  color: rgb(255, 255, 255);
+  font-size: 18px;
+}
+.footerContainer .innerContainer .sectionLogo .trendyVerse a {
+  font-family: Epilogue-Regular;
+  color: rgb(255, 255, 255);
+  font-size: 16px;
+}
+.footerContainer .innerContainer .sectionLogo .inputContainer {
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 100%;
+}
+.footerContainer .innerContainer .sectionLogo .inputContainer input {
+  width: 217px;
+  height: 48px;
+  border: 3px solid rgb(171, 169, 169);
+  border-radius: 4px;
+  padding: 8px;
+  font-size: 12px;
+}
+.footerContainer .innerContainer .sectionLogo .inputContainer img {
+  position: absolute;
+  right: 4%;
+}
+.footerContainer .innerContainer .sectionSupport {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.footerContainer .innerContainer .sectionSupport h3 {
+  font-family: Epilogue-Regular;
+  color: rgb(255, 255, 255);
+  font-size: 18px;
+}
+.footerContainer .innerContainer .sectionSupport span {
+  font-family: Epilogue-Regular;
+  color: rgb(255, 255, 255);
+  font-size: 16px;
+}
+.footerContainer .innerContainer .sectionAccount {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.footerContainer .innerContainer .sectionAccount h3 {
+  font-family: Epilogue-Regular;
+  color: rgb(255, 255, 255);
+  font-size: 18px;
+}
+.footerContainer .innerContainer .sectionAccount a {
+  font-family: Epilogue-Regular;
+  color: rgb(255, 255, 255);
+  font-size: 16px;
+}
+.footerContainer .innerContainer .sectionQuickLink {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.footerContainer .innerContainer .sectionQuickLink h3 {
+  font-family: Epilogue-Regular;
+  color: rgb(255, 255, 255);
+  font-size: 18px;
+}
+.footerContainer .innerContainer .sectionQuickLink a {
+  font-family: Epilogue-Regular;
+  color: rgb(255, 255, 255);
+  font-size: 16px;
+}
+.footerContainer .innerContainer .sectionSocial {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 20px;
+}
+.footerContainer .innerContainer .sectionSocial .description {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.footerContainer .innerContainer .sectionSocial .description h3 {
+  font-family: Epilogue-Regular;
+  color: rgb(255, 255, 255);
+  font-size: 18px;
+}
+.footerContainer .innerContainer .sectionSocial .description span {
+  font-family: Epilogue-Regular;
+  color: rgb(255, 255, 255);
+  font-size: 16px;
+}
+.footerContainer .innerContainer .sectionSocial .githubQR img {
+  width: 50px;
+  height: 50px;
+}
+.footerContainer .innerContainer .sectionSocial .social {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  justify-content: center;
+}
+.footerContainer .innerContainer .sectionSocial .social img {
+  width: 18px;
+  height: 18px;
+  color: rgb(255, 255, 255);
+}/*# sourceMappingURL=footer.module.css.map */

@@ -1,0 +1,102 @@
+@font-face {
+  font-family: Epilogue-Regular;
+  src: url(@/assets/fonts/Epilogue-Regular.ttf);
+}
+.cardContainer {
+  width: 270px;
+  height: 350px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border-radius: 8px;
+}
+.cardContainer .contentContainer {
+  width: 270px;
+  height: 250px;
+  background: rgb(245, 245, 245);
+  padding: 10px;
+  position: relative;
+}
+.cardContainer .contentContainer .percentIconsContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+}
+.cardContainer .contentContainer .percentIconsContainer .cardPercent {
+  width: 55px;
+  height: 26px;
+  background: rgb(219, 68, 68);
+  border-radius: 8px;
+}
+.cardContainer .contentContainer .percentIconsContainer .cardIcons {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  gap: 8px;
+}
+.cardContainer .contentContainer .percentIconsContainer .cardIcons a {
+  width: 34px;
+  height: 34px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background-color: #fff;
+}
+.cardContainer .contentContainer .cardImage {
+  position: absolute;
+  top: 27px;
+  left: 34px;
+}
+.cardContainer .contentContainer .cardImage img {
+  width: 190px;
+  height: 180px;
+  object-fit: contain;
+}
+.cardContainer .contentContainer .cardButton {
+  opacity: 0;
+  transform-origin: bottom;
+  transition: ease 1s;
+  position: absolute;
+  bottom: 0;
+  left: 0px;
+}
+.cardContainer .contentContainer .cardButton button {
+  width: 270px;
+  height: 41px;
+  background: rgb(9, 8, 8);
+  border: none;
+  color: rgb(247, 247, 247);
+  font-size: 16px;
+  cursor: pointer;
+}
+.cardContainer .contentContainer .cardButton:hover {
+  opacity: 1;
+}
+.cardContainer .productTitleContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-left: 10px;
+}
+.cardContainer .productTitleContainer h3 {
+  font-size: 18px;
+}
+.cardContainer .productTitleContainer .priceContainer {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.cardContainer .productTitleContainer .priceContainer span {
+  font-size: 16px;
+}
+.cardContainer .productTitleContainer .rateContainer {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding-left: 2px;
+}
+.cardContainer .productTitleContainer .rateContainer span {
+  font-size: 16px;
+}/*# sourceMappingURL=productCard.module.css.map */

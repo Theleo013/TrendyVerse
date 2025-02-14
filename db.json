@@ -1,0 +1,174 @@
+{
+  "products": [
+    {
+      "id": "1",
+      "image": "./src/assets/images/products/HavitJoystick.png",
+      "title": "HAVITHV-G92Gamepad",
+      "price": "120",
+      "views": "88"
+    },
+    {
+      "id": "2",
+      "image": "./src/assets/images/products/Ak900Keyboard.png",
+      "title": "AK-900WiredKeyboard",
+      "price": "960",
+      "views": "75"
+    },
+    {
+      "id": "3",
+      "image": "./src/assets/images/products/IpsMonitor.png",
+      "title": "IPSLCDGamingMonitor",
+      "price": "370",
+      "views": "99"
+    },
+    {
+      "id": "4",
+      "image": "./src/assets/images/products/Chair.png",
+      "title": "S-SeriesComfortChair",
+      "price": "375",
+      "views": "99"
+    },
+    {
+      "id": "5",
+      "image": "./src/assets/images/products/NorthCoat.png",
+      "title": "Thenorthcoat",
+      "price": "260",
+      "views": "66"
+    },
+    {
+      "id": "6",
+      "image": "./src/assets/images/products/GucciBag.png",
+      "title": "Guccidufflebag",
+      "price": "960",
+      "views": "65"
+    },
+    {
+      "id": "7",
+      "image": "./src/assets/images/products/RGBCooler.png",
+      "title": "RGBliquidCPUCooler",
+      "price": "160",
+      "views": "68"
+    },
+    {
+      "id": "8",
+      "image": "./src/assets/images/products/BookSeif.png",
+      "title": "SmallBookSelf",
+      "price": "360",
+      "views": "42"
+    },
+    {
+      "id": "9",
+      "image": "./src/assets/images/products/DogFood.png",
+      "title": "BreedDryDogFood",
+      "price": "100",
+      "views": "35"
+    },
+    {
+      "id": "10",
+      "image": "./src/assets/images/products/CanonCamera.png",
+      "title": "CANONEOSDSLRCamera",
+      "price": "360",
+      "views": "120"
+    },
+    {
+      "id": "11",
+      "image": "./src/assets/images/products/AsusLaptop.png",
+      "title": "ASUSFHDGamingLaptop",
+      "price": "700",
+      "views": "325"
+    },
+    {
+      "id": "12",
+      "image": "./src/assets/images/products/Curology.png",
+      "title": "CurologyProductSet",
+      "price": "500",
+      "views": "145"
+    },
+    {
+      "id": "13",
+      "image": "./src/assets/images/products/KidsCar.png",
+      "title": "KidsElectricCar",
+      "price": "960",
+      "views": "54"
+    },
+    {
+      "id": "14",
+      "image": "./src/assets/images/products/SoccerCleats.png",
+      "title": "Jr.ZoomSoccerCleats",
+      "price": "1160",
+      "views": "35"
+    },
+    {
+      "id": "15",
+      "image": "./src/assets/images/products/GP11Gamepad.png",
+      "title": "GP11ShooterUSBGamepad",
+      "price": "660",
+      "views": "132"
+    },
+    {
+      "id": "16",
+      "image": "./src/assets/images/products/SatinJacket.png",
+      "title": "QuiltedSatinJacket",
+      "price": "660",
+      "views": "38"
+    },
+    {
+      "id": "17",
+      "image": "./src/assets/images/products/ps5Slim.png",
+      "title": "PlayStation5",
+      "price": "800",
+      "views": "572"
+    },
+    {
+      "id": "18",
+      "image": "./src/assets/images/products/GucciParfum.png",
+      "title": "GucciGuiltyParfum90ml",
+      "price": "183",
+      "views": "76"
+    }
+  ],
+  "tecno": [
+    {
+      "id": "19",
+      "image": "./src/assets/images/sliderImage/iphone16.png",
+      "title": "Iphone16",
+      "price": "1200",
+      "views": "812"
+    },
+    {
+      "id": "20",
+      "image": "./src/assets/images/sliderImage/samsungs25.png",
+      "title": "Samsungs25",
+      "price": "800",
+      "views": "749"
+    },
+    {
+      "id": "21",
+      "image": "./src/assets/images/sliderImage/xiaomi15.png",
+      "title": "Xiaomi15",
+      "price": "700",
+      "views": "972"
+    },
+    {
+      "id": "22",
+      "image": "./src/assets/images/sliderImage/lenovo15.png",
+      "title": "LenovoThinkpad15",
+      "price": "930",
+      "views": "537"
+    }
+  ],
+  "users": [
+    {
+      "id": "75c2",
+      "username": "dwsdsds",
+      "password": "sdsdsds",
+      "remember": true
+    },
+    {
+      "id": "1810",
+      "username": "gdgdgdg",
+      "password": "dgdgdgdg",
+      "remember": true
+    }
+  ]
+}

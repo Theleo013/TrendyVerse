@@ -1,0 +1,7 @@
+@use "../../styles/partials/fonts" as *;
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
+
+.productCard {
+  @include flexMulti(flex, null, space-between, center, null, 10px);
+}

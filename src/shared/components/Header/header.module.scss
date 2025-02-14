@@ -1,0 +1,75 @@
+@use "../../../styles/partials/fonts" as *;
+@use "../../../styles/partials/mixins" as *;
+@use "../../../styles/partials/variables" as *;
+
+.headerNav {
+  @include space-around;
+  border-bottom: $br-1;
+  .headerLogoContainer {
+    /* img {
+    } */
+  }
+  .headerList {
+    ul {
+      @include flex-space(flex, center, 30px);
+      li {
+        a {
+          color: $primary-color;
+        }
+      }
+    }
+  }
+  .headerContactContainer {
+    @include flex-space(flex, center, 20px);
+    .headerInput {
+      position: relative;
+      @include flex-space(flex, center, null);
+      input {
+        @include w-h(243px, 38px);
+        border: none;
+        background-color: $input-color;
+        border-radius: $br-s;
+        padding: $pa-s;
+        font-size: $fs-xs;
+      }
+      img {
+        position: absolute;
+        right: 4%;
+      }
+    }
+    .headerBasketIcons {
+      @include flex-space(flex, center, 10px);
+      position: relative;
+
+      a {
+        display: flex;
+      }
+      // img {
+      //   position: relative;
+      //   width: 100%;
+      // }
+      .basketCount {
+        @include w-h(20px, 23px);
+        border-radius: 50%;
+        background: rgb(219, 47, 17);
+
+        position: absolute;
+        top: -13px;
+        right: 0px;
+        // .bgGreen {
+        //   background: rgb(17, 105, 219);
+        // }
+        // .bgRed {
+        // }
+
+        span {
+          position: absolute;
+          top: 2px;
+          right: 6px;
+          color: $bg-color;
+          font-size: $fs-md;
+        }
+      }
+    }
+  }
+}

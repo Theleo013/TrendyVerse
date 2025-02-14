@@ -1,0 +1,61 @@
+@font-face {
+  font-family: Epilogue-Regular;
+  src: url(@/assets/fonts/Epilogue-Regular.ttf);
+}
+/* .contentStyle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 0;
+  height: 460px;
+  color: #fff;
+  line-height: 160px;
+  text-align: center;
+  background: #364d79;
+} */
+.contentStyle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 550px;
+  color: #fff;
+  line-height: 160px;
+  background: rgb(24, 23, 28);
+}
+.contentStyle .productTitle {
+  height: 170px;
+  font-family: Epilogue-Regular;
+  font-size: 28px;
+}
+.contentStyle .imageContainer {
+  position: relative;
+}
+.contentStyle .imageContainer img {
+  width: 530px;
+  height: 180px;
+  object-fit: contain;
+  transition: transform 0.5s ease-in-out;
+}
+.contentStyle .imageContainer img:hover {
+  transform: scale(1.2);
+  object-fit: contain;
+}
+.contentStyle .shopButton {
+  width: 500px;
+  height: 100px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding-left: 50px;
+}
+.contentStyle .shopButton a {
+  color: rgb(247, 247, 247);
+  font-family: Epilogue-Regular;
+  font-size: 24px;
+}
+.contentStyle .shopButton a:hover {
+  color: rgb(252, 163, 17);
+}/*# sourceMappingURL=slider.module.css.map */

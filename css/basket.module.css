@@ -1,0 +1,176 @@
+@font-face {
+  font-family: Epilogue-Regular;
+  src: url(@/assets/fonts/Epilogue-Regular.ttf);
+}
+.basketContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  padding: 30px 80px;
+}
+.basketContainer .basketNav {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.basketContainer .basketNav .homeLink {
+  font-size: 18px;
+  color: rgb(163, 161, 161);
+  text-decoration: underline;
+  font-family: Epilogue-Regular;
+}
+.basketContainer .basketNav .basketLink {
+  font-size: 18px;
+  color: rgb(9, 8, 8);
+  text-decoration: underline;
+  font-family: Epilogue-Regular;
+}
+.basketContainer .basketEmpty {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.basketContainer .basketEmpty h3 {
+  font-family: Epilogue-Regular;
+}
+.basketContainer .basketEmpty .startShopping {
+  width: 218px;
+  height: 56px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(219, 219, 219);
+  border-radius: 4px;
+}
+.basketContainer .basketEmpty .startShopping a {
+  font-family: Epilogue-Regular;
+  color: rgb(9, 8, 8);
+}
+.basketContainer .basketProduct {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.basketContainer .basketProduct .basketTitle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.basketContainer .basketProduct .basketTitle .titlePrice {
+  padding-left: 195px;
+}
+.basketContainer .basketProduct .basketItems {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 30px;
+  border-top: 2px solid rgb(161, 159, 159);
+  border-bottom: 2px solid rgb(161, 159, 159);
+}
+.basketContainer .basketProduct .basketItems .basketItemContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.basketContainer .basketProduct .basketItems .basketItemContainer .basketContentContainer {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.basketContainer .basketProduct .basketItems .basketItemContainer .basketContentContainer .contentImage {
+  position: relative;
+}
+.basketContainer .basketProduct .basketItems .basketItemContainer .basketContentContainer .contentImage .imageContainer img {
+  width: 80px;
+  height: 115px;
+  object-fit: contain;
+}
+.basketContainer .basketProduct .basketItems .basketItemContainer .basketContentContainer .contentImage .removeButton {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+.basketContainer .basketProduct .basketItems .basketItemContainer .basketContentContainer .contentImage .removeButton button {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+.basketContainer .basketProduct .basketItems .basketItemContainer .basketContentContainer .contentTitle span {
+  font-size: 16px;
+  font-family: Epilogue-Regular;
+}
+.basketContainer .basketProduct .basketItems .basketItemContainer .quantityContainer {
+  width: 100px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border: 1px solid rgb(171, 169, 169);
+  border-radius: 4px;
+}
+.basketContainer .basketProduct .basketItems .basketItemContainer .quantityContainer button {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+.basketContainer .basketProduct .basketSummary {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.basketContainer .basketProduct .basketSummary .clearButton button {
+  width: 120px;
+  height: 40px;
+  font-family: Epilogue-Regular;
+  background: transparent;
+  color: rgb(24, 23, 28);
+  border-radius: 4px;
+  border: 1px solid rgb(163, 161, 161);
+  cursor: pointer;
+}
+.basketContainer .basketProduct .basketSummary .basketCheckout {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 20px;
+}
+.basketContainer .basketProduct .basketSummary .basketCheckout .subTotal {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.basketContainer .basketProduct .basketSummary .basketCheckout .subTotal span {
+  font-family: Epilogue-Regular;
+}
+.basketContainer .basketProduct .basketSummary .basketCheckout .description {
+  font-size: 14px;
+  font-family: Epilogue-Regular;
+}
+.basketContainer .basketProduct .basketSummary .basketCheckout .checkoutButton button {
+  width: 218px;
+  height: 56px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  background-color: rgb(60, 97, 194);
+  border-radius: 4px;
+  font-family: Epilogue-Regular;
+  color: rgb(255, 255, 255);
+  font-size: 16px;
+}
+.basketContainer .basketProduct .basketSummary .basketCheckout .startShopping {
+  width: 218px;
+  height: 56px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.basketContainer .basketProduct .basketSummary .basketCheckout .startShopping a {
+  font-family: Epilogue-Regular;
+  color: rgb(9, 8, 8);
+  font-size: 16px;
+}/*# sourceMappingURL=basket.module.css.map */

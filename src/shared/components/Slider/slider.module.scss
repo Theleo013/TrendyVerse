@@ -1,0 +1,54 @@
+@use "../../../styles/partials/fonts" as *;
+@use "../../../styles/partials/mixins" as *;
+@use "../../../styles/partials/variables" as *;
+
+/* .contentStyle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 0;
+  height: 460px;
+  color: #fff;
+  line-height: 160px;
+  text-align: center;
+  background: #364d79;
+} */
+.contentStyle {
+  @include flexMulti(flex, column, center, center, center, null);
+  height: 550px;
+  color: #fff;
+  line-height: 160px;
+  background: $secondary-color;
+  .productTitle {
+    @include w-h(null, 170px);
+
+    font-family: Epilogue-Regular;
+    font-size: $fs-2xl;
+  }
+  .imageContainer {
+    position: relative;
+    img {
+      @include w-h(530px, 180px);
+      object-fit: contain;
+      transition: transform 0.5s ease-in-out;
+    }
+    img:hover {
+      transform: scale(1.2);
+      object-fit: contain;
+    }
+  }
+  .shopButton {
+    @include w-h(500px, 100px);
+    @include align(flex, flex-start, center);
+    padding-left: 50px;
+    a {
+      color: $bg-color;
+      font-family: Epilogue-Regular;
+      font-size: $fs-xl;
+    }
+    a:hover {
+      color: $hover-color;
+    }
+  }
+}

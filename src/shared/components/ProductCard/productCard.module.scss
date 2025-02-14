@@ -1,0 +1,82 @@
+@use "../../../styles/partials/fonts" as *;
+@use "../../../styles/partials/mixins" as *;
+@use "../../../styles/partials/variables" as *;
+
+.cardContainer {
+  @include w-h(270px, 350px);
+  @include flexDirection(flex, column, null, 10px);
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border-radius: $br-m;
+  .contentContainer {
+    @include w-h(270px, 250px);
+    background: $input-color;
+    padding: 10px;
+    position: relative;
+    .percentIconsContainer {
+      @include align(flex, space-between, start);
+      .cardPercent {
+        @include w-h(55px, 26px);
+        background: $span-color;
+        border-radius: $br-m;
+      }
+      .cardIcons {
+        @include flexDirection(flex, column, end, 8px);
+
+        a {
+          @include w-h(34px, 34px);
+          @include flex-center;
+          border-radius: 50%;
+          background-color: #fff;
+        }
+      }
+    }
+    .cardImage {
+      position: absolute;
+      top: 27px;
+      left: 34px;
+      img {
+        @include w-h(190px, 180px);
+        object-fit: contain;
+      }
+    }
+    .cardButton {
+      opacity: 0;
+      transform-origin: bottom;
+      transition: ease 1s;
+      position: absolute;
+      bottom: 0;
+      left: 0px;
+      button {
+        @include w-h(270px, 41px);
+        background: $primary-color;
+        border: none;
+        color: $bg-color;
+        font-size: $fs-md;
+        cursor: pointer;
+      }
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+  .productTitleContainer {
+    @include flexDirection(flex, column, null, 10px);
+    padding-left: 10px;
+    h3 {
+      font-size: $fs-lg;
+    }
+    .priceContainer {
+      @include flex-space(flex, center, 10px);
+      span {
+        font-size: $fs-md;
+      }
+    }
+    .rateContainer {
+      @include flex-space(flex, center, 10px);
+      padding-left: 2px;
+      span {
+        font-size: $fs-md;
+      }
+    }
+  }
+}

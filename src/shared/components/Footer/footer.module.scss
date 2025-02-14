@@ -1,0 +1,117 @@
+@use "../../../styles/partials/fonts" as *;
+@use "../../../styles/partials/mixins" as *;
+@use "../../../styles/partials/variables" as *;
+
+.footerContainer {
+  @include flex-center;
+  min-height: 400px;
+  background-color: $primary-color;
+  margin-top: 30px;
+  .innerContainer {
+    @include justify(flex, space-evenly);
+    width: 100%;
+    .sectionLogo {
+      @include flexDirection(flex, column, null, 20px);
+      .trendyVerse {
+        @include flexDirection(flex, column, null, 20px);
+        h3 {
+          font-family: Epilogue-Regular;
+          color: $footer-color;
+          font-size: $fs-lg;
+        }
+        a {
+          font-family: Epilogue-Regular;
+          color: $footer-color;
+          font-size: $fs-md;
+        }
+      }
+      .inputContainer {
+        @include flex-space(flex, center, null);
+        position: relative;
+        width: 100%;
+        input {
+          @include w-h(217px, 48px);
+          border: $br-4;
+          border-radius: $br-s;
+          padding: $pa-s;
+          font-size: $fs-xs;
+        }
+        img {
+          position: absolute;
+          right: 4%;
+        }
+      }
+    }
+    .sectionSupport {
+      @include flexDirection(flex, column, null, 20px);
+      h3 {
+        font-family: Epilogue-Regular;
+        color: $footer-color;
+        font-size: $fs-lg;
+      }
+      span {
+        font-family: Epilogue-Regular;
+        color: $footer-color;
+        font-size: $fs-md;
+      }
+    }
+    .sectionAccount {
+      @include flexDirection(flex, column, null, 20px);
+
+      h3 {
+        font-family: Epilogue-Regular;
+        color: $footer-color;
+        font-size: $fs-lg;
+      }
+      a {
+        font-family: Epilogue-Regular;
+        color: $footer-color;
+        font-size: $fs-md;
+      }
+    }
+    .sectionQuickLink {
+      @include flexDirection(flex, column, null, 20px);
+      h3 {
+        font-family: Epilogue-Regular;
+        color: $footer-color;
+        font-size: $fs-lg;
+      }
+      a {
+        font-family: Epilogue-Regular;
+        color: $footer-color;
+        font-size: $fs-md;
+      }
+    }
+    .sectionSocial {
+      @include flexMulti(flex, column, null, null, center, 20px);
+      .description {
+        @include flexDirection(flex, column, null, 20px);
+
+        h3 {
+          font-family: Epilogue-Regular;
+          color: $footer-color;
+          font-size: $fs-lg;
+        }
+        span {
+          font-family: Epilogue-Regular;
+          color: $footer-color;
+          font-size: $fs-md;
+        }
+      }
+
+      .githubQR {
+        img {
+          @include w-h(50px, 50px);
+        }
+      }
+      .social {
+        @include flex-space(flex, center, 10px);
+        justify-content: center;
+        img {
+          @include w-h(18px, 18px);
+          color: $footer-color;
+        }
+      }
+    }
+  }
+}

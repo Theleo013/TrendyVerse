@@ -1,0 +1,10 @@
+@font-face {
+  font-family: Epilogue-Regular;
+  src: url(@/assets/fonts/Epilogue-Regular.ttf);
+}
+.productCard {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}/*# sourceMappingURL=home.module.css.map */

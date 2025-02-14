@@ -1,0 +1,67 @@
+//& responsive
+$phone-xs: 340px;
+$phone-sm: 576px;
+$tablet-md: 768px;
+$pc-lg: 1024px;
+$pc-xl: 1200px;
+$pc-xxl: 1440px;
+$tv-xxxl: 1920px;
+
+//& colors
+
+$primary-color: rgba(9, 8, 8, 1);
+$secondary-color: rgba(24, 23, 28, 1);
+$bg-color: rgba(247, 247, 247, 1);
+$bg-color2: rgba(219, 219, 219, 1);
+$list-color: rgba(79, 79, 79, 1);
+$footer-color: rgba(255, 255, 255, 1);
+$card-color: rgba(255, 255, 255, 1);
+$placeHolder-color: rgba(189, 189, 189, 1);
+$input-color: rgb(245 245 245);
+$hover-color: rgba(252, 163, 17);
+$span-color: rgba(219, 68, 68, 1);
+$link-color: rgb(163, 161, 161);
+$btn-color: rgba(60, 97, 194, 1);
+
+//& padding
+$pa-s: 8px;
+$pa-m: 16px;
+$pa-l: 32px;
+$pa-xl: 64px;
+$pa-xxl: 80px;
+$pa-xxxl: 100px;
+$pa-page: 30px 80px;
+
+//& margin
+$ma-s: 8px;
+$ma-m: 16px;
+$ma-l: 32px;
+
+//& font-size
+$fs-xs: 12px;
+$fs-sm: 14px;
+$fs-md: 16px;
+$fs-lg: 18px;
+$fs-xl: 24px;
+$fs-2xl: 28px;
+$fs-3xl: 32px;
+$fs-4xl: 40px;
+$fs-5xl: 48px;
+$fs-6xl: 60px;
+
+//& border-radius
+$br-s: 4px;
+$br-m: 8px;
+$br-l: 16px;
+$br-xl: 24px;
+$br-xxl: 50px;
+$br-round: 50%;
+
+//& border
+
+$br-1: 2px solid rgba(224, 224, 224, 1);
+$br-2: 1px solid rgba(242, 242, 242, 1);
+$br-3: 1px solid $primary-color;
+$br-4: 3px solid rgba(171, 169, 169.1);
+$br-5: 1px solid rgba(171, 169, 169.1);
+$br-6: 2px solid rgb(161, 159, 159);

@@ -1,0 +1,70 @@
+@font-face {
+  font-family: Epilogue-Regular;
+  src: url(@/assets/fonts/Epilogue-Regular.ttf);
+}
+.headerNav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-bottom: 2px solid rgb(224, 224, 224);
+}
+.headerNav .headerLogoContainer {
+  /* img {
+  } */
+}
+.headerNav .headerList ul {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+.headerNav .headerList ul li a {
+  color: rgb(9, 8, 8);
+}
+.headerNav .headerContactContainer {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.headerNav .headerContactContainer .headerInput {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.headerNav .headerContactContainer .headerInput input {
+  width: 243px;
+  height: 38px;
+  border: none;
+  background-color: rgb(245, 245, 245);
+  border-radius: 4px;
+  padding: 8px;
+  font-size: 12px;
+}
+.headerNav .headerContactContainer .headerInput img {
+  position: absolute;
+  right: 4%;
+}
+.headerNav .headerContactContainer .headerBasketIcons {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  position: relative;
+}
+.headerNav .headerContactContainer .headerBasketIcons a {
+  display: flex;
+}
+.headerNav .headerContactContainer .headerBasketIcons .basketCount {
+  width: 20px;
+  height: 23px;
+  border-radius: 50%;
+  background: rgb(219, 47, 17);
+  position: absolute;
+  top: -13px;
+  right: 0px;
+}
+.headerNav .headerContactContainer .headerBasketIcons .basketCount span {
+  position: absolute;
+  top: 2px;
+  right: 6px;
+  color: rgb(247, 247, 247);
+  font-size: 16px;
+}/*# sourceMappingURL=header.module.css.map */
