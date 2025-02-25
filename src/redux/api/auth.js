@@ -11,24 +11,15 @@ export const authApi = createApi({
         body: userData,
       }),
     }),
-    loginUser: builder.query({
-      query: (credentials) => ({
-        url: `user?username=${credentials.username}&password=${credentials.password}`,
-        method: "GET",
-      }),
-      transformResponse: (response) => {
-        if (response.length > 0) {
-          return {
-            success: true,
-            user: response[0],
-            token: `fake-token-${response[0].id}`,
-          };
-        } else {
-          return { success: false, message: "Invalid username or password." };
-        }
+    getUser: builder.query({
+      query() {
+        return {
+          url: "users",
+          method: "GET",
+        };
       },
     }),
   }),
 });
 
-export const { useRegisterUserMutation, useLoginUserQuery } = authApi;
+export const { useLoginUserMutation } = authApi;
