@@ -1,0 +1,50 @@
+@font-face {
+  font-family: Epilogue-Regular;
+  src: url(/assets/fonts/Epilogue-Regular.ttf);
+}
+.servicesContainer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  margin-top: 100px;
+}
+@media (max-width: 475px) and (max-width: 475px) {
+  .servicesContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+}
+.servicesContainer .servicesWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+@media (max-width: 475px) {
+  .servicesContainer .servicesWrapper img {
+    width: 40px;
+    height: 40px;
+  }
+}
+.servicesContainer .servicesWrapper h4 {
+  font-family: Epilogue-Regular;
+  font-size: 18px;
+}
+@media (max-width: 475px) {
+  .servicesContainer .servicesWrapper h4 {
+    font-size: 12px;
+  }
+}
+.servicesContainer .servicesWrapper p {
+  font-family: Epilogue-Regular;
+  font-size: 16px;
+}
+@media (max-width: 475px) {
+  .servicesContainer .servicesWrapper p {
+    font-size: 12px;
+  }
+}/*# sourceMappingURL=deliveryCard.module.css.map */

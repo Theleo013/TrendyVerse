@@ -1,0 +1,133 @@
+@font-face {
+  font-family: Epilogue-Regular;
+  src: url(/assets/fonts/Epilogue-Regular.ttf);
+}
+.aboutContainer {
+  padding: 30px 80px;
+}
+@media (max-width: 475px) {
+  .aboutContainer {
+    padding: 25px 15px;
+  }
+}
+.aboutContainer .aboutNavigateLinks {
+  display: flex;
+  align-items: start;
+  gap: 20px;
+}
+.aboutContainer .aboutNavigateLinks .linkToHome {
+  color: rgb(163, 161, 161);
+  font-family: Epilogue-Regular;
+  font-size: 16px;
+}
+.aboutContainer .aboutNavigateLinks .linkToAbout {
+  color: rgb(9, 8, 8);
+  font-family: Epilogue-Regular;
+  font-size: 16px;
+}
+.aboutContainer .aboutMainContent {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 100px 0;
+}
+@media (max-width: 475px) {
+  .aboutContainer .aboutMainContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+}
+.aboutContainer .aboutMainContent .aboutContentWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 30px;
+}
+.aboutContainer .aboutMainContent .aboutContentWrapper h1 {
+  color: rgb(9, 8, 8);
+  font-family: Epilogue-Regular;
+  font-size: 24px;
+}
+@media (max-width: 475px) {
+  .aboutContainer .aboutMainContent .aboutContentWrapper h1 {
+    font-size: 16px;
+  }
+}
+.aboutContainer .aboutMainContent .aboutContentWrapper p {
+  width: 450px;
+  height: auto;
+  color: rgb(9, 8, 8);
+  font-family: Epilogue-Regular;
+  font-size: 14px;
+}
+@media (max-width: 475px) {
+  .aboutContainer .aboutMainContent .aboutContentWrapper p {
+    width: 320px;
+    height: auto;
+    font-size: 12px;
+  }
+}
+@media (max-width: 475px) {
+  .aboutContainer .aboutMainContent .aboutMainImage img {
+    width: 320px;
+    height: auto;
+  }
+}
+.aboutContainer .ratingSection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+@media (max-width: 475px) {
+  .aboutContainer .ratingSection {
+    flex-wrap: wrap;
+  }
+}
+.aboutContainer .ratingSection .ratingCard {
+  width: 270px;
+  height: 230px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 20px;
+  border: 2px solid rgb(224, 224, 224);
+}
+.aboutContainer .ratingSection .ratingCard span {
+  font-family: Epilogue-Regular;
+  font-size: 16px;
+}
+.aboutContainer .ratingSection .ratingCard p {
+  font-family: Epilogue-Regular;
+  font-size: 16px;
+}
+@media (max-width: 475px) {
+  .aboutContainer .ratingSection .ratingCard {
+    width: 170px;
+    height: 130px;
+  }
+}
+@media (max-width: 475px) {
+  .aboutContainer .ratingSection .ratingCard img {
+    width: 40px;
+    height: 40px;
+  }
+  .aboutContainer .ratingSection .ratingCard span {
+    font-size: 12px;
+    font-family: Epilogue-Regular;
+  }
+  .aboutContainer .ratingSection .ratingCard p {
+    font-size: 12px;
+    font-family: Epilogue-Regular;
+  }
+}
+.aboutContainer .aboutCardSection {
+  display: flex;
+  justify-content: center;
+  margin: 100px 0;
+}/*# sourceMappingURL=about.module.css.map */

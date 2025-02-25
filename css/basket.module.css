@@ -1,12 +1,17 @@
 @font-face {
   font-family: Epilogue-Regular;
-  src: url(@/assets/fonts/Epilogue-Regular.ttf);
+  src: url(/assets/fonts/Epilogue-Regular.ttf);
 }
 .basketContainer {
   display: flex;
   flex-direction: column;
   gap: 50px;
   padding: 30px 80px;
+}
+@media (max-width: 475px) {
+  .basketContainer {
+    padding: 25px 15px;
+  }
 }
 .basketContainer .basketNav {
   display: flex;
@@ -56,6 +61,11 @@
   justify-content: space-between;
   align-items: center;
 }
+@media (max-width: 475px) {
+  .basketContainer .basketProduct .basketTitle span {
+    font-size: 16px;
+  }
+}
 .basketContainer .basketProduct .basketTitle .titlePrice {
   padding-left: 195px;
 }
@@ -78,27 +88,45 @@
   align-items: center;
   gap: 10px;
 }
-.basketContainer .basketProduct .basketItems .basketItemContainer .basketContentContainer .contentImage {
-  position: relative;
+@media (max-width: 475px) {
+  .basketContainer .basketProduct .basketItems .basketItemContainer .basketContentContainer {
+    width: 251px;
+    height: auto;
+  }
 }
 .basketContainer .basketProduct .basketItems .basketItemContainer .basketContentContainer .contentImage .imageContainer img {
   width: 80px;
   height: 115px;
   object-fit: contain;
 }
-.basketContainer .basketProduct .basketItems .basketItemContainer .basketContentContainer .contentImage .removeButton {
-  position: absolute;
-  top: 0px;
-  left: 0px;
-}
 .basketContainer .basketProduct .basketItems .basketItemContainer .basketContentContainer .contentImage .removeButton button {
   border: none;
   background: transparent;
   cursor: pointer;
 }
+.basketContainer .basketProduct .basketItems .basketItemContainer .basketContentContainer .contentTitle {
+  width: 195px;
+  height: auto;
+}
 .basketContainer .basketProduct .basketItems .basketItemContainer .basketContentContainer .contentTitle span {
   font-size: 16px;
   font-family: Epilogue-Regular;
+}
+@media (max-width: 475px) {
+  .basketContainer .basketProduct .basketItems .basketItemContainer .basketContentContainer .contentTitle span {
+    font-size: 12px;
+  }
+}
+.basketContainer .basketProduct .basketItems .basketItemContainer .priceContainer {
+  width: 63px;
+  height: auto;
+}
+@media (max-width: 475px) {
+  .basketContainer .basketProduct .basketItems .basketItemContainer .priceContainer {
+    width: 33px;
+    height: auto;
+    font-size: 16px;
+  }
 }
 .basketContainer .basketProduct .basketItems .basketItemContainer .quantityContainer {
   width: 100px;
@@ -110,10 +138,24 @@
   border: 1px solid rgb(171, 169, 169);
   border-radius: 4px;
 }
+@media (max-width: 475px) {
+  .basketContainer .basketProduct .basketItems .basketItemContainer .quantityContainer {
+    width: 58px;
+    height: auto;
+    font-size: 12px;
+  }
+}
 .basketContainer .basketProduct .basketItems .basketItemContainer .quantityContainer button {
   border: none;
   background: transparent;
   cursor: pointer;
+}
+@media (max-width: 475px) {
+  .basketContainer .basketProduct .basketItems .basketItemContainer .totalContainer {
+    width: 37px;
+    height: auto;
+    font-size: 16px;
+  }
 }
 .basketContainer .basketProduct .basketSummary {
   display: flex;
@@ -130,6 +172,11 @@
   border: 1px solid rgb(163, 161, 161);
   cursor: pointer;
 }
+@media (max-width: 475px) {
+  .basketContainer .basketProduct .basketSummary .clearButton button {
+    font-size: 16px;
+  }
+}
 .basketContainer .basketProduct .basketSummary .basketCheckout {
   display: flex;
   flex-direction: column;
@@ -142,6 +189,11 @@
   align-items: center;
   width: 100%;
 }
+@media (max-width: 475px) {
+  .basketContainer .basketProduct .basketSummary .basketCheckout .subTotal {
+    font-size: 16px;
+  }
+}
 .basketContainer .basketProduct .basketSummary .basketCheckout .subTotal span {
   font-family: Epilogue-Regular;
 }
@@ -149,18 +201,26 @@
   font-size: 14px;
   font-family: Epilogue-Regular;
 }
+@media (max-width: 475px) {
+  .basketContainer .basketProduct .basketSummary .basketCheckout .description {
+    font-size: 12px;
+  }
+}
 .basketContainer .basketProduct .basketSummary .basketCheckout .checkoutButton button {
-  width: 218px;
+  width: 234px;
   height: 56px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border: none;
-  background-color: rgb(60, 97, 194);
+  background-color: rgb(219, 68, 68);
   border-radius: 4px;
-  font-family: Epilogue-Regular;
-  color: rgb(255, 255, 255);
-  font-size: 16px;
+  color: rgb(247, 247, 247);
+  border: none;
+  cursor: pointer;
+}
+@media (max-width: 475px) {
+  .basketContainer .basketProduct .basketSummary .basketCheckout .checkoutButton button {
+    width: 234px;
+    height: 26px;
+    font-size: 12px;
+  }
 }
 .basketContainer .basketProduct .basketSummary .basketCheckout .startShopping {
   width: 218px;
@@ -173,4 +233,9 @@
   font-family: Epilogue-Regular;
   color: rgb(9, 8, 8);
   font-size: 16px;
+}
+@media (max-width: 475px) {
+  .basketContainer .basketProduct .basketSummary .basketCheckout .startShopping a {
+    font-size: 14px;
+  }
 }/*# sourceMappingURL=basket.module.css.map */

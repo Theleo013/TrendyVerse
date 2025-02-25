@@ -1,3 +1,38 @@
+$sm: 475px;
+$sm_icon: 476px;
+$md: 768px;
+$lg: 992px;
+$xl: 1200px;
+
+@mixin sm {
+  @media (max-width: $sm) {
+    @content;
+  }
+}
+@mixin sm_icon {
+  @media (min-width: $sm_icon) {
+    @content;
+  }
+}
+
+@mixin md {
+  @media (max-width: $md) {
+    @content;
+  }
+}
+
+@mixin lg {
+  @media (max-width: $lg) {
+    @content;
+  }
+}
+
+@mixin xl {
+  @media (max-width: $xl) {
+    @content;
+  }
+}
+
 @mixin flex-center {
   display: flex;
   justify-content: center;
@@ -55,6 +90,12 @@
   display: $flex;
   justify-content: $justify;
   align-items: $align;
+}
+@mixin space($flex, $justify, $align, $space) {
+  display: $flex;
+  justify-content: $justify;
+  align-items: $align;
+  gap: $space;
 }
 @mixin w-h($width, $height) {
   width: $width;

@@ -1,0 +1,114 @@
+@use "../../styles/partials/fonts" as *;
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
+
+.productContainer {
+  padding: $pa-page;
+  margin: $ma-page;
+  @include sm {
+    padding: $pa-responsive;
+  }
+
+  .prductContentContainer {
+    @include flexDirection(flex, column, center, 100px);
+    position: relative;
+    .productNavigateLinks {
+      @include flex-space(flex, center, 20px);
+      position: absolute;
+      top: -50px;
+      left: 0;
+      .productLinkHome {
+        color: $link-color;
+        font-family: Epilogue-Regular;
+        font-size: $fs-md;
+      }
+      .productLinkProduct {
+        color: $primary-color;
+        font-family: Epilogue-Regular;
+        font-size: $fs-md;
+      }
+    }
+    .productHeadingText {
+      h1 {
+        color: $primary-color;
+        font-family: Epilogue-Regular;
+        font-size: $fs-4xl;
+      }
+    }
+    .productWrapper {
+      @include justify(flex, space-evenly);
+      width: 100%;
+      padding: $pa-page2;
+      @include sm {
+        @include flexDirection(flex, column, center, 20px);
+        padding: $pa-responsive;
+      }
+
+      .productImage {
+        @include w-h(300px, 300px);
+        @include align(flex, center, center);
+        background-color: $bg-color2;
+        @include sm {
+          @include w-h(220px, 220px);
+        }
+
+        img {
+          @include sm {
+            @include w-h(120px, 120px);
+          }
+        }
+      }
+      .productContent {
+        @include flexDirection(flex, column, start, 40px);
+        .productTitle {
+          color: $primary-color;
+          font-family: Epilogue-Regular;
+          font-size: $fs-xl;
+          @include sm {
+            font-size: $fs-md;
+          }
+        }
+        .productRate {
+          @include flex-space(flex, center, 20px);
+        }
+        .productDescription {
+          p {
+            @include w-h(400px, auto);
+            color: $primary-color;
+            font-family: Epilogue-Regular;
+            font-size: $fs-md;
+            @include sm {
+              @include w-h(225px, auto);
+              font-size: $fs-xs;
+            }
+          }
+        }
+        .productPriceWrapper {
+          @include flex-space(flex, center, 20px);
+
+          span {
+            color: $primary-color;
+            font-family: Epilogue-Regular;
+            font-size: $fs-lg;
+            @include sm {
+              font-size: $fs-md;
+            }
+          }
+          button {
+            @include w-h(170px, 40px);
+            font-family: Epilogue-Regular;
+            background: transparent;
+            color: $secondary-color;
+            border-radius: $br-s;
+            border: 1px solid $link-color;
+            cursor: pointer;
+            @include sm {
+              @include w-h(166px, 28px);
+              font-size: $fs-md;
+            }
+          }
+        }
+      }
+    }
+  }
+}

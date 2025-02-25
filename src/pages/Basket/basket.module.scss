@@ -5,6 +5,9 @@
 .basketContainer {
   @include flexDirection(flex, column, null, 50px);
   padding: $pa-page;
+  @include sm {
+    padding: $pa-responsive;
+  }
   .basketNav {
     @include flex-space(flex, center, 10px);
     .homeLink {
@@ -40,6 +43,11 @@
   .basketProduct {
     @include flexDirection(flex, column, null, 30px);
     .basketTitle {
+      span {
+        @include sm {
+          font-size: $fs-md;
+        }
+      }
       @include space-between;
       .titlePrice {
         padding-left: 195px;
@@ -55,9 +63,11 @@
         width: 100%;
         .basketContentContainer {
           @include flex-space(flex, center, 10px);
+          @include sm {
+            @include w-h(251px, auto);
+          }
 
           .contentImage {
-            position: relative;
             .imageContainer {
               img {
                 @include w-h(80px, 115px);
@@ -65,9 +75,6 @@
               }
             }
             .removeButton {
-              position: absolute;
-              top: 0px;
-              left: 0px;
               button {
                 border: none;
                 background: transparent;
@@ -76,28 +83,45 @@
             }
           }
           .contentTitle {
+            @include w-h(195px, auto);
             span {
               font-size: $fs-md;
               font-family: Epilogue-Regular;
+              @include sm {
+                font-size: $fs-xs;
+              }
             }
           }
         }
-        // .priceContainer {
-        // }
+        .priceContainer {
+          @include w-h(63px, auto);
+          @include sm {
+            @include w-h(33px, auto);
+            font-size: $fs-md;
+          }
+        }
         .quantityContainer {
           @include w-h(100px, 40px);
           @include align(flex, center, center);
           gap: 10px;
           border: $br-5;
           border-radius: $br-s;
+          @include sm {
+            @include w-h(58px, auto);
+            font-size: $fs-xs;
+          }
           button {
             border: none;
             background: transparent;
             cursor: pointer;
           }
         }
-        // .totalContainer {
-        // }
+        .totalContainer {
+          @include sm {
+            @include w-h(37px, auto);
+            font-size: $fs-md;
+          }
+        }
       }
     }
     .basketSummary {
@@ -111,6 +135,9 @@
           border-radius: $br-s;
           border: 1px solid $link-color;
           cursor: pointer;
+          @include sm {
+            font-size: $fs-md;
+          }
         }
       }
       .basketCheckout {
@@ -118,6 +145,9 @@
         .subTotal {
           @include align(flex, space-between, center);
           width: 100%;
+          @include sm {
+            font-size: $fs-md;
+          }
           span {
             font-family: Epilogue-Regular;
           }
@@ -128,26 +158,35 @@
         .description {
           font-size: $fs-sm;
           font-family: Epilogue-Regular;
+          @include sm {
+            font-size: $fs-xs;
+          }
         }
         .checkoutButton {
           button {
-            @include w-h(218px, 56px);
-            @include flex-center;
-            border: none;
-            background-color: $btn-color;
+            @include w-h(234px, 56px);
+            background-color: $span-color;
             border-radius: $br-s;
-            font-family: Epilogue-Regular;
-            color: $footer-color;
-            font-size: $fs-md;
+            color: $bg-color;
+            border: none;
+            cursor: pointer;
+            @include sm {
+              @include w-h(234px, 26px);
+              font-size: $fs-xs;
+            }
           }
         }
         .startShopping {
           @include w-h(218px, 56px);
           @include flex-center;
+
           a {
             font-family: Epilogue-Regular;
             color: $primary-color;
             font-size: $fs-md;
+            @include sm {
+              font-size: $fs-sm;
+            }
           }
         }
       }

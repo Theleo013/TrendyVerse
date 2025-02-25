@@ -1,6 +1,6 @@
 @font-face {
   font-family: Epilogue-Regular;
-  src: url(@/assets/fonts/Epilogue-Regular.ttf);
+  src: url(/assets/fonts/Epilogue-Regular.ttf);
 }
 .cardContainer {
   width: 270px;
@@ -10,6 +10,7 @@
   gap: 10px;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   border-radius: 8px;
+  margin-top: 50px;
 }
 .cardContainer .contentContainer {
   width: 270px;
@@ -24,16 +25,51 @@
   align-items: start;
 }
 .cardContainer .contentContainer .percentIconsContainer .cardPercent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgb(247, 247, 247);
+  font-size: 16px;
   width: 55px;
   height: 26px;
   background: rgb(219, 68, 68);
   border-radius: 8px;
+}
+@media (max-width: 475px) {
+  .cardContainer .contentContainer .percentIconsContainer .cardPercent {
+    width: 40px;
+    height: auto;
+    font-size: 12px;
+  }
 }
 .cardContainer .contentContainer .percentIconsContainer .cardIcons {
   display: flex;
   flex-direction: column;
   align-items: end;
   gap: 8px;
+}
+.cardContainer .contentContainer .percentIconsContainer .cardIcons button {
+  width: 34px;
+  height: 34px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background-color: #fff;
+  border: none;
+  cursor: pointer;
+}
+@media (max-width: 475px) {
+  .cardContainer .contentContainer .percentIconsContainer .cardIcons button {
+    width: 25px;
+    height: 25px;
+  }
+}
+@media (max-width: 475px) {
+  .cardContainer .contentContainer .percentIconsContainer .cardIcons button img {
+    width: 20px;
+    height: 20px;
+  }
 }
 .cardContainer .contentContainer .percentIconsContainer .cardIcons a {
   width: 34px;
@@ -44,15 +80,33 @@
   border-radius: 50%;
   background-color: #fff;
 }
+@media (max-width: 475px) {
+  .cardContainer .contentContainer .percentIconsContainer .cardIcons a {
+    display: none;
+  }
+}
 .cardContainer .contentContainer .cardImage {
   position: absolute;
   top: 27px;
   left: 34px;
 }
+@media (max-width: 475px) {
+  .cardContainer .contentContainer .cardImage {
+    position: absolute;
+    top: 60px;
+    left: 72px;
+  }
+}
 .cardContainer .contentContainer .cardImage img {
   width: 190px;
   height: 180px;
   object-fit: contain;
+}
+@media (max-width: 475px) {
+  .cardContainer .contentContainer .cardImage img {
+    width: 120px;
+    height: 120px;
+  }
 }
 .cardContainer .contentContainer .cardButton {
   opacity: 0;
@@ -71,6 +125,13 @@
   font-size: 16px;
   cursor: pointer;
 }
+@media (max-width: 475px) {
+  .cardContainer .contentContainer .cardButton button {
+    width: 270px;
+    height: 41px;
+    font-size: 12px;
+  }
+}
 .cardContainer .contentContainer .cardButton:hover {
   opacity: 1;
 }
@@ -80,8 +141,14 @@
   gap: 10px;
   padding-left: 10px;
 }
-.cardContainer .productTitleContainer h3 {
+.cardContainer .productTitleContainer a {
+  color: rgb(9, 8, 8);
   font-size: 18px;
+}
+@media (max-width: 475px) {
+  .cardContainer .productTitleContainer a {
+    font-size: 16px;
+  }
 }
 .cardContainer .productTitleContainer .priceContainer {
   display: flex;

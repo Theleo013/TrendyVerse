@@ -1,0 +1,87 @@
+@font-face {
+  font-family: Epilogue-Regular;
+  src: url(/assets/fonts/Epilogue-Regular.ttf);
+}
+.wishlistContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  padding: 30px 80px;
+  width: 100%;
+}
+@media (max-width: 475px) {
+  .wishlistContainer {
+    padding: 25px 15px;
+  }
+}
+.wishlistContainer .sectionHeading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.wishlistContainer .sectionHeading span {
+  color: rgb(9, 8, 8);
+  font-size: 24px;
+  font-family: Epilogue-Regular;
+}
+@media (max-width: 475px) {
+  .wishlistContainer .sectionHeading span {
+    font-size: 16px;
+  }
+}
+.wishlistContainer .sectionHeading button {
+  width: 170px;
+  height: 40px;
+  font-family: Epilogue-Regular;
+  background: transparent;
+  color: rgb(24, 23, 28);
+  border-radius: 4px;
+  border: 1px solid rgb(163, 161, 161);
+  cursor: pointer;
+}
+@media (max-width: 475px) {
+  .wishlistContainer .sectionHeading button {
+    font-size: 16px;
+  }
+}
+.wishlistContainer .wishlistProducts {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+@media (max-width: 475px) {
+  .wishlistContainer .wishlistProducts {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+  }
+}
+.wishlistContainer .wishlistProducts .wishlistContentContainer {
+  position: relative;
+}
+.wishlistContainer .wishlistProducts .wishlistContentContainer .wishlistRemoveIcon {
+  position: absolute;
+  top: 54px;
+  right: 6px;
+}
+.wishlistContainer .wishlistProducts .wishlistContentContainer .wishlistRemoveIcon button {
+  border: none;
+  background: none;
+}
+.wishlistContainer .wishlistClear button {
+  width: 120px;
+  height: 40px;
+  font-family: Epilogue-Regular;
+  background: transparent;
+  color: rgb(24, 23, 28);
+  border-radius: 4px;
+  border: 1px solid rgb(163, 161, 161);
+  cursor: pointer;
+}
+@media (max-width: 475px) {
+  .wishlistContainer .wishlistClear button {
+    font-size: 16px;
+  }
+}/*# sourceMappingURL=wishlist.module.css.map */

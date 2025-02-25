@@ -3,7 +3,7 @@ import { axiosBaseQuery } from "@/redux/api/axiosBase";
 
 export const productsApi = createApi({
   reducerPath: "productsApi",
-  baseQuery: axiosBaseQuery({ baseUrl: "http://localhost:3000/" }),
+  baseQuery: axiosBaseQuery({ baseUrl: "http://localhost:3001/" }),
   keepUnusedDataFor: 1000,
   endpoints: (builder) => ({
     getProducts: builder.query({

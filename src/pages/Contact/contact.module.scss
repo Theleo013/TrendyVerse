@@ -1,0 +1,76 @@
+@use "../../styles/partials/fonts" as *;
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
+
+.contactContainer {
+  padding: $pa-page;
+  @include sm {
+    padding: $pa-responsive;
+    flex-wrap: wrap;
+  }
+  .contactNavigateLinks {
+    @include flex-space(flex, start, 20px);
+    .linkToHome {
+      color: $link-color;
+      font-family: Epilogue-Regular;
+      font-size: $fs-md;
+    }
+    .linkToAbout {
+      color: $primary-color;
+      font-family: Epilogue-Regular;
+      font-size: $fs-md;
+    }
+  }
+  .contactContentContainer {
+    @include align(flex, space-evenly, center);
+    @include sm {
+      @include align(flex, center, center);
+
+      flex-wrap: wrap;
+    }
+    .contactCommunication {
+      margin: $ma-page2;
+      .contactUsWrapper {
+        @include flexDirection(flex, column, start, 30px);
+        .contactIcon {
+          @include flex-space(flex, center, 20px);
+          color: $primary-color;
+          font-family: Epilogue-Regular;
+          font-size: $fs-lg;
+        }
+        .contactDescription {
+          @include flexDirection(flex, column, start, 10px);
+          color: $primary-color;
+          font-family: Epilogue-Regular;
+          font-size: $fs-md;
+          @include sm {
+            @include w-h(245px, auto);
+            font-size: $fs-sm;
+          }
+        }
+      }
+    }
+    .contactFormWrapper {
+      @include flexDirection(flex, column, center, 10px);
+
+      .contactInfo {
+        @include flex-space(flex, center, 20px);
+        @include sm {
+          @include flexDirection(flex, column, start, 10px);
+        }
+      }
+      .contactIntroduction {
+        @include w-h(616px, auto);
+        @include sm {
+          @include w-h(255px, auto);
+        }
+      }
+      .contactSubmit {
+        @include w-h(616px, auto);
+        @include sm {
+          @include w-h(215px, auto);
+        }
+      }
+    }
+  }
+}

@@ -1,6 +1,6 @@
 @font-face {
   font-family: Epilogue-Regular;
-  src: url(@/assets/fonts/Epilogue-Regular.ttf);
+  src: url(/assets/fonts/Epilogue-Regular.ttf);
 }
 .headerNav {
   display: flex;
@@ -8,9 +8,32 @@
   align-items: center;
   border-bottom: 2px solid rgb(224, 224, 224);
 }
-.headerNav .headerLogoContainer {
-  /* img {
-  } */
+@media (max-width: 475px) {
+  .headerNav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 15px;
+    position: relative;
+  }
+}
+@media (max-width: 475px) {
+  .headerNav .headerLogoContainer img {
+    width: 200px;
+  }
+}
+.headerNav .headerLogoContainer .menuBar {
+  display: none;
+}
+@media (max-width: 475px) {
+  .headerNav .headerLogoContainer .menuBar {
+    display: flex;
+  }
+}
+@media (max-width: 475px) {
+  .headerNav .headerList {
+    display: none;
+  }
 }
 .headerNav .headerList ul {
   display: flex;
@@ -30,6 +53,11 @@
   display: flex;
   align-items: center;
 }
+@media (max-width: 475px) {
+  .headerNav .headerContactContainer .headerInput {
+    display: none;
+  }
+}
 .headerNav .headerContactContainer .headerInput input {
   width: 243px;
   height: 38px;
@@ -46,11 +74,40 @@
 .headerNav .headerContactContainer .headerBasketIcons {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 30px;
   position: relative;
+}
+@media (max-width: 475px) {
+  .headerNav .headerContactContainer .headerBasketIcons {
+    position: absolute;
+    top: 64px;
+    right: 30px;
+  }
 }
 .headerNav .headerContactContainer .headerBasketIcons a {
   display: flex;
+}
+@media (max-width: 475px) {
+  .headerNav .headerContactContainer .headerBasketIcons img {
+    width: 25px;
+    height: 25px;
+  }
+}
+.headerNav .headerContactContainer .headerBasketIcons .wishlistCount {
+  width: 20px;
+  height: 23px;
+  border-radius: 50%;
+  background: rgb(219, 47, 17);
+  position: absolute;
+  top: -13px;
+  left: 13px;
+}
+.headerNav .headerContactContainer .headerBasketIcons .wishlistCount span {
+  position: absolute;
+  top: 2px;
+  right: 6px;
+  color: rgb(247, 247, 247);
+  font-size: 16px;
 }
 .headerNav .headerContactContainer .headerBasketIcons .basketCount {
   width: 20px;

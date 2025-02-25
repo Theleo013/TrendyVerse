@@ -1,6 +1,6 @@
 @font-face {
   font-family: Epilogue-Regular;
-  src: url(@/assets/fonts/Epilogue-Regular.ttf);
+  src: url(/assets/fonts/Epilogue-Regular.ttf);
 }
 /* .contentStyle {
   display: flex;

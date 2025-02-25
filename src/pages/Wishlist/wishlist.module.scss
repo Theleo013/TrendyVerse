@@ -1,0 +1,71 @@
+@use "../../styles/partials/fonts" as *;
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
+
+.wishlistContainer {
+  @include flexDirection(flex, column, null, 50px);
+  padding: $pa-page;
+  width: 100%;
+  @include sm {
+    padding: $pa-responsive;
+  }
+  .sectionHeading {
+    @include align(flex, space-between, center);
+    span {
+      color: $primary-color;
+      font-size: $fs-xl;
+      font-family: Epilogue-Regular;
+      @include sm {
+        font-size: $fs-md;
+      }
+    }
+    button {
+      @include w-h(170px, 40px);
+      font-family: Epilogue-Regular;
+      background: transparent;
+      color: $secondary-color;
+      border-radius: $br-s;
+      border: 1px solid $link-color;
+      cursor: pointer;
+      @include sm {
+        font-size: $fs-md;
+      }
+    }
+  }
+  .wishlistProducts {
+    @include space(flex, center, center, 20px);
+    @include sm {
+      @include flexDirection(flex, column, center, 5px);
+    }
+
+    .wishlistContentContainer {
+      position: relative;
+
+      .wishlistRemoveIcon {
+        position: absolute;
+        top: 54px;
+        right: 6px;
+        button {
+          border: none;
+          background: none;
+        }
+      }
+      //   .wishlistProductWrapper {
+      //   }
+    }
+  }
+  .wishlistClear {
+    button {
+      @include w-h(120px, 40px);
+      font-family: Epilogue-Regular;
+      background: transparent;
+      color: $secondary-color;
+      border-radius: $br-s;
+      border: 1px solid $link-color;
+      cursor: pointer;
+      @include sm {
+        font-size: $fs-md;
+      }
+    }
+  }
+}

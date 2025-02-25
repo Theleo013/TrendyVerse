@@ -8,14 +8,27 @@ import {
   clearBasket,
   getTotals,
 } from "@/redux/features/basketSlice";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { urls } from "@/shared/urls";
+
 const Basket = () => {
   const { basket, basketTotalPrice } = useSelector((state) => state.basket);
+  const { user } = useSelector((state) => state.auth);
   const dispatch = useDispatch();
+  const navigate = useNavigate();
+  const userData = user ?? [];
+  console.log("user data Basket:", userData);
   useEffect(() => {
     dispatch(getTotals());
   }, [basket]);
+
+  const handleCheckout = () => {
+    if (userData) {
+      navigate(urls.CHECKOUT);
+    } else {
+      navigate(urls.LOGIN);
+    }
+  };
 
   return (
     <div className={Styles.basketContainer}>
@@ -49,18 +62,18 @@ const Basket = () => {
                 <div key={item.id} className={Styles.basketItemContainer}>
                   <div className={Styles.basketContentContainer}>
                     <div className={Styles.contentImage}>
-                      <div className={Styles.imageContainer}>
-                        <img src={item.image} alt={item.image} />
-                      </div>
                       <div className={Styles.removeButton}>
                         <button
                           onClick={() => dispatch(removeFromBasket(item))}
                         >
                           <img
-                            src="./src/assets/icons/remove-icon.svg"
+                            src="/assets/icons/remove-icon.svg"
                             alt="remove-icon"
                           />
                         </button>
+                      </div>
+                      <div className={Styles.imageContainer}>
+                        <img src={item.image} alt={item.image} />
                       </div>
                     </div>
                     <div className={Styles.contentTitle}>
@@ -97,10 +110,10 @@ const Basket = () => {
                   <span className={Styles.amount}>${basketTotalPrice}</span>
                 </div>
                 <div className={Styles.description}>
-                  <p>shipping at calculate</p>
+                  <p>Shipping at calculate</p>
                 </div>
                 <div className={Styles.checkoutButton}>
-                  <button>Checkout</button>
+                  <button onClick={handleCheckout}>Checkout</button>
                 </div>
                 <div className={Styles.startShopping}>
                   <Link to={urls.HOME}> &larr; Start Shopping</Link>

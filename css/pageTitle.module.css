@@ -1,0 +1,32 @@
+@font-face {
+  font-family: Epilogue-Regular;
+  src: url(/assets/fonts/Epilogue-Regular.ttf);
+}
+.pageTitleContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.pageTitleContainer .headingtitleWrapper {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.pageTitleContainer .headingtitleWrapper .rectangle {
+  width: 20px;
+  height: 40px;
+  border-radius: 4px;
+  border: none;
+  background-color: rgb(219, 68, 68);
+}
+.pageTitleContainer .headingtitleWrapper .headingTitle {
+  font-weight: 600;
+  font-size: 16px;
+  color: rgb(219, 68, 68);
+  font-family: Epilogue-Regular;
+}
+.pageTitleContainer .descriptionWrapper h3 {
+  color: rgb(9, 8, 8);
+  font-size: 24px;
+  font-family: Epilogue-Regular;
+}/*# sourceMappingURL=pageTitle.module.css.map */

@@ -36,6 +36,7 @@ export const basketSlice = createSlice({
         });
       }
     },
+
     removeFromBasket: (state, action) => {
       const removeSingleItem = state.basket.filter(
         (basketItem) => basketItem.id !== action.payload.id
@@ -52,7 +53,7 @@ export const basketSlice = createSlice({
       if (state.basket[decreaseIndex].basketQuantity > 1) {
         state.basket[decreaseIndex].basketQuantity -= 1;
 
-        toast.info(`Decreased ${action.payload.title} basket quantity`, {
+        toast.warn(`Decreased ${action.payload.title} basket quantity`, {
           position: "bottom-left",
         });
       } else if (state.basket[decreaseIndex].basketQuantity === 1) {
@@ -72,24 +73,28 @@ export const basketSlice = createSlice({
       });
     },
     getTotals: (state) => {
-      let { total } = state.basket.reduce(
+      let { total, quantity } = state.basket.reduce(
         (cartTotal, cartItem) => {
           const { price, basketQuantity } = cartItem;
           const itemTotal = price * basketQuantity;
-          cartTotal.total = itemTotal;
+          cartTotal.total += itemTotal;
+          cartTotal.quantity += basketQuantity;
           return cartTotal;
         },
         {
           total: 0,
+          quantity: 0,
         }
       );
       state.basketTotalPrice = total;
+      state.basketTotalQuantity = quantity;
     },
   },
 });
 
 export const {
   addToBasket,
+  addToCheckout,
   removeFromBasket,
   decreasedFromBasket,
   clearBasket,

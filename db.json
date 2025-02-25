@@ -2,173 +2,202 @@
   "products": [
     {
       "id": "1",
-      "image": "./src/assets/images/products/HavitJoystick.png",
+      "image": "/assets/images/products/HavitJoystick.png",
       "title": "HAVITHV-G92Gamepad",
+      "desc": "Reliable 3D ergonomic design with built-in motors for dual vibration",
       "price": "120",
       "views": "88"
     },
     {
       "id": "2",
-      "image": "./src/assets/images/products/Ak900Keyboard.png",
+      "image": "/assets/images/products/Ak900Keyboard.png",
       "title": "AK-900WiredKeyboard",
+      "desc": "This iMICE AK-900 has 104 keys, 100mA with DC 5V voltage. It is one of the perfect choices for gaming at a reasonable price",
       "price": "960",
       "views": "75"
     },
     {
       "id": "3",
-      "image": "./src/assets/images/products/IpsMonitor.png",
+      "image": "/assets/images/products/IpsMonitor.png",
       "title": "IPSLCDGamingMonitor",
+      "desc": "IPS (In-Plane Switching) is a type of LCD panel technology known for its ability to deliver exceptional color accuracy, wide viewing angles, and consistent image quality",
       "price": "370",
       "views": "99"
     },
     {
       "id": "4",
-      "image": "./src/assets/images/products/Chair.png",
+      "image": "/assets/images/products/Chair.png",
       "title": "S-SeriesComfortChair",
+      "desc": "Church Chair offers a plush waterfall seat, and a comfort curved foam back that provides your guest with an unmatched sitting experience",
       "price": "375",
       "views": "99"
     },
     {
       "id": "5",
-      "image": "./src/assets/images/products/NorthCoat.png",
+      "image": "/assets/images/products/NorthCoat.png",
       "title": "Thenorthcoat",
+      "desc": "CHRONICLES JACKET & BOILERSUIT are designed for everyday journeys, in extraordinary colour",
       "price": "260",
       "views": "66"
     },
     {
       "id": "6",
-      "image": "./src/assets/images/products/GucciBag.png",
+      "image": "/assets/images/products/GucciBag.png",
       "title": "Guccidufflebag",
+      "desc": "small or medium-sized, made of leather, canvas, and suede, and feature zippered compartments and metal locks or magnetic snap closures",
       "price": "960",
       "views": "65"
     },
     {
       "id": "7",
-      "image": "./src/assets/images/products/RGBCooler.png",
+      "image": "/assets/images/products/RGBCooler.png",
       "title": "RGBliquidCPUCooler",
+      "desc": "A liquid cooling system consists of water blocks, a pump, a radiator, pipes, and optionally a reservoir",
       "price": "160",
       "views": "68"
     },
     {
       "id": "8",
-      "image": "./src/assets/images/products/BookSeif.png",
+      "image": "/assets/images/products/BookSeif.png",
       "title": "SmallBookSelf",
+      "desc": "A bookcase, or bookshelf, is a piece of furniture with horizontal shelves, often in a cabinet, used to store books or other printed materials",
       "price": "360",
       "views": "42"
     },
     {
       "id": "9",
-      "image": "./src/assets/images/products/DogFood.png",
+      "image": "/assets/images/products/DogFood.png",
       "title": "BreedDryDogFood",
+      "desc": "Kibble, in simple terms, is dog food containing meat, grains, and vegetables that are dried and reshaped into small pellet-sized pieces",
       "price": "100",
       "views": "35"
     },
     {
       "id": "10",
-      "image": "./src/assets/images/products/CanonCamera.png",
+      "image": "/assets/images/products/CanonCamera.png",
       "title": "CANONEOSDSLRCamera",
+      "desc": "Canon EOS (Electro-Optical System) is an autofocus single-lens reflex camera (SLR) and mirrorless camera series produced by Canon Inc",
       "price": "360",
       "views": "120"
     },
     {
       "id": "11",
-      "image": "./src/assets/images/products/AsusLaptop.png",
+      "image": "/assets/images/products/AsusLaptop.png",
       "title": "ASUSFHDGamingLaptop",
+      "desc": "Asus ROG laptops are generally considered to be very good gaming laptops",
       "price": "700",
       "views": "325"
     },
     {
       "id": "12",
-      "image": "./src/assets/images/products/Curology.png",
+      "image": "/assets/images/products/Curology.png",
       "title": "CurologyProductSet",
+      "desc": "Curology offers clinically-proven ingredients like topical clindamycin and tretinoin to treat acne, rosacea, and signs of aging",
       "price": "500",
       "views": "145"
     },
     {
       "id": "13",
-      "image": "./src/assets/images/products/KidsCar.png",
+      "image": "/assets/images/products/KidsCar.png",
       "title": "KidsElectricCar",
+      "desc": "Ride on car with 2.4G remote control, 12V battery powered electric car for kids with 3 adjustable speeds, soft start, battery display, music",
       "price": "960",
       "views": "54"
     },
     {
       "id": "14",
-      "image": "./src/assets/images/products/SoccerCleats.png",
+      "image": "/assets/images/products/SoccerCleats.png",
       "title": "Jr.ZoomSoccerCleats",
+      "desc": "Designed for natural and synthetic surfaces, conical studs offer supercharged traction with quick release and pivoting",
       "price": "1160",
       "views": "35"
     },
     {
       "id": "15",
-      "image": "./src/assets/images/products/GP11Gamepad.png",
+      "image": "/assets/images/products/GP11Gamepad.png",
       "title": "GP11ShooterUSBGamepad",
+      "desc": "For PC / PS3- Ergonomic shape & weight favored by esports athletes- Feel Comfortable in your hands for hours of gaming- Vibration feedback gives you a riveting gaming experience USB Wired Game Controller",
       "price": "660",
       "views": "132"
     },
     {
       "id": "16",
-      "image": "./src/assets/images/products/SatinJacket.png",
+      "image": "/assets/images/products/SatinJacket.png",
       "title": "QuiltedSatinJacket",
+      "desc": "A waist-length or hip-length coat filled with a thick soft material, usually sewn into diamond-shaped sections",
       "price": "660",
       "views": "38"
     },
     {
       "id": "17",
-      "image": "./src/assets/images/products/ps5Slim.png",
-      "title": "PlayStation5",
+      "image": "/assets/images/products/ps5Slim.png",
+      "title": "PlayStation 5",
+      "desc": "Experience lightning-fast loading with an ultra-high speed SSD, deeper immersion with support for haptic feedback1, adaptive triggers1 and 3D Audio1, and an incredible collection of PlayStation games",
       "price": "800",
       "views": "572"
     },
     {
       "id": "18",
-      "image": "./src/assets/images/products/GucciParfum.png",
-      "title": "GucciGuiltyParfum90ml",
+      "image": "/assets/images/products/GucciParfum.png",
+      "title": "Gucci Guilty Parfum90ml",
+      "desc": "When it comes to the smell of Gucci Guilty, it's interesting. It's a kind of mix of something you'd wear in the day and also the night. It has a lemon twist which gives it citrus vibes, slightly floral and also has a soft woody smell to it",
       "price": "183",
       "views": "76"
-    }
-  ],
-  "tecno": [
+    },
     {
       "id": "19",
-      "image": "./src/assets/images/sliderImage/iphone16.png",
-      "title": "Iphone16",
+      "image": "/assets/images/sliderImage/iphone16.png",
+      "title": "Iphone 16",
+      "desc": "The versatile new iPhone 16 camera system captures beautiful photos — from up close or far away. The two-in-one 48MP Fusion camera lets you take stunning super-high-resolution images, or zoom in with the 2x optical-quality Telephoto",
       "price": "1200",
       "views": "812"
     },
     {
       "id": "20",
-      "image": "./src/assets/images/sliderImage/samsungs25.png",
-      "title": "Samsungs25",
+      "image": "/assets/images/sliderImage/samsungs25.png",
+      "title": "Samsung s25",
+      "desc": "The Samsung Galaxy S25 comes with 6.2-inch display with 120Hz refresh rate and Qualcomm Snapdragon 8 Elite processor. Specs also include 4000mAh battery and Triple camera sensor on the back",
       "price": "800",
       "views": "749"
     },
     {
       "id": "21",
-      "image": "./src/assets/images/sliderImage/xiaomi15.png",
-      "title": "Xiaomi15",
+      "image": "/assets/images/sliderImage/xiaomi15.png",
+      "title": "Xiaomi 14",
+      "desc": "The Xiaomi 14 Ultra is among the best camera phones we've ever tested, and as Xiaomi phones go, it's the best model overall. Its Leica-developed quad camera system is second to none, and its 1-inch sensor can handle low light and wide dynamic range like a pro",
       "price": "700",
       "views": "972"
     },
     {
       "id": "22",
-      "image": "./src/assets/images/sliderImage/lenovo15.png",
-      "title": "LenovoThinkpad15",
+      "image": "/assets/images/sliderImage/lenovo15.png",
+      "title": "Lenovo Thinkpad 15",
+      "desc": "ThinkPad laptops are often lightweight, portable, and have a long battery life, making them phenomenal choices for people on the go and frequent travellers. They offer nonstop and constant use, elevating productivity and results",
       "price": "930",
       "views": "537"
     }
   ],
-  "users": [
+  "user": [
     {
-      "id": "75c2",
-      "username": "dwsdsds",
-      "password": "sdsdsds",
-      "remember": true
-    },
+      "username": "leo",
+      "email": "elcinelcin57@gmail.com",
+      "password": "w5491se",
+      "confirm": "w5491se",
+      "id": 1
+    }
+  ],
+  "contact": [
     {
-      "id": "1810",
-      "username": "gdgdgdg",
-      "password": "dgdgdgdg",
-      "remember": true
+      "request": {
+        "name": "leo",
+        "email": "sagksagska@gmail.com"
+      },
+      "prefix": "944",
+      "phone": "51111111",
+      "user": {
+        "introduction": "zzz"
+      },
+      "id": 1
     }
   ]
 }

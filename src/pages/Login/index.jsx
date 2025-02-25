@@ -1,35 +1,32 @@
 import React from "react";
 import { LockOutlined, UserOutlined } from "@ant-design/icons";
-import { Button, Checkbox, Form, Input } from "antd";
-import { Link, useNavigate } from "react-router-dom";
+import { Button, Form, Input } from "antd";
+import { useNavigate } from "react-router-dom";
+import { useLoginUserQuery } from "@/redux/api/auth";
 import Styles from "@/pages/Login/login.module.scss";
-import { urls } from "@/shared/urls";
-import { useLoginUserMutation } from "@/redux/api/auth";
 
 const Login = () => {
   const navigate = useNavigate();
-  const [loginUser, { isLoading, error }] = useLoginUserMutation();
+  const [loginUser, { isLoading }] = useLoginUserQuery();
 
-  const onFinish = (values) => {
-    loginUser(values)
-      .unwrap()
-      .then((res) => {
-        // Başarılı login durumunda örneğin token'ı saklayabilir, dashboard'a yönlendirebilirsiniz.
-        console.log("Login successful:", res);
-        navigate("/basket");
-      })
-      .catch((err) => {
-        console.error("Login error:", err);
-      });
+  const onFinish = async (values) => {
+    try {
+      const response = await loginUser(values);
+
+      if (response.success) {
+        navigate("/home");
+      } else {
+        alert(response.message || "Invalid username or password.");
+      }
+    } catch (err) {
+      alert("Invalid username or password.");
+    }
   };
 
   return (
     <div className={Styles.loginContainer}>
       <div className={Styles.loginImage}>
-        <img
-          src="./src/assets/images/products/loginImage.png"
-          alt="login-image"
-        />
+        <img src="/assets/images/products/loginImage.png" alt="login-image" />
       </div>
       <div className={Styles.loginContentContainer}>
         <div className={Styles.loginContent}>
@@ -64,21 +61,8 @@ const Login = () => {
               />
             </Form.Item>
             <Form.Item>
-              <div
-                style={{
-                  display: "flex",
-                  justifyContent: "space-between",
-                  alignItems: "center",
-                }}
-              >
-                <Form.Item name="remember" valuePropName="checked" noStyle>
-                  <Checkbox>Remember me</Checkbox>
-                </Form.Item>
-                <a href="">Forgot password</a>
-              </div>
-            </Form.Item>
-            <Form.Item>
               <Button
+                className={Styles.loginButton}
                 block
                 type="primary"
                 htmlType="submit"
@@ -86,17 +70,8 @@ const Login = () => {
               >
                 Log in
               </Button>
-              or <Link to={urls.REGISTER}>Register now!</Link>
             </Form.Item>
           </Form>
-          {error && (
-            <p style={{ color: "red" }}>
-              {error?.data?.message || "Login failed. Please try again."}
-            </p>
-          )}
-        </div>
-        <div className={Styles.loginGoogle}>
-          <button>Sign-in with Google</button>
         </div>
       </div>
     </div>

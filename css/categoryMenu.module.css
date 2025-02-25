@@ -1,0 +1,31 @@
+@font-face {
+  font-family: Epilogue-Regular;
+  src: url(/assets/fonts/Epilogue-Regular.ttf);
+}
+.categoryMenuContainer {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  justify-content: space-between;
+}
+@media (max-width: 475px) {
+  .categoryMenuContainer {
+    flex-wrap: wrap;
+  }
+}
+.categoryMenuContainer .contentWrapper {
+  width: 170px;
+  height: 145px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 20px;
+  border: 2px solid rgb(161, 159, 159);
+  background-color: transparent;
+}
+.categoryMenuContainer .contentWrapper h4 {
+  font-size: 14px;
+  color: rgb(24, 23, 28);
+}/*# sourceMappingURL=categoryMenu.module.css.map */

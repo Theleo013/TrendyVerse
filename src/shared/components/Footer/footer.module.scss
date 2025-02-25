@@ -10,6 +10,11 @@
   .innerContainer {
     @include justify(flex, space-evenly);
     width: 100%;
+    @include sm {
+      @include flexDirection(flex, column, center, 20px);
+      text-align: center;
+      padding: 28px 55px;
+    }
     .sectionLogo {
       @include flexDirection(flex, column, null, 20px);
       .trendyVerse {
@@ -18,17 +23,26 @@
           font-family: Epilogue-Regular;
           color: $footer-color;
           font-size: $fs-lg;
+          @include sm {
+            font-size: $fs-md;
+          }
         }
         a {
           font-family: Epilogue-Regular;
           color: $footer-color;
           font-size: $fs-md;
+          @include sm {
+            font-size: $fs-xs;
+          }
         }
       }
       .inputContainer {
         @include flex-space(flex, center, null);
         position: relative;
         width: 100%;
+        @include sm {
+          display: none;
+        }
         input {
           @include w-h(217px, 48px);
           border: $br-4;
@@ -44,33 +58,51 @@
     }
     .sectionSupport {
       @include flexDirection(flex, column, null, 20px);
-      h3 {
-        font-family: Epilogue-Regular;
-        color: $footer-color;
-        font-size: $fs-lg;
-      }
-      span {
-        font-family: Epilogue-Regular;
-        color: $footer-color;
-        font-size: $fs-md;
-      }
-    }
-    .sectionAccount {
-      @include flexDirection(flex, column, null, 20px);
 
       h3 {
         font-family: Epilogue-Regular;
         color: $footer-color;
         font-size: $fs-lg;
+        @include sm {
+          font-size: $fs-md;
+        }
+      }
+      span {
+        font-family: Epilogue-Regular;
+        color: $footer-color;
+        font-size: $fs-md;
+        @include sm {
+          font-size: $fs-xs;
+        }
+      }
+    }
+    .sectionAccount {
+      @include flexDirection(flex, column, null, 20px);
+      @include sm {
+        display: none;
+      }
+      h3 {
+        font-family: Epilogue-Regular;
+        color: $footer-color;
+        font-size: $fs-lg;
+        @include sm {
+          font-size: $fs-md;
+        }
       }
       a {
         font-family: Epilogue-Regular;
         color: $footer-color;
         font-size: $fs-md;
+        @include sm {
+          font-size: $fs-xs;
+        }
       }
     }
     .sectionQuickLink {
       @include flexDirection(flex, column, null, 20px);
+      @include sm {
+        display: none;
+      }
       h3 {
         font-family: Epilogue-Regular;
         color: $footer-color;
@@ -91,11 +123,17 @@
           font-family: Epilogue-Regular;
           color: $footer-color;
           font-size: $fs-lg;
+          @include sm {
+            font-size: $fs-md;
+          }
         }
         span {
           font-family: Epilogue-Regular;
           color: $footer-color;
           font-size: $fs-md;
+          @include sm {
+            font-size: $fs-xs;
+          }
         }
       }
 

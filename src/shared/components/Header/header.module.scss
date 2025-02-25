@@ -5,15 +5,38 @@
 .headerNav {
   @include space-around;
   border-bottom: $br-1;
+  @include sm {
+    @include align(flex, space-between, center);
+    padding: $pa-responsive;
+    position: relative;
+  }
   .headerLogoContainer {
-    /* img {
-    } */
+    @include sm {
+    }
+    img {
+      @include sm {
+        width: 200px;
+      }
+    }
+    .menuBar {
+      display: none;
+    }
+    @include sm {
+      .menuBar {
+        display: flex;
+      }
+    }
   }
   .headerList {
+    @include sm {
+      display: none;
+    }
     ul {
       @include flex-space(flex, center, 30px);
       li {
         a {
+          @include sm {
+          }
           color: $primary-color;
         }
       }
@@ -21,7 +44,11 @@
   }
   .headerContactContainer {
     @include flex-space(flex, center, 20px);
+
     .headerInput {
+      @include sm {
+        display: none;
+      }
       position: relative;
       @include flex-space(flex, center, null);
       input {
@@ -38,16 +65,38 @@
       }
     }
     .headerBasketIcons {
-      @include flex-space(flex, center, 10px);
+      @include flex-space(flex, center, 30px);
       position: relative;
+      @include sm {
+        position: absolute;
+        top: 64px;
+        right: 30px;
+      }
 
       a {
         display: flex;
       }
-      // img {
-      //   position: relative;
-      //   width: 100%;
-      // }
+      img {
+        @include sm {
+          @include w-h(25px, 25px);
+        }
+      }
+      .wishlistCount {
+        @include w-h(20px, 23px);
+        border-radius: 50%;
+        background: rgb(219, 47, 17);
+
+        position: absolute;
+        top: -13px;
+        left: 13px;
+        span {
+          position: absolute;
+          top: 2px;
+          right: 6px;
+          color: $bg-color;
+          font-size: $fs-md;
+        }
+      }
       .basketCount {
         @include w-h(20px, 23px);
         border-radius: 50%;

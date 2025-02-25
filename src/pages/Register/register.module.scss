@@ -1,0 +1,71 @@
+@use "../../styles/partials/fonts" as *;
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
+
+.registerContainer {
+  @include align(flex, space-around, center);
+  padding: $pa-page;
+  @include sm {
+    padding: $pa-responsive;
+    @include flexDirection(flex, column, center, 30px);
+  }
+  .registerImage {
+    img {
+      @include w-h(600px, auto);
+    }
+    img {
+      @include sm {
+        @include w-h(320px, 220px);
+      }
+    }
+  }
+
+  .registerContentContainer {
+    @include flexDirection(flex, column, null, 20px);
+    .registerContent {
+      @include flexDirection(flex, column, start, 20px);
+
+      h3 {
+        font-size: $fs-xl;
+        font-family: Epilogue-Regular;
+      }
+      p {
+        font-size: $fs-sm;
+
+        font-family: Epilogue-Regular;
+      }
+    }
+    // .registerFormContainer {
+    //   @include flexDirection(flex, column, start, null);
+
+    //   .form {
+    //     display: flex;
+    //     flex-direction: column;
+    //     justify-content: center;
+    //     align-items: center;
+    //     input {
+    //       //   width: 250px;
+    //     }
+    //   }
+    // }
+  }
+  .registerButton {
+    background-color: $span-color;
+  }
+  .sectionLogin {
+    @include space(flex, space-around, center, 20px);
+    p {
+      font-size: $fs-sm;
+
+      font-family: Epilogue-Regular;
+    }
+    a {
+      font-size: $fs-md;
+      color: $primary-color;
+      font-family: Epilogue-Regular;
+      &:hover {
+        color: $hover-color;
+      }
+    }
+  }
+}

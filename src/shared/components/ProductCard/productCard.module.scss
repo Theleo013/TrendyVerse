@@ -7,6 +7,7 @@
   @include flexDirection(flex, column, null, 10px);
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   border-radius: $br-m;
+  margin-top: 50px;
   .contentContainer {
     @include w-h(270px, 250px);
     background: $input-color;
@@ -15,11 +16,34 @@
     .percentIconsContainer {
       @include align(flex, space-between, start);
       .cardPercent {
+        @include flex-center;
+        color: $bg-color;
+        font-size: $fs-md;
         @include w-h(55px, 26px);
         background: $span-color;
         border-radius: $br-m;
+        @include sm {
+          @include w-h(40px, auto);
+          font-size: $fs-xs;
+        }
       }
       .cardIcons {
+        button {
+          @include w-h(34px, 34px);
+          @include flex-center;
+          border-radius: 50%;
+          background-color: #fff;
+          border: none;
+          cursor: pointer;
+          @include sm {
+            @include w-h(25px, 25px);
+          }
+          img {
+            @include sm {
+              @include w-h(20px, 20px);
+            }
+          }
+        }
         @include flexDirection(flex, column, end, 8px);
 
         a {
@@ -27,6 +51,9 @@
           @include flex-center;
           border-radius: 50%;
           background-color: #fff;
+          @include sm {
+            display: none;
+          }
         }
       }
     }
@@ -34,9 +61,17 @@
       position: absolute;
       top: 27px;
       left: 34px;
+      @include sm {
+        position: absolute;
+        top: 60px;
+        left: 72px;
+      }
       img {
         @include w-h(190px, 180px);
         object-fit: contain;
+        @include sm {
+          @include w-h(120px, 120px);
+        }
       }
     }
     .cardButton {
@@ -53,6 +88,10 @@
         color: $bg-color;
         font-size: $fs-md;
         cursor: pointer;
+        @include sm {
+          @include w-h(270px, 41px);
+          font-size: $fs-xs;
+        }
       }
       &:hover {
         opacity: 1;
@@ -62,8 +101,12 @@
   .productTitleContainer {
     @include flexDirection(flex, column, null, 10px);
     padding-left: 10px;
-    h3 {
+    a {
+      color: $primary-color;
       font-size: $fs-lg;
+      @include sm {
+        font-size: $fs-md;
+      }
     }
     .priceContainer {
       @include flex-space(flex, center, 10px);

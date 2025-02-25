@@ -1,0 +1,102 @@
+@use "../../styles/partials/fonts" as *;
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
+
+.aboutContainer {
+  // @include flexDirection(flex, column, center, 50px);
+  padding: $pa-page;
+  @include sm {
+    padding: $pa-responsive;
+  }
+  .aboutNavigateLinks {
+    @include flex-space(flex, start, 20px);
+
+    .linkToHome {
+      color: $link-color;
+      font-family: Epilogue-Regular;
+      font-size: $fs-md;
+    }
+    .linkToAbout {
+      color: $primary-color;
+      font-family: Epilogue-Regular;
+      font-size: $fs-md;
+    }
+  }
+  .aboutMainContent {
+    @include align(flex, space-between, center);
+    margin: $ma-page2;
+    @include sm {
+      @include flexDirection(flex, column, center, 10px);
+      flex-wrap: wrap;
+    }
+    .aboutContentWrapper {
+      @include flexDirection(flex, column, start, 30px);
+
+      h1 {
+        color: $primary-color;
+        font-family: Epilogue-Regular;
+        font-size: $fs-xl;
+        @include sm {
+          font-size: $fs-md;
+        }
+      }
+      p {
+        @include w-h(450px, auto);
+        color: $primary-color;
+        font-family: Epilogue-Regular;
+        font-size: $fs-sm;
+        @include sm {
+          @include w-h(320px, auto);
+
+          font-size: $fs-xs;
+        }
+      }
+    }
+    .aboutMainImage {
+      img {
+        @include sm {
+          @include w-h(320px, auto);
+        }
+      }
+    }
+  }
+  .ratingSection {
+    @include space(flex, center, center, 20px);
+    @include sm {
+      flex-wrap: wrap;
+    }
+    .ratingCard {
+      @include w-h(270px, 230px);
+      @include flexMulti(flex, column, center, center, center, 20px);
+      border: $br-1;
+      span {
+        font-family: Epilogue-Regular;
+        font-size: $fs-md;
+      }
+      p {
+        font-family: Epilogue-Regular;
+        font-size: $fs-md;
+      }
+      @include sm {
+        @include w-h(170px, 130px);
+      }
+      @include sm {
+        img {
+          @include w-h(40px, 40px);
+        }
+        span {
+          font-size: $fs-xs;
+          font-family: Epilogue-Regular;
+        }
+        p {
+          font-size: $fs-xs;
+          font-family: Epilogue-Regular;
+        }
+      }
+    }
+  }
+  .aboutCardSection {
+    @include justify(flex, center);
+    margin: $ma-page2;
+  }
+}

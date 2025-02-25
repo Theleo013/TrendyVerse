@@ -1,0 +1,25 @@
+@use "../../../styles/partials/fonts" as *;
+@use "../../../styles/partials/mixins" as *;
+@use "../../../styles/partials/variables" as *;
+
+.categoryMenuContainer {
+  @include flex-space(flex, center, 20px);
+  @include sm {
+    flex-wrap: wrap;
+  }
+  justify-content: space-between;
+  .contentWrapper {
+    @include w-h(170px, 145px);
+    @include flexMulti(flex, column, center, center, center, 20px);
+    border: $br-6;
+    background-color: transparent;
+    a {
+    }
+    // img {
+    // }
+    h4 {
+      font-size: $fs-sm;
+      color: $secondary-color;
+    }
+  }
+}

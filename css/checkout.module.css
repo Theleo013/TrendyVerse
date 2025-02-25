@@ -1,0 +1,124 @@
+@font-face {
+  font-family: Epilogue-Regular;
+  src: url(/assets/fonts/Epilogue-Regular.ttf);
+}
+.checkoutConatiner {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  padding: 30px 80px;
+  width: 100%;
+}
+.checkoutConatiner .navigateLinks {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.checkoutConatiner .navigateLinks .toBasket {
+  color: rgb(163, 161, 161);
+  font-size: 16px;
+  font-family: Epilogue-Regular;
+}
+.checkoutConatiner .navigateLinks .toCheckout {
+  color: rgb(9, 8, 8);
+  font-size: 16px;
+  font-family: Epilogue-Regular;
+}
+.checkoutConatiner .checkoutContentContainer {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.checkoutConatiner .checkoutContentContainer .checkoutFormWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 30px;
+}
+.checkoutConatiner .checkoutContentContainer .checkoutFormWrapper h1 {
+  color: rgb(9, 8, 8);
+  font-size: 28px;
+  font-family: Epilogue-Regular;
+}
+.checkoutConatiner .checkoutContentContainer .checkoutDataWrapper {
+  width: 400px;
+  height: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 20px;
+}
+.checkoutConatiner .checkoutContentContainer .checkoutDataWrapper .checkoutData {
+  overflow-y: auto;
+}
+.checkoutConatiner .checkoutContentContainer .checkoutDataWrapper .checkoutData div {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 50px;
+}
+.checkoutConatiner .checkoutContentContainer .checkoutDataWrapper .checkoutData img {
+  width: 80px;
+  height: 115px;
+  object-fit: contain;
+}
+.checkoutConatiner .checkoutContentContainer .checkoutDataWrapper .checkoutData span {
+  color: rgb(9, 8, 8);
+  font-size: 16px;
+  font-family: Epilogue-Regular;
+}
+.checkoutConatiner .checkoutContentContainer .checkoutDataWrapper .checkoutTotalWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 20px;
+}
+.checkoutConatiner .checkoutContentContainer .checkoutDataWrapper .checkoutTotalWrapper .checkoutshipping {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 281px;
+}
+.checkoutConatiner .checkoutContentContainer .checkoutDataWrapper .checkoutTotalWrapper .checkoutTotal {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 309px;
+  border-top: 2px solid rgb(161, 159, 159);
+  padding-top: 32px;
+}
+.checkoutConatiner .checkoutContentContainer .checkoutDataWrapper .checkoutTotalWrapper span {
+  color: rgb(9, 8, 8);
+  font-size: 16px;
+  font-family: Epilogue-Regular;
+}
+.checkoutConatiner .checkoutContentContainer .checkoutDataWrapper .chooseBank {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 235px;
+}
+.checkoutConatiner .checkoutContentContainer .checkoutDataWrapper .chooseBank .bankImageWrapper {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 20px;
+}
+.checkoutConatiner .checkoutContentContainer .checkoutDataWrapper .chooseBank span {
+  color: rgb(9, 8, 8);
+  font-size: 16px;
+  font-family: Epilogue-Regular;
+}
+.checkoutConatiner .checkoutContentContainer .checkoutDataWrapper .chooseBank img {
+  width: 42px;
+  height: 28px;
+}
+.checkoutConatiner .checkoutContentContainer .checkoutDataWrapper .payOrder button {
+  width: 234px;
+  height: 56px;
+  background-color: rgb(219, 68, 68);
+  border-radius: 4px;
+  color: rgb(247, 247, 247);
+  border: none;
+  cursor: pointer;
+}/*# sourceMappingURL=checkout.module.css.map */

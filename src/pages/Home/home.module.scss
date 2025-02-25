@@ -2,6 +2,304 @@
 @use "../../styles/partials/mixins" as *;
 @use "../../styles/partials/variables" as *;
 
-.productCard {
-  @include flexMulti(flex, null, space-between, center, null, 10px);
+.homeContainer {
+  padding: $pa-page;
+  @include sm {
+    padding: $pa-responsive;
+  }
+  // .sliderContainer {
+  //   display: flex;
+  // }
+
+  .ProductCardContainer {
+    @include flexDirection(flex, column, center, 30px);
+    position: relative;
+    margin-top: 200px;
+    padding-top: 50px;
+
+    .pageTitle {
+      position: absolute;
+      top: -100px;
+      left: 0;
+    }
+    .productCard {
+      @include space(flex, space-between, center, 10px);
+      flex-wrap: wrap;
+      width: 100%;
+      @include sm {
+        @include align(flex, center, center);
+      }
+    }
+    .showAllButton {
+      button {
+        @include w-h(234px, 56px);
+        background-color: $span-color;
+        border-radius: $br-s;
+        color: $bg-color;
+        border: none;
+        cursor: pointer;
+      }
+    }
+    .categoryMenu {
+      @include flexDirection(flex, column, null, 50px);
+      border-top: $br-6;
+      padding: 100px 0;
+      padding-top: 50px;
+
+      margin-top: 30px;
+      width: 100%;
+    }
+    .topSellingContainer {
+      @include flexDirection(flex, column, null, 50px);
+      padding: 100px 0;
+      border-top: $br-6;
+      margin-top: 30px;
+      width: 100%;
+      padding-top: 50px;
+
+      .topSellingTitle {
+        @include align(flex, space-between, center);
+      }
+      .topSellingContent {
+        @include align(flex, space-between, center);
+        @include sm {
+          @include align(flex, center, center);
+
+          flex-wrap: wrap;
+        }
+      }
+    }
+    .flashProductContainer {
+      @include align(flex, space-between, center);
+      @include w-h(100%, 500px);
+      background-color: $primary-color;
+      padding: 0 50px;
+      @include sm {
+        @include align(flex, center, center);
+        flex-wrap: wrap;
+      }
+      .flashContentContainer {
+        @include flexDirection(flex, column, start, 30px);
+        @include sm {
+          padding-top: $pa-m;
+          position: relative;
+        }
+        span {
+          color: $flash-color;
+          font-size: $fs-sm;
+          font-family: Epilogue-Regular;
+        }
+        h2 {
+          @include w-h(260px, 121px);
+          color: $bg-color;
+          font-family: Epilogue-Regular;
+        }
+        button {
+          @include w-h(171px, 56px);
+          background-color: $flash-color;
+          color: $bg-color;
+          border-radius: $br-s;
+          font-family: Epilogue-Regular;
+          @include sm {
+            position: absolute;
+            top: 410px;
+            left: 0;
+          }
+        }
+      }
+      .flashImage {
+        @include w-h(600px, 420px);
+        @include sm {
+          padding-top: $pa-m;
+          position: relative;
+          img {
+            position: absolute;
+            top: -40px;
+            left: 50px;
+            width: 200px;
+          }
+        }
+      }
+    }
+    .exploreProductsContainer {
+      @include flexDirection(flex, column, center, 30px);
+      position: relative;
+      width: 100%;
+      margin-top: 150px;
+      padding-top: 50px;
+      @include sm {
+        @include align(flex, center, center);
+        flex-wrap: wrap;
+      }
+
+      .pageTitleExplore {
+        position: absolute;
+        top: -100px;
+        left: 0;
+      }
+      .exploreContent {
+        @include align(flex, space-between, center);
+        flex-wrap: wrap;
+        @include sm {
+          @include align(flex, center, center);
+          flex-wrap: wrap;
+        }
+      }
+    }
+    .newArrivalContainer {
+      @include flexDirection(flex, column, center, 30px);
+      position: relative;
+      width: 100%;
+      margin-top: 150px;
+      padding-top: 50px;
+      @include sm {
+        @include align(flex, center, center);
+        flex-wrap: wrap;
+      }
+      .pageTitleArrival {
+        position: absolute;
+        top: -100px;
+        left: 0;
+      }
+      .newArrivalWrapper {
+        @include align(flex, space-between, center);
+        @include sm {
+          @include space(flex, center, center, 10px);
+          flex-wrap: wrap;
+        }
+        width: 100%;
+        .ps5Container {
+          @include w-h(600px, 588px);
+          @include flexMulti(flex, column, end, start, start, 20px);
+          padding: 30px;
+          background-image: url("/assets/images/arrivalProducts/ps5.png");
+          background-color: $primary-color;
+          object-fit: contain;
+          background-repeat: no-repeat;
+          background-position: bottom;
+          @include sm {
+            object-fit: fill;
+            @include w-h(399px, null);
+          }
+
+          h4 {
+            font-family: Epilogue-Regular;
+
+            font-size: $fs-lg;
+            color: $bg-color;
+          }
+          p {
+            font-family: Epilogue-Regular;
+
+            font-size: $fs-sm;
+            color: $bg-color;
+          }
+          a {
+            font-size: $fs-sm;
+            color: $bg-color;
+            font-family: Epilogue-Regular;
+          }
+          a:hover {
+            color: $hover-color;
+          }
+        }
+        .arrivalProductsContainer {
+          @include flexDirection(flex, column, center, 20px);
+          .womens {
+            @include w-h(560px, 284px);
+            @include flexMulti(flex, column, end, start, start, 20px);
+            padding: 30px;
+            background-image: url("/assets/images/arrivalProducts/woman.png");
+            background-color: $primary-color;
+            object-fit: contain;
+            background-repeat: no-repeat;
+            background-position: right;
+            @include sm {
+              @include w-h(399px, auto);
+            }
+            h4 {
+              font-family: Epilogue-Regular;
+
+              font-size: $fs-lg;
+              color: $bg-color;
+            }
+            p {
+              font-family: Epilogue-Regular;
+
+              font-size: $fs-sm;
+              color: $bg-color;
+            }
+            a {
+              font-family: Epilogue-Regular;
+
+              font-size: $fs-sm;
+              color: $bg-color;
+            }
+          }
+          .innerProductsWrapper {
+            @include space(flex, space-between, center, 20px);
+            @include sm {
+              @include w-h(399px, auto);
+            }
+            .speaker {
+              @include flexMulti(flex, column, end, start, start, 20px);
+              padding: 30px;
+              @include w-h(270px, 284px);
+              background-image: url("/assets/images/arrivalProducts/speakers.png");
+              background-color: $primary-color;
+              object-fit: contain;
+              background-repeat: no-repeat;
+              background-position: center;
+              h4 {
+                font-family: Epilogue-Regular;
+
+                font-size: $fs-lg;
+                color: $bg-color;
+              }
+              p {
+                font-family: Epilogue-Regular;
+
+                font-size: $fs-sm;
+                color: $bg-color;
+              }
+              a {
+                font-family: Epilogue-Regular;
+
+                font-size: $fs-sm;
+                color: $bg-color;
+              }
+            }
+            .parfume {
+              @include w-h(270px, 284px);
+              @include flexMulti(flex, column, end, start, start, 20px);
+              padding: 30px;
+              background-image: url("/assets/images/arrivalProducts/parfume.png");
+              background-color: $primary-color;
+              object-fit: contain;
+              background-repeat: no-repeat;
+              background-position: center;
+              h4 {
+                font-family: Epilogue-Regular;
+
+                font-size: $fs-lg;
+                color: $bg-color;
+              }
+              p {
+                font-family: Epilogue-Regular;
+
+                font-size: $fs-sm;
+                color: $bg-color;
+              }
+              a {
+                font-family: Epilogue-Regular;
+
+                font-size: $fs-sm;
+                color: $bg-color;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 }

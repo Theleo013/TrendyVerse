@@ -1,29 +1,34 @@
-import { createApi } from "@reduxjs/toolkit/query/react";
-import { axiosBaseQuery } from "@/redux/api/axiosBase";
+import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 
 export const authApi = createApi({
   reducerPath: "authApi",
-  baseQuery: axiosBaseQuery({ baseUrl: "http://localhost:3000/" }),
-  keepUnusedDataFor: 1000,
+  baseQuery: fetchBaseQuery({ baseUrl: "http://localhost:3001" }),
   endpoints: (builder) => ({
-    loginUser: builder.mutation({
-      query(data) {
-        return {
-          url: "users",
-          method: "POST",
-          data,
-        };
-      },
+    registerUser: builder.mutation({
+      query: (userData) => ({
+        url: "user",
+        method: "POST",
+        body: userData,
+      }),
     }),
-    getUser: builder.query({
-      query() {
-        return {
-          url: "users",
-          method: "GET",
-        };
+    loginUser: builder.query({
+      query: (credentials) => ({
+        url: `user?username=${credentials.username}&password=${credentials.password}`,
+        method: "GET",
+      }),
+      transformResponse: (response) => {
+        if (response.length > 0) {
+          return {
+            success: true,
+            user: response[0],
+            token: `fake-token-${response[0].id}`,
+          };
+        } else {
+          return { success: false, message: "Invalid username or password." };
+        }
       },
     }),
   }),
 });
 
-export const { useLoginUserMutation } = authApi;
+export const { useRegisterUserMutation, useLoginUserQuery } = authApi;

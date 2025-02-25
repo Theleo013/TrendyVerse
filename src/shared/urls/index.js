@@ -1,8 +1,12 @@
 export const urls = {
   HOME: "/",
   CONTACT: "/contact",
-  ABOUt: "/about",
+  ABOUT: "/about",
   REGISTER: "/register",
   LOGIN: "/login",
+  PROFILE: "/profile",
   BASKET: "/basket",
+  CHECKOUT: "/checkout",
+  WISHLIST: "/wishlist",
+  PRODUCT_ID: "/product/:id",
 };

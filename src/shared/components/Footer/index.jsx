@@ -14,7 +14,7 @@ const Footer = () => {
           </div>
           <div className={Styles.inputContainer}>
             <input placeholder="Enter your email" type="text" />
-            <img src="./src/assets/icons/send-icon.svg" alt="send-icon" />
+            <img src="/assets/icons/send-icon.svg" alt="send-icon" />
           </div>
         </div>
         <div className={Styles.sectionSupport}>
@@ -44,13 +44,13 @@ const Footer = () => {
             <span>Visit My Social Media</span>
           </div>
           <div className={Styles.githubQR}>
-            <img src="./src/assets/icons/GithubQR.png" alt="GithubQR" />
+            <img src="/assets/icons/GithubQR.png" alt="GithubQR" />
           </div>
           <div className={Styles.social}>
-            <img src="./src/assets/icons/Github.svg" alt="github" />
-            <img src="./src/assets/icons/Linkedin.png" alt="linkedin" />
-            <img src="./src/assets/icons/X_icon.svg" alt="X" />
-            <img src="./src/assets/icons/Facebook.png" alt="facebook" />
+            <img src="/assets/icons/Github.svg" alt="github" />
+            <img src="/assets/icons/Linkedin.png" alt="linkedin" />
+            <img src="/assets/icons/X_icon.svg" alt="X" />
+            <img src="/assets/icons/Facebook.png" alt="facebook" />
           </div>
         </div>
       </div>

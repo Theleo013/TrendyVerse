@@ -1,0 +1,145 @@
+@font-face {
+  font-family: Epilogue-Regular;
+  src: url(/assets/fonts/Epilogue-Regular.ttf);
+}
+.productContainer {
+  padding: 30px 80px;
+  margin: 50px 0;
+}
+@media (max-width: 475px) {
+  .productContainer {
+    padding: 25px 15px;
+  }
+}
+.productContainer .prductContentContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 100px;
+  position: relative;
+}
+.productContainer .prductContentContainer .productNavigateLinks {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  position: absolute;
+  top: -50px;
+  left: 0;
+}
+.productContainer .prductContentContainer .productNavigateLinks .productLinkHome {
+  color: rgb(163, 161, 161);
+  font-family: Epilogue-Regular;
+  font-size: 16px;
+}
+.productContainer .prductContentContainer .productNavigateLinks .productLinkProduct {
+  color: rgb(9, 8, 8);
+  font-family: Epilogue-Regular;
+  font-size: 16px;
+}
+.productContainer .prductContentContainer .productHeadingText h1 {
+  color: rgb(9, 8, 8);
+  font-family: Epilogue-Regular;
+  font-size: 40px;
+}
+.productContainer .prductContentContainer .productWrapper {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  padding: 50px 100px;
+}
+@media (max-width: 475px) {
+  .productContainer .prductContentContainer .productWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 25px 15px;
+  }
+}
+.productContainer .prductContentContainer .productWrapper .productImage {
+  width: 300px;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(219, 219, 219);
+}
+@media (max-width: 475px) {
+  .productContainer .prductContentContainer .productWrapper .productImage {
+    width: 220px;
+    height: 220px;
+  }
+}
+@media (max-width: 475px) {
+  .productContainer .prductContentContainer .productWrapper .productImage img {
+    width: 120px;
+    height: 120px;
+  }
+}
+.productContainer .prductContentContainer .productWrapper .productContent {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 40px;
+}
+.productContainer .prductContentContainer .productWrapper .productContent .productTitle {
+  color: rgb(9, 8, 8);
+  font-family: Epilogue-Regular;
+  font-size: 24px;
+}
+@media (max-width: 475px) {
+  .productContainer .prductContentContainer .productWrapper .productContent .productTitle {
+    font-size: 16px;
+  }
+}
+.productContainer .prductContentContainer .productWrapper .productContent .productRate {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.productContainer .prductContentContainer .productWrapper .productContent .productDescription p {
+  width: 400px;
+  height: auto;
+  color: rgb(9, 8, 8);
+  font-family: Epilogue-Regular;
+  font-size: 16px;
+}
+@media (max-width: 475px) {
+  .productContainer .prductContentContainer .productWrapper .productContent .productDescription p {
+    width: 225px;
+    height: auto;
+    font-size: 12px;
+  }
+}
+.productContainer .prductContentContainer .productWrapper .productContent .productPriceWrapper {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.productContainer .prductContentContainer .productWrapper .productContent .productPriceWrapper span {
+  color: rgb(9, 8, 8);
+  font-family: Epilogue-Regular;
+  font-size: 18px;
+}
+@media (max-width: 475px) {
+  .productContainer .prductContentContainer .productWrapper .productContent .productPriceWrapper span {
+    font-size: 16px;
+  }
+}
+.productContainer .prductContentContainer .productWrapper .productContent .productPriceWrapper button {
+  width: 170px;
+  height: 40px;
+  font-family: Epilogue-Regular;
+  background: transparent;
+  color: rgb(24, 23, 28);
+  border-radius: 4px;
+  border: 1px solid rgb(163, 161, 161);
+  cursor: pointer;
+}
+@media (max-width: 475px) {
+  .productContainer .prductContentContainer .productWrapper .productContent .productPriceWrapper button {
+    width: 166px;
+    height: 28px;
+    font-size: 16px;
+  }
+}/*# sourceMappingURL=productdetail.module.css.map */

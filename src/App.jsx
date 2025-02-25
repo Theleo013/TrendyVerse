@@ -12,6 +12,13 @@ import Basket from "@/pages/Basket";
 import { ToastContainer } from "react-toastify";
 import Register from "@/pages/Register";
 import Login from "@/pages/Login";
+import Profile from "@/pages/Profile";
+import Checkout from "@/pages/Checkout";
+import Wishlist from "@/pages/Wishlist";
+import ProductDetail from "@/pages/ProductDetail";
+import About from "@/pages/About";
+import Contact from "@/pages/Contact";
+import ProtectedRoute from "@/shared/components/ProtectedRoute";
 
 function App() {
   const router = createBrowserRouter(
@@ -20,10 +27,21 @@ function App() {
         <Route path={urls.HOME} element={<Layout />}>
           <Route path={urls.HOME} element={<Home />} />
           <Route path={urls.BASKET} element={<Basket />} />
-          {/* <Route path={urls.CONTACT} element={} */}
-          {/* <Route path={urls.ABOUT} element={<About />} /> */}
+          <Route path={urls.CONTACT} element={<Contact />} />
+          <Route path={urls.ABOUT} element={<About />} />
           <Route path={urls.REGISTER} element={<Register />} />
           <Route path={urls.LOGIN} element={<Login />} />
+          <Route
+            path={urls.PROFILE}
+            element={
+              <ProtectedRoute>
+                <Profile />
+              </ProtectedRoute>
+            }
+          />
+          <Route path={urls.CHECKOUT} element={<Checkout />} />
+          <Route path={urls.WISHLIST} element={<Wishlist />} />
+          <Route path={urls.PRODUCT_ID} element={<ProductDetail />} />
         </Route>
       </React.Fragment>
     )

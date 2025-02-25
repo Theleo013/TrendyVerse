@@ -1,0 +1,95 @@
+@use "../../styles/partials/fonts" as *;
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
+
+.checkoutConatiner {
+  @include flexDirection(flex, column, null, 50px);
+  padding: $pa-page;
+  width: 100%;
+  .navigateLinks {
+    @include space(flex, null, center, 10px);
+
+    .toBasket {
+      color: $link-color;
+      font-size: $fs-md;
+      font-family: Epilogue-Regular;
+    }
+    .toCheckout {
+      color: $primary-color;
+      font-size: $fs-md;
+      font-family: Epilogue-Regular;
+    }
+  }
+  .checkoutContentContainer {
+    @include align(flex, space-evenly, center);
+    .checkoutFormWrapper {
+      @include flexDirection(flex, column, start, 30px);
+
+      h1 {
+        color: $primary-color;
+        font-size: $fs-2xl;
+        font-family: Epilogue-Regular;
+      }
+    }
+    .checkoutDataWrapper {
+      @include w-h(400px, 600px);
+      @include flexDirection(flex, column, start, 20px);
+
+      .checkoutData {
+        overflow-y: auto;
+        div {
+          @include space(flex, space-evenly, center, 50px);
+        }
+        img {
+          @include w-h(80px, 115px);
+          object-fit: contain;
+        }
+        span {
+          color: $primary-color;
+          font-size: $fs-md;
+          font-family: Epilogue-Regular;
+        }
+      }
+      .checkoutTotalWrapper {
+        @include flexDirection(flex, column, start, 20px);
+        .checkoutshipping {
+          @include space(flex, space-evenly, center, 281px);
+        }
+        .checkoutTotal {
+          @include space(flex, space-evenly, center, 309px);
+          border-top: $br-6;
+          padding-top: $pa-l;
+        }
+        span {
+          color: $primary-color;
+          font-size: $fs-md;
+          font-family: Epilogue-Regular;
+        }
+      }
+      .chooseBank {
+        @include space(flex, space-evenly, center, 235px);
+        .bankImageWrapper {
+          @include space(flex, space-evenly, center, 20px);
+        }
+        span {
+          color: $primary-color;
+          font-size: $fs-md;
+          font-family: Epilogue-Regular;
+        }
+        img {
+          @include w-h(42px, 28px);
+        }
+      }
+      .payOrder {
+        button {
+          @include w-h(234px, 56px);
+          background-color: $span-color;
+          border-radius: $br-s;
+          color: $bg-color;
+          border: none;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}

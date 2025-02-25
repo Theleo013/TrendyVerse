@@ -1,0 +1,69 @@
+@font-face {
+  font-family: Epilogue-Regular;
+  src: url(/assets/fonts/Epilogue-Regular.ttf);
+}
+.registerContainer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 30px 80px;
+}
+@media (max-width: 475px) {
+  .registerContainer {
+    padding: 25px 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+}
+.registerContainer .registerImage img {
+  width: 600px;
+  height: auto;
+}
+@media (max-width: 475px) {
+  .registerContainer .registerImage img {
+    width: 320px;
+    height: 220px;
+  }
+}
+.registerContainer .registerContentContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.registerContainer .registerContentContainer .registerContent {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 20px;
+}
+.registerContainer .registerContentContainer .registerContent h3 {
+  font-size: 24px;
+  font-family: Epilogue-Regular;
+}
+.registerContainer .registerContentContainer .registerContent p {
+  font-size: 14px;
+  font-family: Epilogue-Regular;
+}
+.registerContainer .registerButton {
+  background-color: rgb(219, 68, 68);
+}
+.registerContainer .sectionLogin {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 20px;
+}
+.registerContainer .sectionLogin p {
+  font-size: 14px;
+  font-family: Epilogue-Regular;
+}
+.registerContainer .sectionLogin a {
+  font-size: 16px;
+  color: rgb(9, 8, 8);
+  font-family: Epilogue-Regular;
+}
+.registerContainer .sectionLogin a:hover {
+  color: rgb(252, 163, 17);
+}/*# sourceMappingURL=register.module.css.map */

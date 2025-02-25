@@ -1,0 +1,10 @@
+@use "../../../styles/partials/fonts" as *;
+@use "../../../styles/partials/mixins" as *;
+@use "../../../styles/partials/variables" as *;
+
+.galleryContainer {
+  @include flexDirection(flex, column, center, 20px);
+  .galleryWrapper {
+    @include align(flex, space-evenly, center);
+  }
+}
