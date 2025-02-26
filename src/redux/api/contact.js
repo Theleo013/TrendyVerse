@@ -3,7 +3,7 @@ import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 export const contactApi = createApi({
   reducerPath: "contact",
   baseQuery: fetchBaseQuery({ baseUrl: "http://localhost:3001" }),
-  tagTypes: ["Contact"], // Cache için tag belirle
+  tagTypes: ["Contact"],
   endpoints: (builder) => ({
     contactForm: builder.mutation({
       query: (contactData) => ({
@@ -11,11 +11,11 @@ export const contactApi = createApi({
         method: "POST",
         body: contactData,
       }),
-      invalidatesTags: ["Contact"], // Yeni form eklenince cache temizlenecek
+      invalidatesTags: ["Contact"],
     }),
     getContactForm: builder.query({
       query: () => "contact",
-      providesTags: ["Contact"], // Cache'in güncellenmesi için tag ekle
+      providesTags: ["Contact"],
     }),
   }),
 });

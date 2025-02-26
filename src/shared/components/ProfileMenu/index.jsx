@@ -32,7 +32,7 @@ const ProfileMenu = () => {
     {
       key: "3",
       label: "Logout",
-      onClick: handleLogout, // Logout işlemi burada çağrılıyor
+      onClick: handleLogout,
       extra: <RightSquareOutlined />,
     },
   ];
