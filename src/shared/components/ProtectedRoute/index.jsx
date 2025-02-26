@@ -3,7 +3,6 @@ import { useSelector } from "react-redux";
 import { Navigate } from "react-router-dom";
 
 const ProtectedRoute = ({ children }) => {
-  // Kullanıcıyı Redux Store'dan al
   const { user } = useSelector((state) => state.auth) || {};
 
   if (!user) {

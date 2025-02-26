@@ -17,7 +17,8 @@ export const authApi = createApi({
         method: "GET",
       }),
       transformResponse: (response) => {
-        if (response.length > 0) {
+        if (response.length === 1) {
+          console.log("response data", response);
           return {
             success: true,
             user: response[0],
@@ -31,4 +32,4 @@ export const authApi = createApi({
   }),
 });
 
-export const { useRegisterUserMutation, useLoginUserQuery } = authApi;
+export const { useRegisterUserMutation, useLazyLoginUserQuery } = authApi;

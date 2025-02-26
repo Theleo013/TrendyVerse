@@ -2,64 +2,39 @@ import React from "react";
 import Styles from "@/shared/components/Sliders/sliders.module.scss";
 import { Link } from "react-router-dom";
 import { Carousel } from "antd";
+import { useGetProductsQuery } from "@/redux/api/products";
+import RenderIf from "../RenderIf";
 
 const HomeSlider = () => {
+  const { data: products, isFetching, isError, error } = useGetProductsQuery();
+
   return (
     <React.Fragment>
-      <Carousel arrows infinite={false}>
-        <div>
-          <div className={Styles.contentStyle}>
-            <div className={Styles.productTitle}>
-              <h3>Iphone 16</h3>
+      <RenderIf condition={isFetching}>
+        <h2>Loading...</h2>
+      </RenderIf>
+      <RenderIf condition={!isFetching && isError}>
+        <h2>{error?.data?.message || "API bağlantısı yok"}</h2>
+      </RenderIf>
+      <RenderIf condition={!isFetching && !isError && products?.length > 0}>
+        <Carousel arrows infinite={false}>
+          {products.slice(18, 22).map((product) => (
+            <div key={product.id}>
+              <div className={Styles.contentStyle}>
+                <div className={Styles.productTitle}>
+                  <h3>{product.name}</h3>
+                </div>
+                <div className={Styles.imageContainer}>
+                  <img src={product.image} alt={product.name} />
+                </div>
+                <div className={Styles.shopButton}>
+                  <Link to={`/product/${product.id}`}>Buy now &rarr;</Link>
+                </div>
+              </div>
             </div>
-            <div className={Styles.imageContainer}>
-              <img src="/assets/images/sliderImage/iphone16.png" />
-            </div>
-            <div className={Styles.shopButton}>
-              <Link>Buy now &rarr;</Link>
-            </div>
-          </div>
-        </div>
-        <div>
-          <h3 className={Styles.contentStyle}>
-            <div className={Styles.productTitle}>
-              <h3>Samsung s25</h3>
-            </div>
-            <div className={Styles.imageContainer}>
-              <img src="/assets/images/sliderImage/sam25.png" />
-            </div>
-            <div className={Styles.shopButton}>
-              <Link>Buy now &rarr;</Link>
-            </div>
-          </h3>
-        </div>
-        <div>
-          <h3 className={Styles.contentStyle}>
-            <div className={Styles.productTitle}>
-              <h3>Xiaomi 15</h3>
-            </div>
-            <div className={Styles.imageContainer}>
-              <img src="/assets/images/sliderImage/xiaomi15.png" />
-            </div>
-            <div className={Styles.shopButton}>
-              <Link>Buy now &rarr;</Link>
-            </div>
-          </h3>
-        </div>
-        <div>
-          <h3 className={Styles.contentStyle}>
-            <div className={Styles.productTitle}>
-              <h3>Lenovo 15</h3>
-            </div>
-            <div className={Styles.imageContainer}>
-              <img src="/assets/images/sliderImage/lenovo15rs.png" />
-            </div>
-            <div className={Styles.shopButton}>
-              <Link>Buy now &rarr;</Link>
-            </div>
-          </h3>
-        </div>
-      </Carousel>
+          ))}
+        </Carousel>
+      </RenderIf>
     </React.Fragment>
   );
 };

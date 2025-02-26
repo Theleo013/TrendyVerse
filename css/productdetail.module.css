@@ -70,6 +70,11 @@
     height: 220px;
   }
 }
+.productContainer .prductContentContainer .productWrapper .productImage img {
+  width: 200px;
+  height: auto;
+  object-fit: contain;
+}
 @media (max-width: 475px) {
   .productContainer .prductContentContainer .productWrapper .productImage img {
     width: 120px;

@@ -12,7 +12,7 @@ const ProfileMenu = () => {
 
   const handleLogout = () => {
     dispatch(logout());
-    navigate(urls.HOME); // Çıkış yaptıktan sonra anasayfaya yönlendirme
+    navigate(urls.HOME);
   };
 
   const items = [

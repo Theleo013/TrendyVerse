@@ -9,6 +9,8 @@ import ProfileMenu from "../ProfileMenu";
 const Header = () => {
   const { basket } = useSelector((state) => state.basket);
   const { wishlist } = useSelector((state) => state.wishlist);
+  const { user } = useSelector((state) => state.auth);
+  console.log("user:", user);
 
   return (
     <header>
@@ -62,9 +64,11 @@ const Header = () => {
             </Link>
           </div>
 
-          <div>
-            <ProfileMenu />
-          </div>
+          {user ? (
+            <div>
+              <ProfileMenu />
+            </div>
+          ) : null}
         </div>
       </nav>
     </header>

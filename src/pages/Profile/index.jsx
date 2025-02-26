@@ -2,11 +2,12 @@ import React from "react";
 import { Form, Input, Button, Card } from "antd";
 
 import Styles from "@/pages/Profile/profile.module.scss";
+import { useSelector } from "react-redux";
 
 const Profile = () => {
+  const { user, isLoading } = useSelector((state) => state.auth);
   const onFinish = (values) => {
     console.log("Updated Profile:", values);
-    // Burada güncelleme işlemi yapılabilir
   };
 
   if (isLoading) return <p>Loading...</p>;

@@ -2,19 +2,21 @@ import React from "react";
 import { LockOutlined, UserOutlined } from "@ant-design/icons";
 import { Button, Form, Input } from "antd";
 import { useNavigate } from "react-router-dom";
-import { useLoginUserQuery } from "@/redux/api/auth";
+import { useLazyLoginUserQuery } from "@/redux/api/auth";
 import Styles from "@/pages/Login/login.module.scss";
+import { urls } from "@/shared/urls";
 
 const Login = () => {
   const navigate = useNavigate();
-  const [loginUser, { isLoading }] = useLoginUserQuery();
+  const [loginUser, { isLoading }] = useLazyLoginUserQuery();
 
   const onFinish = async (values) => {
+    const { username, password } = values;
     try {
-      const response = await loginUser(values);
+      const response = await loginUser({ username, password }).unwrap();
 
       if (response.success) {
-        navigate("/home");
+        navigate(`${urls.HOME}`);
       } else {
         alert(response.message || "Invalid username or password.");
       }
