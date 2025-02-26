@@ -10,6 +10,7 @@ import {
   SearchOutlined,
 } from "@ant-design/icons";
 import { Button, Menu, Input } from "antd";
+import SearchBar from "../SearchBar";
 
 const MenuBar = () => {
   const [collapsed, setCollapsed] = useState(false);
@@ -53,18 +54,7 @@ const MenuBar = () => {
     },
     {
       key: "5",
-      icon: <SearchOutlined />,
-      label: collapsed ? (
-        ""
-      ) : (
-        <Input
-          placeholder="Search..."
-          value={search}
-          onChange={(e) => setSearch(e.target.value)}
-          onPressEnter={handleSearch}
-          style={{ borderRadius: "5px", width: "100%" }}
-        />
-      ),
+      label: collapsed ? "" : <SearchBar />,
       onClick: () => {
         if (collapsed) setCollapsed(false);
       },

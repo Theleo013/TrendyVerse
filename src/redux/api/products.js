@@ -22,7 +22,19 @@ export const productsApi = createApi({
         };
       },
     }),
+    SearchProducts: builder.query({
+      query(title) {
+        return {
+          url: `products?title_like=${title}`,
+          method: "GET",
+        };
+      },
+    }),
   }),
 });
 
-export const { useGetProductsQuery, useGetProductByIdQuery } = productsApi;
+export const {
+  useGetProductsQuery,
+  useGetProductByIdQuery,
+  useLazySearchProductsQuery,
+} = productsApi;

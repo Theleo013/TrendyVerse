@@ -5,6 +5,7 @@ import { urls } from "@/shared/urls";
 import { useSelector } from "react-redux";
 import MenuBar from "../MenuBar";
 import ProfileMenu from "../ProfileMenu";
+import SearchBar from "../SearchBar";
 
 const Header = () => {
   const { basket } = useSelector((state) => state.basket);
@@ -41,8 +42,7 @@ const Header = () => {
         </div>
         <div className={Styles.headerContactContainer}>
           <div className={Styles.headerInput}>
-            <input placeholder="What are you looking for?" type="text" />
-            <img src="/assets/icons/search-icon.svg" alt="search-icon" />
+            <SearchBar />
           </div>
           <div className={Styles.headerBasketIcons}>
             <Link to={urls.WISHLIST}>

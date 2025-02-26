@@ -15,5 +15,4 @@ export const checkoutApi = createApi({
   }),
 });
 
-// usePerformCheckoutMutation hook'u buradan geliyor
 export const { usePerformCheckoutMutation } = checkoutApi;
