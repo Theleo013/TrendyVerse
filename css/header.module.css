@@ -61,8 +61,15 @@
   gap: 30px;
   font-family: Epilogue-Regular;
 }
+.headerNav .headerList ul li {
+  font-size: 18px;
+}
 .headerNav .headerList ul li a {
   color: rgb(9, 8, 8);
+}
+.headerNav .headerList ul li a:hover {
+  color: rgb(219, 68, 68);
+  transition: 0.2s;
 }
 .headerNav .headerContactContainer {
   display: flex;
@@ -113,7 +120,7 @@
     gap: 15px;
     position: absolute;
     top: 70px;
-    right: 18px;
+    right: 33px;
   }
 }
 .headerNav .headerContactContainer .headerIcons a {
@@ -153,6 +160,16 @@
 .headerNav .headerContactContainer .headerIcons .basketIcon {
   position: absolute;
 }
+@media (max-width: 475px) {
+  .headerNav .headerContactContainer .headerIcons .basketIcon {
+    top: 3px;
+  }
+}
+@media (max-width: 368px) {
+  .headerNav .headerContactContainer .headerIcons .basketIcon {
+    top: 44px !important;
+  }
+}
 .headerNav .headerContactContainer .headerIcons .basketIcon .basketCount {
   display: flex;
   justify-content: center;
@@ -170,14 +187,14 @@
   .headerNav .headerContactContainer .headerIcons .basketIcon .basketCount {
     position: absolute;
     top: -13px;
-    right: 53px;
+    right: 0px;
   }
 }
 @media (max-width: 368px) {
   .headerNav .headerContactContainer .headerIcons .basketIcon .basketCount {
     position: absolute;
-    top: 22px;
-    right: -8px;
+    top: -17px;
+    right: -1px;
   }
 }
 .headerNav .headerContactContainer .headerIcons .basketIcon .basketCount span {
@@ -186,4 +203,11 @@
   right: 6px;
   color: rgb(247, 247, 247);
   font-size: 16px;
+}
+@media (max-width: 368px) {
+  .headerNav .headerContactContainer .profileMenu {
+    position: absolute;
+    top: 80px;
+    right: -25px;
+  }
 }/*# sourceMappingURL=header.module.css.map */

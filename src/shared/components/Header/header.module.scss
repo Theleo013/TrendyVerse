@@ -52,10 +52,15 @@
       font-family: Epilogue-Regular;
 
       li {
+        font-size: $fs-lg;
         a {
           @include sm {
           }
           color: $primary-color;
+          &:hover {
+            color: $span-color;
+            transition: 0.2s;
+          }
         }
       }
     }
@@ -94,7 +99,7 @@
         @include flexDirection(flex, column, center, 15px);
         position: absolute;
         top: 70px;
-        right: 18px;
+        right: 33px;
       }
 
       a {
@@ -127,6 +132,12 @@
       }
       .basketIcon {
         position: absolute;
+        @include sm {
+          top: 3px;
+        }
+        @include xs {
+          top: 44px !important;
+        }
         .basketCount {
           @include flex-center;
           @include w-h(20px, 23px);
@@ -139,12 +150,12 @@
           @include sm {
             position: absolute;
             top: -13px;
-            right: 53px;
+            right: 0px;
           }
           @include xs {
             position: absolute;
-            top: 22px;
-            right: -8px;
+            top: -17px;
+            right: -1px;
           }
 
           span {
@@ -157,8 +168,12 @@
         }
       }
     }
-    // .profileMenu{
-
-    // }
+    .profileMenu {
+      @include xs {
+        position: absolute;
+        top: 80px;
+        right: -25px;
+      }
+    }
   }
 }

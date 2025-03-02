@@ -175,6 +175,46 @@
       "desc": "ThinkPad laptops are often lightweight, portable, and have a long battery life, making them phenomenal choices for people on the go and frequent travellers. They offer nonstop and constant use, elevating productivity and results",
       "price": "930",
       "views": "537"
+    },
+    {
+      "id": "23",
+      "image": "/assets/images/products/ps5Slim.png",
+      "title": "PlayStation 5",
+      "desc": "Experience lightning-fast loading with an ultra-high speed SSD, deeper immersion with support for haptic feedback",
+      "price": "800",
+      "views": "572"
+    },
+    {
+      "id": "24",
+      "image": "/assets/images/arrivalProducts/woman.png",
+      "title": "Women's Hat",
+      "desc": "Our womens black hats are crafted to exude elegance and sophistication",
+      "price": "230",
+      "views": "72"
+    },
+    {
+      "id": "25",
+      "image": "/assets/images/arrivalProducts/speakers.png",
+      "title": "Speakers",
+      "desc": "Discover B&O's luxury design in stereo speakers and home speaker systems, and enjoy the best sound on-the-go with portable Bluetooth speakers",
+      "price": "380",
+      "views": "928"
+    },
+    {
+      "id": "26",
+      "image": "/assets/images/arrivalProducts/parfume.png",
+      "title": "Gucci Parfume",
+      "desc": "The signature Gucci Guilty fragrances are reinterpreted with new ingredients Pour Homme and Pour Femme, offering distinctive and harmonious scents",
+      "price": "264",
+      "views": "419"
+    },
+    {
+      "id": "27",
+      "image": "/assets/images/products/MusicMachine.png",
+      "title": "JBL Boombox",
+      "desc": " Enjoy your music with massive JBL Original Pro Sound. The new 3-way speakers deliver higher sensitivity of our acoustic design sharpens clarity while lowering distortion for monstrous bass and a rich audio spectrums",
+      "price": "314",
+      "views": "916"
     }
   ],
 

@@ -1,4 +1,3 @@
-// src/pages/CategoryPage.js
 import React, { useEffect, useState } from "react";
 import Styles from "@/pages/CategoryPage/categoryPage.module.scss";
 import heartIcon from "/assets/icons/heart-icon.svg";

@@ -10,4 +10,5 @@ export const urls = {
   WISHLIST: "/wishlist",
   PRODUCT_ID: "/product/:id",
   CATEGORY: "/category/:categoryName",
+  NOT_fOUND: "*",
 };

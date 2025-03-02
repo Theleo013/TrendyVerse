@@ -72,7 +72,7 @@ const Register = () => {
                 { required: true, message: "Please input your username!" },
               ]}
             >
-              <Input />
+              <Input autoComplete="off" />
             </Form.Item>
 
             <Form.Item
@@ -80,7 +80,7 @@ const Register = () => {
               label={<span className={Styles.registerlabel}>Email</span>}
               rules={[{ required: true, message: "Please input your E-mail!" }]}
             >
-              <Input />
+              <Input autoComplete="off" />
             </Form.Item>
 
             <Form.Item
@@ -90,7 +90,7 @@ const Register = () => {
                 { required: true, message: "Please input your password!" },
               ]}
             >
-              <Input.Password />
+              <Input.Password autoComplete="off" />
             </Form.Item>
             <Form.Item
               name="confirm"
@@ -118,7 +118,7 @@ const Register = () => {
                 }),
               ]}
             >
-              <Input.Password />
+              <Input.Password autoComplete="off" />
             </Form.Item>
 
             <Form.Item>

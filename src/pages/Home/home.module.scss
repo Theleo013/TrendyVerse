@@ -94,7 +94,7 @@
         flex-wrap: wrap;
       }
       .flashContentContainer {
-        @include flexDirection(flex, column, start, 30px);
+        @include flexDirection(flex, column, start, 22px);
         @include sm {
           padding-top: $pa-m;
           position: relative;
@@ -109,12 +109,21 @@
           color: $bg-color;
           font-family: Epilogue-Regular;
         }
-        button {
+        .timer {
+          color: $bg-color;
+          font-size: $fs-4xl;
+        }
+        a {
+          @include flex-center;
           @include w-h(171px, 56px);
           background-color: $flash-color;
-          color: $bg-color;
+          color: $list-color;
           border-radius: $br-s;
           font-family: Epilogue-Regular;
+          cursor: pointer;
+          &:hover {
+            color: $hover-color;
+          }
           @include sm {
             position: absolute;
             top: 410px;
@@ -214,9 +223,9 @@
             font-size: $fs-sm;
             color: $bg-color;
             font-family: Epilogue-Regular;
-          }
-          a:hover {
-            color: $hover-color;
+            &:hover {
+              color: $hover-color;
+            }
           }
         }
         .arrivalProductsContainer {
@@ -250,6 +259,9 @@
 
               font-size: $fs-sm;
               color: $bg-color;
+              &:hover {
+                color: $hover-color;
+              }
             }
           }
           .innerProductsWrapper {
@@ -283,6 +295,9 @@
 
                 font-size: $fs-sm;
                 color: $bg-color;
+                &:hover {
+                  color: $hover-color;
+                }
               }
             }
             .parfume {
@@ -311,6 +326,9 @@
 
                 font-size: $fs-sm;
                 color: $bg-color;
+                &:hover {
+                  color: $hover-color;
+                }
               }
             }
           }

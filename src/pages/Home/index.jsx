@@ -11,6 +11,8 @@ import CategoryMenu from "@/shared/components/CategoryMenu";
 import { Link } from "react-router-dom";
 import heartIcon from "/assets/icons/heart-icon.svg";
 import DeliveryCard from "@/shared/components/DeliveryCard";
+import { urls } from "@/shared/urls";
+import Timer from "@/shared/components/Timer";
 
 const Home = () => {
   const { data, isFetching, isError, error } = useGetProductsQuery(undefined, {
@@ -24,6 +26,12 @@ const Home = () => {
   const filteredDataTop = showAll ? data.slice(0, 16) : data?.slice(4, 8);
 
   const filteredDataExplore = showAll ? data.slice(0, 16) : data?.slice(8, 16);
+
+  const PS5 = data?.find((item) => Number(item.id) === 23);
+  const Hat = data?.find((item) => Number(item.id) === 24);
+  const Speakers = data?.find((item) => Number(item.id) === 25);
+  const Parfume = data?.find((item) => Number(item.id) === 26);
+  const JBL = data?.find((item) => Number(item.id) === 27);
 
   return (
     <div className={Styles.homeContainer}>
@@ -113,8 +121,12 @@ const Home = () => {
             <div className={Styles.flashContentContainer}>
               <span>Categories</span>
               <h2>Enhance Your Music Experience</h2>
-              <div>Time</div>
-              <button>Buy Now</button>
+              <div className={Styles.timer}>
+                <Timer />
+              </div>
+              {JBL && (
+                <Link to={urls.PRODUCT_ID.replace(":id", JBL.id)}>Buy Now</Link>
+              )}
             </div>
             <div className={Styles.flashImage}>
               <img
@@ -165,24 +177,40 @@ const Home = () => {
               <div className={Styles.ps5Container}>
                 <h4>PlayStation 5</h4>
                 <p>Black and White version of the PS5 coming out on sale.</p>
-                <Link>Shop Now</Link>
+                {PS5 && (
+                  <Link to={urls.PRODUCT_ID.replace(":id", PS5.id)}>
+                    Shop Now
+                  </Link>
+                )}
               </div>
               <div className={Styles.arrivalProductsContainer}>
                 <div className={Styles.womens}>
                   <h4>Women's Collections</h4>
                   <p>Featured woman collections that give you another vibe.</p>
-                  <Link>Shop Now</Link>
+                  {Hat && (
+                    <Link to={urls.PRODUCT_ID.replace(":id", Hat.id)}>
+                      Shop Now
+                    </Link>
+                  )}
                 </div>
                 <div className={Styles.innerProductsWrapper}>
                   <div className={Styles.speaker}>
                     <h4>Speakers</h4>
                     <p>Amazon wireless speakers</p>
-                    <Link>Shop Now</Link>
+                    {Speakers && (
+                      <Link to={urls.PRODUCT_ID.replace(":id", Speakers.id)}>
+                        Shop Now
+                      </Link>
+                    )}
                   </div>
                   <div className={Styles.parfume}>
                     <h4>Perfume</h4>
                     <p>Gucci intense oud edp</p>
-                    <Link>Shop Now</Link>
+                    {Parfume && (
+                      <Link to={urls.PRODUCT_ID.replace(":id", Parfume.id)}>
+                        Shop Now
+                      </Link>
+                    )}
                   </div>
                 </div>
               </div>

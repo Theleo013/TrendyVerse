@@ -14,7 +14,7 @@ const HomeSlider = () => {
         <h2>Loading...</h2>
       </RenderIf>
       <RenderIf condition={!isFetching && isError}>
-        <h2>{error?.data?.message || "API bağlantısı yok"}</h2>
+        <h2>{error?.data?.message || ""}</h2>
       </RenderIf>
       <RenderIf condition={!isFetching && !isError && products?.length > 0}>
         <Carousel arrows infinite={false}>

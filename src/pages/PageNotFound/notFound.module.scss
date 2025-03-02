@@ -1,0 +1,41 @@
+@use "../../styles/partials/fonts" as *;
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
+
+.notFoundContainer {
+  @include flexDirection(flex, column, center, 30px);
+  padding: $pa-page;
+  text-align: center;
+  h1 {
+    font-size: $fs-6xl;
+    color: $primary-color;
+    font-family: Epilogue-Regular;
+    @include sm {
+      font-size: $fs-3xl;
+    }
+  }
+  p {
+    font-size: $fs-2xl;
+    color: $primary-color;
+    font-family: Epilogue-Regular;
+    @include sm {
+      font-size: $fs-lg;
+    }
+  }
+  a {
+    @include w-h(234px, 56px);
+    @include flex-center;
+
+    background-color: $span-color;
+    border-radius: $br-s;
+    color: $bg-color;
+    font-family: Epilogue-Regular;
+    font-size: $fs-md;
+    border: none;
+    cursor: pointer;
+    @include sm {
+      @include w-h(150px, 46px);
+      font-size: $fs-xs;
+    }
+  }
+}

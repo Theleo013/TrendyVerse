@@ -8,41 +8,63 @@ import { SearchOutlined } from "@ant-design/icons";
 const SearchBar = () => {
   const [options, setOptions] = useState([]);
   const [searchText, setSearchText] = useState("");
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [triggerSearch, { data: products }] = useLazySearchProductsQuery();
   const navigate = useNavigate();
 
   const handleSearch = async (value) => {
     setSearchText(value);
-    if (!value) return;
+    if (!value.trim()) {
+      setOptions([]);
+      setIsDropdownOpen(false);
+      return;
+    }
+
     triggerSearch(value);
+    setIsDropdownOpen(true);
   };
 
   useEffect(() => {
-    if (products) {
+    if (products?.length) {
+      const filteredOptions = products.filter((product) =>
+        product.title.toLowerCase().startsWith(searchText.toLowerCase())
+      );
+
       setOptions(
-        products.map((product) => ({
+        filteredOptions.map((product) => ({
           value: product.id,
           label: <span>{product.title}</span>,
         }))
       );
+      setIsDropdownOpen(true);
+    } else {
+      setOptions([]);
+      setIsDropdownOpen(false);
     }
-  }, [products]);
+  }, [products, searchText]);
 
   const onSelect = (productId) => {
     navigate(`/product/${productId}`);
     setSearchText("");
+    setIsDropdownOpen(false);
   };
 
   const handleSearchButtonClick = () => {
     if (searchText.trim()) {
       triggerSearch(searchText);
+      setIsDropdownOpen(true);
     }
   };
 
   return (
     <div
       className={Styles.searchBar}
-      style={{ display: "flex", alignItems: "center", gap: "8px" }}
+      style={{
+        position: "relative",
+        display: "flex",
+        alignItems: "center",
+        gap: "8px",
+      }}
     >
       <AutoComplete
         popupMatchSelectWidth={252}
@@ -52,6 +74,7 @@ const SearchBar = () => {
         onSelect={onSelect}
         value={searchText}
         onChange={setSearchText}
+        open={isDropdownOpen}
         defaultActiveFirstOption={false}
         filterOption={false}
       >

@@ -5,7 +5,7 @@ import { InfinitySpin } from "react-loader-spinner";
 import { useGetProductByIdQuery } from "@/redux/api/products";
 import { addToBasket } from "@/redux/features/basketSlice";
 import RenderIf from "@/shared/components/RenderIf";
-import { Link, useParams } from "react-router-dom";
+import { Link, Navigate, useParams } from "react-router-dom";
 import StarRate from "@/shared/components/StarRate";
 import { useDispatch } from "react-redux";
 import { urls } from "@/shared/urls";
@@ -35,7 +35,7 @@ const ProductDetail = () => {
         </div>
       </RenderIf>
       <RenderIf condition={!isFetching && isError}>
-        <h2>{error?.data?.message || "Not api connected"}</h2>
+        <h2>{error?.data?.message || "Not Found"}</h2>
       </RenderIf>
       <RenderIf condition={!isFetching && !isError && product}></RenderIf>
 
@@ -50,7 +50,7 @@ const ProductDetail = () => {
           </Link>
         </div>
         <div className={Styles.productHeadingText}>
-          <h1>Product detail</h1>
+          {product && <h1>Product detail</h1>}
         </div>
         {product?.id && (
           <div

@@ -49,7 +49,11 @@ const Login = () => {
                 { required: true, message: "Please input your Username!" },
               ]}
             >
-              <Input prefix={<UserOutlined />} placeholder="Username" />
+              <Input
+                prefix={<UserOutlined />}
+                placeholder="Username"
+                autoComplete="off"
+              />
             </Form.Item>
             <Form.Item
               name="password"
@@ -61,6 +65,7 @@ const Login = () => {
                 prefix={<LockOutlined />}
                 type="password"
                 placeholder="Password"
+                autoComplete="off"
               />
             </Form.Item>
             <Form.Item>

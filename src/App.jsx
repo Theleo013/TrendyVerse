@@ -4,7 +4,7 @@ import {
   createRoutesFromElements,
   Route,
 } from "react-router-dom";
-import { urls } from "./shared/urls";
+import { urls } from "@/shared/urls";
 import { RouterProvider } from "react-router";
 import Home from "@/pages/Home";
 import Layout from "@/shared/Layout";
@@ -19,7 +19,9 @@ import ProductDetail from "@/pages/ProductDetail";
 import About from "@/pages/About";
 import Contact from "@/pages/Contact";
 import ProtectedRoute from "@/shared/components/ProtectedRoute";
-import CategoryPage from "./pages/CategoryPage";
+import CategoryPage from "@/pages/CategoryPage";
+import PageNotFound from "@/pages/PageNotFound";
+import ProtectedRouteProfile from "@/shared/components/ProtectedRouteProfile";
 
 function App() {
   const router = createBrowserRouter(
@@ -30,20 +32,35 @@ function App() {
           <Route path={urls.BASKET} element={<Basket />} />
           <Route path={urls.CONTACT} element={<Contact />} />
           <Route path={urls.ABOUT} element={<About />} />
-          <Route path={urls.REGISTER} element={<Register />} />
-          <Route path={urls.LOGIN} element={<Login />} />
+          <Route
+            path={urls.REGISTER}
+            element={
+              <ProtectedRoute>
+                <Register />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path={urls.LOGIN}
+            element={
+              <ProtectedRoute>
+                <Login />
+              </ProtectedRoute>
+            }
+          />
           <Route
             path={urls.PROFILE}
             element={
-              <ProtectedRoute>
+              <ProtectedRouteProfile>
                 <Profile />
-              </ProtectedRoute>
+              </ProtectedRouteProfile>
             }
           />
           <Route path={urls.CHECKOUT} element={<Checkout />} />
           <Route path={urls.WISHLIST} element={<Wishlist />} />
           <Route path={urls.PRODUCT_ID} element={<ProductDetail />} />
           <Route path={urls.CATEGORY} element={<CategoryPage />} />
+          <Route path={urls.NOT_fOUND} element={<PageNotFound />} />
         </Route>
       </React.Fragment>
     )

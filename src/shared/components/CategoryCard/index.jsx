@@ -41,7 +41,7 @@ const CategoryCard = ({
           </div>
         </div>
         <div className={Styles.categoryCardImage}>
-          <Link to={urls.PRODUCT_ID}>
+          <Link>
             <img src={image} alt={image} />
           </Link>
         </div>
@@ -58,7 +58,7 @@ const CategoryCard = ({
       </div>
 
       <div className={Styles.productTitleContainer}>
-        <Link to={urls.PRODUCT_ID}>
+        <Link>
           <h3>{title}</h3>
         </Link>
         <Link>
