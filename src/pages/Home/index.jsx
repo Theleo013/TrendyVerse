@@ -1,5 +1,7 @@
-import React from "react";
+import React, { useEffect } from "react";
+import CustomContainer from "@/styles/base/customContainer.module.scss";
 import Styles from "@/pages/Home/home.module.scss";
+import { InfinitySpin } from "react-loader-spinner";
 import HomeSlider from "@/shared/components/Sliders/HomeSlider";
 import ProductCard from "@/shared/components/ProductCard";
 import RenderIf from "@/shared/components/RenderIf";
@@ -8,30 +10,33 @@ import PageTitle from "@/shared/components/PageTitle";
 import CategoryMenu from "@/shared/components/CategoryMenu";
 import { Link } from "react-router-dom";
 import heartIcon from "/assets/icons/heart-icon.svg";
-import viewIcon from "/assets/icons/view-icon.svg";
 import DeliveryCard from "@/shared/components/DeliveryCard";
 
 const Home = () => {
-  const { data, isFetching, isError, error } = useGetProductsQuery();
+  const { data, isFetching, isError, error } = useGetProductsQuery(undefined, {
+    refetchOnMountOrArgChange: false,
+  });
 
   const [showAll, setShowAll] = React.useState(false);
 
-  const filteredDataMain = showAll
-    ? data
-    : data?.filter((item) => item.id >= 1 && item.id <= 4);
+  const filteredDataMain = showAll ? data.slice(0, 16) : data?.slice(0, 4);
 
-  const filteredDataTop = showAll
-    ? data
-    : data?.filter((item) => item.id >= 5 && item.id <= 8);
+  const filteredDataTop = showAll ? data.slice(0, 16) : data?.slice(4, 8);
 
-  const filteredDataExplore = showAll
-    ? data
-    : data?.filter((item) => item.id >= 9 && item.id <= 16);
+  const filteredDataExplore = showAll ? data.slice(0, 16) : data?.slice(8, 16);
 
   return (
     <div className={Styles.homeContainer}>
       <RenderIf condition={isFetching}>
-        <h2>Loading...</h2>
+        <div className={Styles.loadingContainer}>
+          <h2>Loading...</h2>
+          <InfinitySpin
+            visible={true}
+            width="200"
+            color="#4fa94d"
+            ariaLabel="infinity-spin-loading"
+          />
+        </div>
       </RenderIf>
       <RenderIf condition={!isFetching && isError}>
         <h2>{error?.data?.massage || "Not api connected"}</h2>
@@ -45,7 +50,7 @@ const Home = () => {
           <div className={Styles.pageTitle}>
             <PageTitle headingTitle={"Today's"} description={"Flash Sales"} />
           </div>
-          <div className={Styles.productCard}>
+          <div className={`${Styles.productCard} ${CustomContainer.container}`}>
             {filteredDataMain?.map((item) => (
               <ProductCard
                 key={item.id}
@@ -56,7 +61,6 @@ const Home = () => {
                 views={item.views}
                 percent={"50%"}
                 heartIcon={heartIcon}
-                viewIcon={viewIcon}
               />
             ))}
           </div>
@@ -86,7 +90,9 @@ const Home = () => {
                 </button>
               </div>
             </div>
-            <div className={Styles.topSellingContent}>
+            <div
+              className={`${Styles.topSellingContent} ${CustomContainer.container}`}
+            >
               {filteredDataTop?.map((item) => (
                 <ProductCard
                   key={item.id}
@@ -97,12 +103,13 @@ const Home = () => {
                   views={item.views}
                   percent={"60%"}
                   heartIcon={heartIcon}
-                  viewIcon={viewIcon}
                 />
               ))}
             </div>
           </div>
-          <div className={Styles.flashProductContainer}>
+          <div
+            className={`${Styles.flashProductContainer} ${CustomContainer.container}`}
+          >
             <div className={Styles.flashContentContainer}>
               <span>Categories</span>
               <h2>Enhance Your Music Experience</h2>
@@ -123,7 +130,9 @@ const Home = () => {
                 description={"Explore Our Products"}
               />
             </div>
-            <div className={Styles.exploreContent}>
+            <div
+              className={` ${Styles.exploreContent} ${CustomContainer.container}`}
+            >
               {filteredDataExplore?.map((item) => (
                 <ProductCard
                   key={item.id}
@@ -134,7 +143,6 @@ const Home = () => {
                   views={item.views}
                   percent={"30%"}
                   heartIcon={heartIcon}
-                  viewIcon={viewIcon}
                 />
               ))}
             </div>
@@ -151,7 +159,9 @@ const Home = () => {
                 description={"New Arrival"}
               />
             </div>
-            <div className={Styles.newArrivalWrapper}>
+            <div
+              className={`${Styles.newArrivalWrapper} ${CustomContainer.container}`}
+            >
               <div className={Styles.ps5Container}>
                 <h4>PlayStation 5</h4>
                 <p>Black and White version of the PS5 coming out on sale.</p>
@@ -171,7 +181,7 @@ const Home = () => {
                   </div>
                   <div className={Styles.parfume}>
                     <h4>Perfume</h4>
-                    <p>GUCCI INTENSE OUD EDP</p>
+                    <p>Gucci intense oud edp</p>
                     <Link>Shop Now</Link>
                   </div>
                 </div>

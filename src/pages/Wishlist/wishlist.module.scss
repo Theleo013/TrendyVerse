@@ -33,7 +33,7 @@
     }
   }
   .wishlistProducts {
-    @include space(flex, center, center, 20px);
+    @include space(flex, center, center, 50px);
     @include sm {
       @include flexDirection(flex, column, center, 5px);
     }

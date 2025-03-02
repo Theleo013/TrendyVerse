@@ -1,5 +1,6 @@
 import React from "react";
 import Styles from "@/pages/About/about.module.scss";
+import CustomContainer from "@/styles/base/customContainer.module.scss";
 import { Link } from "react-router-dom";
 import { urls } from "@/shared/urls";
 import AboutSlider from "@/shared/components/Sliders/AboutSlider";
@@ -17,7 +18,9 @@ const About = () => {
           About
         </Link>
       </div>
-      <div className={Styles.aboutMainContent}>
+      <div
+        className={`${Styles.aboutMainContent} ${CustomContainer.container}`}
+      >
         <div className={Styles.aboutContentWrapper}>
           <h1>Our Story</h1>
           <p>

@@ -1,1 +1,11 @@
-/*# sourceMappingURL=profile.module.css.map */
+@font-face {
+  font-family: Epilogue-Regular;
+  src: url(/assets/fonts/Epilogue-Regular.ttf);
+}
+.profileContainer {
+  padding: 200px 80px;
+}
+.profileContainer .profileForm {
+  width: 300px;
+  height: auto;
+}/*# sourceMappingURL=profile.module.css.map */

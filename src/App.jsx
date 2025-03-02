@@ -19,6 +19,7 @@ import ProductDetail from "@/pages/ProductDetail";
 import About from "@/pages/About";
 import Contact from "@/pages/Contact";
 import ProtectedRoute from "@/shared/components/ProtectedRoute";
+import CategoryPage from "./pages/CategoryPage";
 
 function App() {
   const router = createBrowserRouter(
@@ -42,6 +43,7 @@ function App() {
           <Route path={urls.CHECKOUT} element={<Checkout />} />
           <Route path={urls.WISHLIST} element={<Wishlist />} />
           <Route path={urls.PRODUCT_ID} element={<ProductDetail />} />
+          <Route path={urls.CATEGORY} element={<CategoryPage />} />
         </Route>
       </React.Fragment>
     )

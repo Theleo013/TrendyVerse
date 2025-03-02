@@ -5,13 +5,20 @@
 .headerNav {
   @include space-around;
   border-bottom: $br-1;
+  position: fixed;
+  z-index: 1000;
+  min-width: 100%;
+  background: $bg-color;
   @include sm {
     @include align(flex, space-between, center);
     padding: $pa-responsive;
     position: relative;
+    height: 200px;
   }
   .headerLogoContainer {
     @include sm {
+      position: absolute;
+      top: 28px;
     }
     img {
       @include sm {
@@ -26,6 +33,15 @@
         display: flex;
       }
     }
+    .searchMenuContainer {
+      display: none;
+    }
+    @include sm {
+      .searchMenuContainer {
+        display: flex;
+        align-items: center;
+      }
+    }
   }
   .headerList {
     @include sm {
@@ -33,6 +49,8 @@
     }
     ul {
       @include flex-space(flex, center, 30px);
+      font-family: Epilogue-Regular;
+
       li {
         a {
           @include sm {
@@ -64,61 +82,83 @@
         right: 4%;
       }
     }
-    .headerBasketIcons {
-      @include flex-space(flex, center, 30px);
+    .headerIcons {
+      @include flex-space(flex, center, 50px);
       position: relative;
       @include sm {
         position: absolute;
-        top: 64px;
-        right: 30px;
+        top: 66px;
+        right: 10px;
+      }
+      @include xs {
+        @include flexDirection(flex, column, center, 15px);
+        position: absolute;
+        top: 70px;
+        right: 18px;
       }
 
       a {
-        display: flex;
+        @include flex-space(flex, center, 20px);
       }
       img {
         @include sm {
           @include w-h(25px, 25px);
         }
       }
-      .wishlistCount {
-        @include w-h(20px, 23px);
-        border-radius: 50%;
-        background: rgb(219, 47, 17);
-
+      .wishlistIcon {
         position: absolute;
-        top: -13px;
-        left: 13px;
-        span {
-          position: absolute;
-          top: 2px;
-          right: 6px;
+        .wishlistCount {
+          @include flex-center;
+          @include w-h(20px, 23px);
+          border-radius: 50%;
+          background: rgb(219, 47, 17);
           color: $bg-color;
-          font-size: $fs-md;
+          position: absolute;
+          top: -13px;
+          right: 0px;
+          span {
+            position: absolute;
+            top: 2px;
+            right: 6px;
+            color: $bg-color;
+            font-size: $fs-md;
+          }
         }
       }
-      .basketCount {
-        @include w-h(20px, 23px);
-        border-radius: 50%;
-        background: rgb(219, 47, 17);
-
+      .basketIcon {
         position: absolute;
-        top: -13px;
-        right: 0px;
-        // .bgGreen {
-        //   background: rgb(17, 105, 219);
-        // }
-        // .bgRed {
-        // }
-
-        span {
-          position: absolute;
-          top: 2px;
-          right: 6px;
+        .basketCount {
+          @include flex-center;
+          @include w-h(20px, 23px);
+          border-radius: 50%;
+          background: rgb(219, 47, 17);
           color: $bg-color;
-          font-size: $fs-md;
+          position: absolute;
+          top: -13px;
+          right: 0px;
+          @include sm {
+            position: absolute;
+            top: -13px;
+            right: 53px;
+          }
+          @include xs {
+            position: absolute;
+            top: 22px;
+            right: -8px;
+          }
+
+          span {
+            position: absolute;
+            top: 2px;
+            right: 6px;
+            color: $bg-color;
+            font-size: $fs-md;
+          }
         }
       }
     }
+    // .profileMenu{
+
+    // }
   }
 }

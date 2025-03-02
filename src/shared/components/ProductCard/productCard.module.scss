@@ -41,9 +41,13 @@
           img {
             @include sm {
               @include w-h(20px, 20px);
+              .changeColor {
+                fill: red;
+              }
             }
           }
         }
+
         @include flexDirection(flex, column, end, 8px);
 
         a {
@@ -104,6 +108,8 @@
     a {
       color: $primary-color;
       font-size: $fs-lg;
+      font-family: Epilogue-Regular;
+      font-weight: 700;
       @include sm {
         font-size: $fs-md;
       }

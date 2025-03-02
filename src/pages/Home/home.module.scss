@@ -10,6 +10,9 @@
   // .sliderContainer {
   //   display: flex;
   // }
+  .loadingContainer {
+    @include flex-space(flex, center, 30px);
+  }
 
   .ProductCardContainer {
     @include flexDirection(flex, column, center, 30px);
@@ -36,8 +39,15 @@
         background-color: $span-color;
         border-radius: $br-s;
         color: $bg-color;
+        font-family: Epilogue-Regular;
+        font-size: $fs-md;
+
         border: none;
         cursor: pointer;
+        @include sm {
+          @include w-h(150px, 46px);
+          font-size: $fs-xs;
+        }
       }
     }
     .categoryMenu {
@@ -59,12 +69,17 @@
 
       .topSellingTitle {
         @include align(flex, space-between, center);
+        @include sm {
+          @include flexDirection(flex, column, start, 20px);
+          flex-wrap: wrap;
+        }
       }
       .topSellingContent {
-        @include align(flex, space-between, center);
+        @include space(flex, space-between, center, 20px);
+        padding-bottom: 30px;
+        overflow-y: auto;
         @include sm {
           @include align(flex, center, center);
-
           flex-wrap: wrap;
         }
       }
@@ -140,6 +155,7 @@
       .exploreContent {
         @include align(flex, space-between, center);
         flex-wrap: wrap;
+
         @include sm {
           @include align(flex, center, center);
           flex-wrap: wrap;
@@ -162,7 +178,7 @@
         left: 0;
       }
       .newArrivalWrapper {
-        @include align(flex, space-between, center);
+        @include space(flex, space-between, center, 30px);
         @include sm {
           @include space(flex, center, center, 10px);
           flex-wrap: wrap;

@@ -21,26 +21,28 @@ const Profile = () => {
         bordered={false}
         className={Styles.profileCard}
       >
-        <Form
-          layout="vertical"
-          initialValues={{
-            username: user?.username || "",
-            email: user?.email || "",
-          }}
-          onFinish={onFinish}
-        >
-          <Form.Item label="Username" name="username">
-            <Input />
-          </Form.Item>
-          <Form.Item label="Email" name="email">
-            <Input disabled />
-          </Form.Item>
-          <Form.Item>
-            <Button type="primary" htmlType="submit">
-              Save Changes
-            </Button>
-          </Form.Item>
-        </Form>
+        <div className={Styles.profileForm}>
+          <Form
+            layout="vertical"
+            initialValues={{
+              username: user?.username || "",
+              email: user?.email || "",
+            }}
+            onFinish={onFinish}
+          >
+            <Form.Item label="Username" name="username">
+              <Input />
+            </Form.Item>
+            <Form.Item label="Email" name="email">
+              <Input disabled />
+            </Form.Item>
+            <Form.Item>
+              <Button type="primary" htmlType="submit">
+                Save Changes
+              </Button>
+            </Form.Item>
+          </Form>
+        </div>
       </Card>
     </div>
   );

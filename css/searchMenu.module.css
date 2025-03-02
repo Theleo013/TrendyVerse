@@ -1,0 +1,77 @@
+@font-face {
+  font-family: Epilogue-Regular;
+  src: url(/assets/fonts/Epilogue-Regular.ttf);
+}
+.searchMenu {
+  position: absolute;
+  top: 7em;
+  left: 4px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 2rem;
+  height: 22px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 10;
+}
+.searchMenu:focus {
+  outline: none;
+}
+.searchMenu .searchMenuIcon img {
+  width: 30px;
+  height: 30px;
+}
+.searchMenu .line {
+  width: 23px;
+  height: 2px;
+  background: black;
+  border-radius: 10px;
+  transition: all 0.3s linear;
+  position: relative;
+  transform-origin: 1px;
+}
+.searchMenu.open .line:first-child {
+  transform: rotate(45deg);
+}
+.searchMenu.open .line:nth-child(2) {
+  opacity: 0;
+  transform: translateX(20px);
+}
+.searchMenu.open .line:nth-child(3) {
+  transform: rotate(-45deg);
+}
+
+.menu {
+  position: absolute;
+  width: 240px;
+  top: 122px;
+  left: 60px;
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+  transform: translateX(-200%);
+  transition: transform 0.3s ease-in-out;
+}
+@media (max-width: 368px) {
+  .menu {
+    position: absolute;
+    left: 50px;
+  }
+}
+.menu.open {
+  transform: translateX(0);
+}
+.menu a {
+  font-size: 14px;
+  font-weight: normal;
+  font-family: Epilogue-Regular;
+  text-decoration: none;
+  color: black;
+  transition: color 0.3s linear;
+}
+.menu a:hover {
+  color: rgb(252, 163, 17);
+}/*# sourceMappingURL=searchMenu.module.css.map */

@@ -3,13 +3,16 @@
 @use "../../styles/partials/variables" as *;
 
 .aboutContainer {
-  // @include flexDirection(flex, column, center, 50px);
+  @include flexDirection(flex, column, center, 50px);
   padding: $pa-page;
+  position: relative;
   @include sm {
     padding: $pa-responsive;
   }
   .aboutNavigateLinks {
     @include flex-space(flex, start, 20px);
+    position: absolute;
+    left: 100px;
 
     .linkToHome {
       color: $link-color;
@@ -23,7 +26,7 @@
     }
   }
   .aboutMainContent {
-    @include align(flex, space-between, center);
+    @include space(flex, space-between, center, 20px);
     margin: $ma-page2;
     @include sm {
       @include flexDirection(flex, column, center, 10px);

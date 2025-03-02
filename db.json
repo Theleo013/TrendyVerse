@@ -3,7 +3,7 @@
     {
       "id": "1",
       "image": "/assets/images/products/HavitJoystick.png",
-      "title": "HAVITHV-G92Gamepad",
+      "title": "HAVITHV-G92 Gamepad",
       "desc": "Reliable 3D ergonomic design with built-in motors for dual vibration",
       "price": "120",
       "views": "88"
@@ -11,7 +11,7 @@
     {
       "id": "2",
       "image": "/assets/images/products/Ak900Keyboard.png",
-      "title": "AK-900WiredKeyboard",
+      "title": "AK-900 Wired Keyboard",
       "desc": "This iMICE AK-900 has 104 keys, 100mA with DC 5V voltage. It is one of the perfect choices for gaming at a reasonable price",
       "price": "960",
       "views": "75"
@@ -19,7 +19,7 @@
     {
       "id": "3",
       "image": "/assets/images/products/IpsMonitor.png",
-      "title": "IPSLCDGamingMonitor",
+      "title": "IPS LCD Gaming Monitor",
       "desc": "IPS (In-Plane Switching) is a type of LCD panel technology known for its ability to deliver exceptional color accuracy, wide viewing angles, and consistent image quality",
       "price": "370",
       "views": "99"
@@ -27,7 +27,7 @@
     {
       "id": "4",
       "image": "/assets/images/products/Chair.png",
-      "title": "S-SeriesComfortChair",
+      "title": "S-Series Comfort Chair",
       "desc": "Church Chair offers a plush waterfall seat, and a comfort curved foam back that provides your guest with an unmatched sitting experience",
       "price": "375",
       "views": "99"
@@ -35,7 +35,7 @@
     {
       "id": "5",
       "image": "/assets/images/products/NorthCoat.png",
-      "title": "Thenorthcoat",
+      "title": "Thenorth coat",
       "desc": "CHRONICLES JACKET & BOILERSUIT are designed for everyday journeys, in extraordinary colour",
       "price": "260",
       "views": "66"
@@ -43,7 +43,7 @@
     {
       "id": "6",
       "image": "/assets/images/products/GucciBag.png",
-      "title": "Guccidufflebag",
+      "title": "Gucci duffle bag",
       "desc": "small or medium-sized, made of leather, canvas, and suede, and feature zippered compartments and metal locks or magnetic snap closures",
       "price": "960",
       "views": "65"
@@ -51,7 +51,7 @@
     {
       "id": "7",
       "image": "/assets/images/products/RGBCooler.png",
-      "title": "RGBliquidCPUCooler",
+      "title": "RGB liquid CPU Cooler",
       "desc": "A liquid cooling system consists of water blocks, a pump, a radiator, pipes, and optionally a reservoir",
       "price": "160",
       "views": "68"
@@ -59,7 +59,7 @@
     {
       "id": "8",
       "image": "/assets/images/products/BookSeif.png",
-      "title": "SmallBookSelf",
+      "title": "Small Book Self",
       "desc": "A bookcase, or bookshelf, is a piece of furniture with horizontal shelves, often in a cabinet, used to store books or other printed materials",
       "price": "360",
       "views": "42"
@@ -67,7 +67,7 @@
     {
       "id": "9",
       "image": "/assets/images/products/DogFood.png",
-      "title": "BreedDryDogFood",
+      "title": "Breed Dry Dog Food",
       "desc": "Kibble, in simple terms, is dog food containing meat, grains, and vegetables that are dried and reshaped into small pellet-sized pieces",
       "price": "100",
       "views": "35"
@@ -75,7 +75,7 @@
     {
       "id": "10",
       "image": "/assets/images/products/CanonCamera.png",
-      "title": "CANONEOSDSLRCamera",
+      "title": "CANON EOS DSLR Camera",
       "desc": "Canon EOS (Electro-Optical System) is an autofocus single-lens reflex camera (SLR) and mirrorless camera series produced by Canon Inc",
       "price": "360",
       "views": "120"
@@ -83,7 +83,7 @@
     {
       "id": "11",
       "image": "/assets/images/products/AsusLaptop.png",
-      "title": "ASUSFHDGamingLaptop",
+      "title": "ASUS FHD Gaming Laptop",
       "desc": "Asus ROG laptops are generally considered to be very good gaming laptops",
       "price": "700",
       "views": "325"
@@ -91,7 +91,7 @@
     {
       "id": "12",
       "image": "/assets/images/products/Curology.png",
-      "title": "CurologyProductSet",
+      "title": "Curology Product Set",
       "desc": "Curology offers clinically-proven ingredients like topical clindamycin and tretinoin to treat acne, rosacea, and signs of aging",
       "price": "500",
       "views": "145"
@@ -99,7 +99,7 @@
     {
       "id": "13",
       "image": "/assets/images/products/KidsCar.png",
-      "title": "KidsElectricCar",
+      "title": "Kids Electric Car",
       "desc": "Ride on car with 2.4G remote control, 12V battery powered electric car for kids with 3 adjustable speeds, soft start, battery display, music",
       "price": "960",
       "views": "54"
@@ -107,7 +107,7 @@
     {
       "id": "14",
       "image": "/assets/images/products/SoccerCleats.png",
-      "title": "Jr.ZoomSoccerCleats",
+      "title": "Jr.Zoom Soccer Cleats",
       "desc": "Designed for natural and synthetic surfaces, conical studs offer supercharged traction with quick release and pivoting",
       "price": "1160",
       "views": "35"
@@ -115,7 +115,7 @@
     {
       "id": "15",
       "image": "/assets/images/products/GP11Gamepad.png",
-      "title": "GP11ShooterUSBGamepad",
+      "title": "GP11 Shooter USB Gamepad",
       "desc": "For PC / PS3- Ergonomic shape & weight favored by esports athletes- Feel Comfortable in your hands for hours of gaming- Vibration feedback gives you a riveting gaming experience USB Wired Game Controller",
       "price": "660",
       "views": "132"
@@ -123,7 +123,7 @@
     {
       "id": "16",
       "image": "/assets/images/products/SatinJacket.png",
-      "title": "QuiltedSatinJacket",
+      "title": "Quilted Satin Jacket",
       "desc": "A waist-length or hip-length coat filled with a thick soft material, usually sewn into diamond-shaped sections",
       "price": "660",
       "views": "38"
@@ -139,7 +139,7 @@
     {
       "id": "18",
       "image": "/assets/images/products/GucciParfum.png",
-      "title": "Gucci Guilty Parfum90ml",
+      "title": "Gucci Guilty Parfum 90ml",
       "desc": "When it comes to the smell of Gucci Guilty, it's interesting. It's a kind of mix of something you'd wear in the day and also the night. It has a lemon twist which gives it citrus vibes, slightly floral and also has a soft woody smell to it",
       "price": "183",
       "views": "76"
@@ -177,6 +177,166 @@
       "views": "537"
     }
   ],
+
+  "categories": {
+    "phones": [
+      {
+        "id": "1",
+        "image": "/assets/images/sliderImage/iphone16.png",
+        "title": "Iphone 16",
+        "desc": "The versatile new iPhone 16 camera system captures beautiful photos — from up close or far away",
+        "price": "1200",
+        "views": "812"
+      },
+      {
+        "id": "2",
+        "image": "/assets/images/sliderImage/samsungs25.png",
+        "title": "Samsung s25",
+        "desc": "The Samsung Galaxy S25 comes with 6.2-inch display with 120Hz refresh rate and Qualcomm Snapdragon 8 Elite processor",
+        "price": "800",
+        "views": "749"
+      },
+      {
+        "id": "3",
+        "image": "/assets/images/sliderImage/xiaomi15.png",
+        "title": "Xiaomi 14",
+        "desc": "The Xiaomi 14 Ultra is among the best camera phones we've ever tested, and as Xiaomi phones go, it's the best model overall",
+        "price": "700",
+        "views": "972"
+      }
+    ],
+    "computers": [
+      {
+        "id": "1",
+        "image": "/assets/images/sliderImage/lenovo15.png",
+        "title": "Lenovo Thinkpad 15",
+        "desc": "ThinkPad laptops are often lightweight, portable, and have a long battery life",
+        "price": "930",
+        "views": "537"
+      },
+      {
+        "id": "2",
+        "image": "/assets/images/categoryImages/ZenBook.jpg",
+        "title": "Asus ZenBook S 14",
+        "desc": "The Asus Zenbook S 14 is one of the few laptops powered by a Lunar Lake chip",
+        "price": "990",
+        "views": "243"
+      },
+      {
+        "id": "3",
+        "image": "/assets/images/products/AsusLaptop.png",
+        "title": "Asus FHD Gaming",
+        "desc": "Asus ROG laptops are generally considered to be very good gaming laptops",
+        "price": "700",
+        "views": "325"
+      }
+    ],
+    "smartWatches": [
+      {
+        "id": "1",
+        "image": "/assets/images/categoryImages/HW20.jpg",
+        "title": "Smart Watch HW20 Pro",
+        "desc": "HW20 Smart Watch offers IP68 waterproof, round design, and men's styles. Track heart rate, sleep, and get call reminders",
+        "price": "81",
+        "views": "837"
+      },
+      {
+        "id": "2",
+        "image": "/assets/images/categoryImages/T800.jpg",
+        "title": "Smart Watch T800 Ultra",
+        "desc": "The T800 Ultra Smart Watch is a multifunctional personal assistant made to simplify tasks in addition to being a tool for remaining connected and in shape",
+        "price": "12",
+        "views": "381"
+      },
+      {
+        "id": "3",
+        "image": "/assets/images/categoryImages/X7-Pro.jpg",
+        "title": "Smart Watch X7 Pro",
+        "desc": "Square Aluminum X7 Pro Smart Watch 45mm Series 7 IP68 Full Waterproof, For Personal Use. X7 Pro Smart Watch Series 7 for Android & iPhone has features design",
+        "price": "12",
+        "views": "381"
+      }
+    ],
+    "cameras": [
+      {
+        "id": "1",
+        "image": "/assets/images/products/CanonCamera.png",
+        "title": "CANON EOS DSLR Camera",
+        "desc": "Canon EOS (Electro-Optical System) is an autofocus single-lens reflex camera (SLR) and mirrorless camera series produced by Canon Inc",
+        "price": "360",
+        "views": "453"
+      },
+      {
+        "id": "2",
+        "image": "/assets/images/categoryImages/Panasonic.jpg",
+        "title": "Panasonic DMC-G7",
+        "desc": "The camera features a 16 MP Live MOS Sensor in combination with a Venus Engine 9 Image Processor. The camera can shoot continuously at up to 8 fps",
+        "price": "764",
+        "views": "620"
+      },
+      {
+        "id": "3",
+        "image": "/assets/images/categoryImages/Canon-EOS.jpg",
+        "title": "Canon EOS M50",
+        "desc": "Discover Canon's EOS M50 4K mirrorless camera. Produce incredible high-resolution, cinematic video footage with a unique look and feel",
+        "price": "990",
+        "views": "204"
+      }
+    ],
+    "headphones": [
+      {
+        "id": "1",
+        "image": "/assets/images/categoryImages/PSHeadPhone.jpg",
+        "title": "Sony PlayStation Gold",
+        "desc": " The Headset from Sony delivers depth and audio clarity, which elevates your gaming experience with customizable game modes created by developers exclusively for PlayStation",
+        "price": "60",
+        "views": "662"
+      },
+      {
+        "id": "2",
+        "image": "/assets/images/categoryImages/CA-037.jpg",
+        "title": "CA-037 Bluetooth Headset",
+        "desc": " Our headset supports 3.5mm AUX IN, allowing you to connect it to various devices for a versatile audio experience. Whether you want to enjoy music, watch movies",
+        "price": "13",
+        "views": "859"
+      },
+      {
+        "id": "3",
+        "image": "/assets/images/categoryImages/Recci-Wired.jpg",
+        "title": "Recci Wired Gaming",
+        "desc": "REP-L19 wired gaming earphone game experience immersive. Comfortable to wear ergonomic design. Plug and pull microphone pole to meet the teams game voice requirements",
+        "price": "130",
+        "views": "572"
+      }
+    ],
+    "gamings": [
+      {
+        "id": "1",
+        "image": "/assets/images/products/ps5Slim.png",
+        "title": "PlayStation 5",
+        "desc": "Experience lightning-fast loading with an ultra-high speed SSD, deeper immersion with support for haptic feedback",
+        "price": "800",
+        "views": "572"
+      },
+      {
+        "id": "2",
+        "image": "/assets/images/products/GP11Gamepad.png",
+        "title": "GP11ShooterUSBGamepad",
+        "desc": "For PC / PS3- Ergonomic shape & weight favored by esports athletes- Feel Comfortable in your hands for hours of gaming",
+        "price": "660",
+        "views": "132"
+      },
+      {
+        "id": "3",
+        "image": "/assets/images/products/HavitJoystick.png",
+        "title": "HAVITHV-G92Gamepad",
+        "desc": "The Havit HV-G92 gamepad allows you to use the familiar layout and buttons to enjoy console control when playing games on your PC",
+        "price": "120",
+        "views": "88"
+      }
+    ]
+  },
+
   "user": [
     {
       "username": "leo",

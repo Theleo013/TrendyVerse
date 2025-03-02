@@ -4,13 +4,15 @@
 
 .productContainer {
   padding: $pa-page;
-  margin: $ma-page;
   @include sm {
     padding: $pa-responsive;
   }
-
+  .loadingContainer {
+    @include flex-space(flex, center, 30px);
+  }
   .prductContentContainer {
     @include flexDirection(flex, column, center, 100px);
+
     position: relative;
     .productNavigateLinks {
       @include flex-space(flex, center, 20px);
@@ -37,6 +39,9 @@
     }
     .productWrapper {
       @include justify(flex, space-evenly);
+      @include sm {
+        @include flexDirection(flex, column, center, 100px);
+      }
       width: 100%;
       padding: $pa-page2;
       @include sm {

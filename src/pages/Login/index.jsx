@@ -4,6 +4,7 @@ import { Button, Form, Input } from "antd";
 import { useNavigate } from "react-router-dom";
 import { useLazyLoginUserQuery } from "@/redux/api/auth";
 import Styles from "@/pages/Login/login.module.scss";
+import CustomContainer from "@/styles/base/customContainer.module.scss";
 import { urls } from "@/shared/urls";
 
 const Login = () => {
@@ -26,7 +27,7 @@ const Login = () => {
   };
 
   return (
-    <div className={Styles.loginContainer}>
+    <div className={`${Styles.loginContainer} ${CustomContainer.container}`}>
       <div className={Styles.loginImage}>
         <img src="/assets/images/products/loginImage.png" alt="login-image" />
       </div>

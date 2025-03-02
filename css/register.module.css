@@ -6,7 +6,7 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
-  padding: 30px 80px;
+  padding: 200px 80px;
 }
 @media (max-width: 475px) {
   .registerContainer {
@@ -44,6 +44,9 @@
 }
 .registerContainer .registerContentContainer .registerContent p {
   font-size: 14px;
+  font-family: Epilogue-Regular;
+}
+.registerContainer .registerlabel {
   font-family: Epilogue-Regular;
 }
 .registerContainer .registerButton {

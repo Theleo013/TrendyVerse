@@ -1,0 +1,10 @@
+@use "../../styles/partials/fonts" as *;
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
+
+.profileContainer {
+  padding: $pa-page;
+  .profileForm {
+    @include w-h(300px, auto);
+  }
+}

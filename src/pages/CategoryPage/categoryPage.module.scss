@@ -1,0 +1,37 @@
+@use "../../styles/partials/fonts" as *;
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
+
+.categoryPageContainer {
+  @include flexDirection(flex, column, center, 50px);
+  position: relative;
+  padding: $pa-page;
+  @include sm {
+    padding: $pa-responsive;
+  }
+  .loadingContainer {
+    @include flex-space(flex, center, 30px);
+  }
+  .categoryNavigateLinks {
+    @include flex-space(flex, center, 20px);
+    position: absolute;
+    left: 200px;
+    .categoryLinkHome {
+      color: $link-color;
+      font-family: Epilogue-Regular;
+      font-size: $fs-md;
+    }
+    .categoryLinkProduct {
+      color: $primary-color;
+      font-family: Epilogue-Regular;
+      font-size: $fs-md;
+    }
+  }
+  .categoryCardContainer {
+    @include align(flex, space-evenly, center);
+    margin: $ma-l 0;
+    @include sm {
+      @include flexDirection(flex, column, center, 10px);
+    }
+  }
+}

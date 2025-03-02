@@ -1,0 +1,53 @@
+@font-face {
+  font-family: Epilogue-Regular;
+  src: url(/assets/fonts/Epilogue-Regular.ttf);
+}
+.categoryPageContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+  position: relative;
+  padding: 200px 80px;
+}
+@media (max-width: 475px) {
+  .categoryPageContainer {
+    padding: 25px 15px;
+  }
+}
+.categoryPageContainer .loadingContainer {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+.categoryPageContainer .categoryNavigateLinks {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  position: absolute;
+  left: 200px;
+}
+.categoryPageContainer .categoryNavigateLinks .categoryLinkHome {
+  color: rgb(163, 161, 161);
+  font-family: Epilogue-Regular;
+  font-size: 16px;
+}
+.categoryPageContainer .categoryNavigateLinks .categoryLinkProduct {
+  color: rgb(9, 8, 8);
+  font-family: Epilogue-Regular;
+  font-size: 16px;
+}
+.categoryPageContainer .categoryCardContainer {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 32px 0;
+}
+@media (max-width: 475px) {
+  .categoryPageContainer .categoryCardContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+}/*# sourceMappingURL=categoryPage.module.css.map */

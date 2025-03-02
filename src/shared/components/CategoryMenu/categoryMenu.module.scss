@@ -5,6 +5,7 @@
 .categoryMenuContainer {
   @include flex-space(flex, center, 20px);
   @include sm {
+    @include flexDirection(flex, column, center, null);
     flex-wrap: wrap;
   }
   justify-content: space-between;
@@ -13,8 +14,8 @@
     @include flexMulti(flex, column, center, center, center, 20px);
     border: $br-6;
     background-color: transparent;
-    a {
-    }
+    /* a {
+    } */
     // img {
     // }
     h4 {

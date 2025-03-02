@@ -1,4 +1,14 @@
 @font-face {
   font-family: Epilogue-Regular;
   src: url(/assets/fonts/Epilogue-Regular.ttf);
+}
+@media (max-width: 475px) {
+  .searchBar .searchInput {
+    width: 300px;
+    height: 30px;
+  }
+  .searchBar .searchButton {
+    width: 30px;
+    height: 30px;
+  }
 }/*# sourceMappingURL=searchBar.module.css.map */

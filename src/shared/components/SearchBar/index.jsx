@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import Styles from "@/shared/components/SearchBar/searchBar.module.scss";
 import { AutoComplete, Input, Button } from "antd";
 import { useLazySearchProductsQuery } from "@/redux/api/products";
 import { useNavigate } from "react-router-dom";
@@ -39,7 +40,10 @@ const SearchBar = () => {
   };
 
   return (
-    <div style={{ display: "flex", alignItems: "center", gap: "8px" }}>
+    <div
+      className={Styles.searchBar}
+      style={{ display: "flex", alignItems: "center", gap: "8px" }}
+    >
       <AutoComplete
         popupMatchSelectWidth={252}
         style={{ flex: 1 }}
@@ -52,6 +56,7 @@ const SearchBar = () => {
         filterOption={false}
       >
         <Input
+          className={Styles.searchInput}
           size="large"
           placeholder="Search products..."
           onPressEnter={handleSearchButtonClick}
@@ -59,6 +64,7 @@ const SearchBar = () => {
         />
       </AutoComplete>
       <Button
+        className={Styles.searchButton}
         type="primary"
         size="large"
         icon={<SearchOutlined />}

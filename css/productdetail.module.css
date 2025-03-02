@@ -3,13 +3,17 @@
   src: url(/assets/fonts/Epilogue-Regular.ttf);
 }
 .productContainer {
-  padding: 30px 80px;
-  margin: 50px 0;
+  padding: 200px 80px;
 }
 @media (max-width: 475px) {
   .productContainer {
     padding: 25px 15px;
   }
+}
+.productContainer .loadingContainer {
+  display: flex;
+  align-items: center;
+  gap: 30px;
 }
 .productContainer .prductContentContainer {
   display: flex;
@@ -46,6 +50,14 @@
   justify-content: space-evenly;
   width: 100%;
   padding: 50px 100px;
+}
+@media (max-width: 475px) {
+  .productContainer .prductContentContainer .productWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 100px;
+  }
 }
 @media (max-width: 475px) {
   .productContainer .prductContentContainer .productWrapper {

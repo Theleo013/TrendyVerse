@@ -2,6 +2,7 @@ import React from "react";
 import { Form, Input, Button } from "antd";
 import { Link, useNavigate } from "react-router-dom";
 import Styles from "@/pages/Register/register.module.scss";
+import CustomContainer from "@/styles/base/customContainer.module.scss";
 import { urls } from "@/shared/urls";
 import { useRegisterUserMutation } from "@/redux/api/auth";
 
@@ -46,7 +47,7 @@ const Register = () => {
   };
 
   return (
-    <div className={Styles.registerContainer}>
+    <div className={`${Styles.registerContainer} ${CustomContainer.container}`}>
       <div className={Styles.registerImage}>
         <img src="/assets/images/products/loginImage.png" alt="login-image" />
       </div>
@@ -66,7 +67,7 @@ const Register = () => {
           >
             <Form.Item
               name="username"
-              label="Username"
+              label={<span className={Styles.registerlabel}>Username</span>}
               rules={[
                 { required: true, message: "Please input your username!" },
               ]}
@@ -76,7 +77,7 @@ const Register = () => {
 
             <Form.Item
               name="email"
-              label="E-mail"
+              label={<span className={Styles.registerlabel}>Email</span>}
               rules={[{ required: true, message: "Please input your E-mail!" }]}
             >
               <Input />
@@ -84,7 +85,7 @@ const Register = () => {
 
             <Form.Item
               name="password"
-              label="Password"
+              label={<span className={Styles.registerlabel}>Password</span>}
               rules={[
                 { required: true, message: "Please input your password!" },
               ]}
@@ -93,7 +94,9 @@ const Register = () => {
             </Form.Item>
             <Form.Item
               name="confirm"
-              label="Confirm Password"
+              label={
+                <span className={Styles.registerlabel}>Confirm Password</span>
+              }
               dependencies={["password"]}
               hasFeedback
               rules={[

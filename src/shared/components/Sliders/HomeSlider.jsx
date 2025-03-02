@@ -22,7 +22,7 @@ const HomeSlider = () => {
             <div key={product.id}>
               <div className={Styles.contentStyle}>
                 <div className={Styles.productTitle}>
-                  <h3>{product.name}</h3>
+                  <h3>{product.title}</h3>
                 </div>
                 <div className={Styles.imageContainer}>
                   <img src={product.image} alt={product.name} />

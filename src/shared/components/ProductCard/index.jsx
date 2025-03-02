@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import { addToBasket } from "@/redux/features/basketSlice";
 import { useDispatch } from "react-redux";
 import { addToWishlist } from "@/redux/features/wishlistSlice";
-
+import heartRedIcon from "/assets/icons/heartRed-icon.svg";
 const ProductCard = ({
   image,
   title,
@@ -19,6 +19,7 @@ const ProductCard = ({
   customIcons,
 }) => {
   const dispatch = useDispatch();
+  const [isLiked, setIsLiked] = React.useState(false);
   return (
     <div className={Styles.cardContainer}>
       <div className={Styles.contentContainer}>
@@ -30,14 +31,11 @@ const ProductCard = ({
             <button
               onClick={() => {
                 dispatch(addToWishlist({ image, title, price, views, id }));
-                e.stopPropagation();
+                setIsLiked(!isLiked);
               }}
             >
-              <img src={heartIcon} alt="heart-icon" />
+              <img src={isLiked ? heartRedIcon : heartIcon} alt="heart-icon" />
             </button>
-            <Link>
-              <img src={viewIcon} alt="view-icon" />
-            </Link>
           </div>
         </div>
         <div className={Styles.cardImage}>

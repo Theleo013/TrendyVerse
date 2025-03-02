@@ -3,7 +3,7 @@
   src: url(/assets/fonts/Epilogue-Regular.ttf);
 }
 .contactContainer {
-  padding: 30px 80px;
+  padding: 200px 80px;
 }
 @media (max-width: 475px) {
   .contactContainer {

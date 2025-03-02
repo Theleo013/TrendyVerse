@@ -70,6 +70,9 @@
     width: 20px;
     height: 20px;
   }
+  .cardContainer .contentContainer .percentIconsContainer .cardIcons button img .changeColor {
+    fill: red;
+  }
 }
 .cardContainer .contentContainer .percentIconsContainer .cardIcons a {
   width: 34px;
@@ -144,6 +147,8 @@
 .cardContainer .productTitleContainer a {
   color: rgb(9, 8, 8);
   font-size: 18px;
+  font-family: Epilogue-Regular;
+  font-weight: 700;
 }
 @media (max-width: 475px) {
   .cardContainer .productTitleContainer a {

@@ -5,6 +5,7 @@ import { productsApi } from "@/redux/api/products";
 import { authApi } from "@/redux/api/auth";
 import { checkoutApi } from "@/redux/api/checkoutApi";
 import { contactApi } from "@/redux/api/contact";
+import { categoryApi } from "@/redux/api/categoryApi";
 
 export const reducer = {
   basket: basketReducer,
@@ -15,6 +16,7 @@ export const reducer = {
   [authApi.reducerPath]: authApi.reducer,
   [checkoutApi.reducerPath]: checkoutApi.reducer,
   [contactApi.reducerPath]: contactApi.reducer,
+  [categoryApi.reducerPath]: categoryApi.reducer,
 };
 
 export const middlewares = [
@@ -22,4 +24,5 @@ export const middlewares = [
   authApi.middleware,
   checkoutApi.middleware,
   contactApi.middleware,
+  categoryApi.middleware,
 ];

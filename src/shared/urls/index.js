@@ -9,4 +9,5 @@ export const urls = {
   CHECKOUT: "/checkout",
   WISHLIST: "/wishlist",
   PRODUCT_ID: "/product/:id",
+  CATEGORY: "/category/:categoryName",
 };

@@ -1,5 +1,6 @@
 import React from "react";
 import Styles from "@/pages/Contact/contact.module.scss";
+import CustomContainer from "@/styles/base/customContainer.module.scss";
 import { Button, Form, Input, Select, Spin } from "antd";
 import { Link } from "react-router-dom";
 import { urls } from "@/shared/urls";
@@ -10,7 +11,6 @@ const Contact = () => {
 
   const { Option } = Select;
 
-  // Ant Design form hook'u ile form nesnesini oluşturuyoruz
   const [form] = Form.useForm();
 
   const layout = {
@@ -27,7 +27,6 @@ const Contact = () => {
   };
 
   const onFinish = (values) => {
-    // Contact form submission logic
     contactForm(values)
       .then((res) => {
         console.log("Form successfully submitted: ", res);
@@ -60,7 +59,9 @@ const Contact = () => {
           About
         </Link>
       </div>
-      <div className={Styles.contactContentContainer}>
+      <div
+        className={`${Styles.contactContentContainer} ${CustomContainer.container}`}
+      >
         <div className={Styles.contactCommunication}>
           <div className={Styles.contactUsWrapper}>
             <div className={Styles.contactIcon}>

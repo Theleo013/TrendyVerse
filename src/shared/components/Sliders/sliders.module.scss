@@ -4,6 +4,7 @@
 
 .contentStyle {
   @include flexMulti(flex, column, center, center, center, null);
+  margin-top: 100px;
   height: 550px;
   color: #fff;
   line-height: 160px;

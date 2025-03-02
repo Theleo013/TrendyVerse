@@ -3,9 +3,10 @@ import Styles from "@/shared/components/Header/header.module.scss";
 import { Link } from "react-router-dom";
 import { urls } from "@/shared/urls";
 import { useSelector } from "react-redux";
-import MenuBar from "../MenuBar";
 import ProfileMenu from "../ProfileMenu";
 import SearchBar from "../SearchBar";
+import BurgerMenu from "../BurgerMenu";
+import SearchMenu from "../SearchMenu";
 
 const Header = () => {
   const { basket } = useSelector((state) => state.basket);
@@ -21,7 +22,11 @@ const Header = () => {
             <img src="/assets/main-logo.svg" alt="main-logo" />
           </Link>
           <div className={Styles.menuBar}>
-            <MenuBar />
+            {/* <MenuBar /> */}
+            <BurgerMenu />
+          </div>
+          <div className={Styles.searchMenuContainer}>
+            <SearchMenu />
           </div>
         </div>
         <div className={Styles.headerList}>
@@ -35,40 +40,52 @@ const Header = () => {
             <li>
               <Link to={urls.ABOUT}>About</Link>
             </li>
-            <li>
-              <Link to={urls.REGISTER}>Sign Up</Link>
-            </li>
+            {user ? null : (
+              <li>
+                <Link to={urls.REGISTER}>Sign Up</Link>
+              </li>
+            )}
           </ul>
         </div>
         <div className={Styles.headerContactContainer}>
           <div className={Styles.headerInput}>
             <SearchBar />
           </div>
-          <div className={Styles.headerBasketIcons}>
-            <Link to={urls.WISHLIST}>
-              <img src="/assets/icons/heart-icon.svg" alt="heart-icon" />
-              {wishlist.length > 0 && (
-                <div className={Styles.wishlistCount}>
-                  <span>{wishlist?.length}</span>
-                </div>
-              )}
-            </Link>
-            <Link to={urls.BASKET}>
-              <img src="/assets/icons/cart-icon.svg" alt="cart-icon" />
-
-              {basket.length > 0 && (
-                <div className={Styles.basketCount}>
-                  <span>{basket?.length}</span>
-                </div>
-              )}
-            </Link>
-          </div>
-
-          {user ? (
+          <div className={Styles.headerIcons}>
             <div>
-              <ProfileMenu />
+              <Link to={urls.WISHLIST}>
+                <div
+                  className={Styles.wishlistIcon}
+                  style={user ? { position: "absolute", top: "3px" } : {}}
+                >
+                  <img src="/assets/icons/heart-icon.svg" alt="heart-icon" />
+                  {wishlist.length > 0 && (
+                    <span className={Styles.wishlistCount}>
+                      {wishlist?.length}
+                    </span>
+                  )}
+                </div>
+              </Link>
             </div>
-          ) : null}
+            <div>
+              <Link to={urls.BASKET}>
+                <div
+                  className={Styles.basketIcon}
+                  style={user ? { position: "absolute", top: "3px" } : {}}
+                >
+                  <img src="/assets/icons/cart-icon.svg" alt="cart-icon" />
+                  {basket.length > 0 && (
+                    <span className={Styles.basketCount}>{basket?.length}</span>
+                  )}
+                </div>
+              </Link>
+            </div>
+            {user ? (
+              <div className={Styles.profileMenu}>
+                <ProfileMenu />
+              </div>
+            ) : null}
+          </div>
         </div>
       </nav>
     </header>

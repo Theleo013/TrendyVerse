@@ -24,9 +24,11 @@ const Wishlist = () => {
     <div className={Styles.wishlistContainer}>
       <div className={Styles.sectionHeading}>
         <span>Wishlist ({wishlist.length})</span>
-        <button onClick={() => dispatch(handleMoveAllToBasket)}>
-          Move All To Basket
-        </button>
+        {wishlist.length > 0 && (
+          <button onClick={() => dispatch(handleMoveAllToBasket)}>
+            Move All To Basket
+          </button>
+        )}
       </div>
       <div className={Styles.wishlistProducts}>
         {wishlist?.map((item) => {
@@ -52,9 +54,11 @@ const Wishlist = () => {
         })}
       </div>
       <div className={Styles.wishlistClear}>
-        <button onClick={() => dispatch(clearWishlist(wishlist))}>
-          Clear Wishlist
-        </button>
+        {wishlist.length > 0 && (
+          <button onClick={() => dispatch(clearWishlist(wishlist))}>
+            Clear Wishlist
+          </button>
+        )}
       </div>
     </div>
   );

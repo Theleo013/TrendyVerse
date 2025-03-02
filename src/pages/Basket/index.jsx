@@ -16,14 +16,13 @@ const Basket = () => {
   const { user } = useSelector((state) => state.auth);
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  const userData = user ?? [];
-  console.log("user data Basket:", userData);
+
   useEffect(() => {
     dispatch(getTotals());
   }, [basket]);
 
   const handleCheckout = () => {
-    if (userData) {
+    if (user) {
       navigate(urls.CHECKOUT);
     } else {
       navigate(urls.LOGIN);

@@ -1,0 +1,199 @@
+@font-face {
+  font-family: Epilogue-Regular;
+  src: url(/assets/fonts/Epilogue-Regular.ttf);
+}
+.categoryContainer {
+  width: 360px;
+  height: 480px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border-radius: 8px;
+  margin-top: 50px;
+}
+@media (max-width: 475px) {
+  .categoryContainer {
+    width: 270px;
+    height: 480px;
+  }
+}
+.categoryContainer .categoryContentContainer {
+  width: 360px;
+  height: 480px;
+  background: rgb(245, 245, 245);
+  padding: 10px;
+  position: relative;
+}
+@media (max-width: 475px) {
+  .categoryContainer .categoryContentContainer {
+    width: 270px;
+    height: 480px;
+  }
+}
+.categoryContainer .categoryContentContainer .percentIconsContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+}
+.categoryContainer .categoryContentContainer .percentIconsContainer .cardPercent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgb(247, 247, 247);
+  font-size: 16px;
+  width: 55px;
+  height: 26px;
+  background: rgb(219, 68, 68);
+  border-radius: 8px;
+}
+@media (max-width: 475px) {
+  .categoryContainer .categoryContentContainer .percentIconsContainer .cardPercent {
+    width: 40px;
+    height: auto;
+    font-size: 12px;
+  }
+}
+.categoryContainer .categoryContentContainer .percentIconsContainer .cardIcons {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  gap: 8px;
+}
+.categoryContainer .categoryContentContainer .percentIconsContainer .cardIcons button {
+  width: 34px;
+  height: 34px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background-color: #fff;
+  border: none;
+  cursor: pointer;
+}
+@media (max-width: 475px) {
+  .categoryContainer .categoryContentContainer .percentIconsContainer .cardIcons button {
+    width: 25px;
+    height: 25px;
+  }
+}
+@media (max-width: 475px) {
+  .categoryContainer .categoryContentContainer .percentIconsContainer .cardIcons button img {
+    width: 20px;
+    height: 20px;
+  }
+  .categoryContainer .categoryContentContainer .percentIconsContainer .cardIcons button img .changeColor {
+    fill: red;
+  }
+}
+.categoryContainer .categoryContentContainer .percentIconsContainer .cardIcons a {
+  width: 34px;
+  height: 34px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background-color: #fff;
+}
+@media (max-width: 475px) {
+  .categoryContainer .categoryContentContainer .percentIconsContainer .cardIcons a {
+    display: none;
+  }
+}
+.categoryContainer .categoryContentContainer .categoryCardImage {
+  position: absolute;
+  top: 40px;
+  left: 80px;
+}
+@media (max-width: 475px) {
+  .categoryContainer .categoryContentContainer .categoryCardImage {
+    position: absolute;
+    top: 60px;
+    left: 72px;
+  }
+}
+.categoryContainer .categoryContentContainer .categoryCardImage img {
+  width: 190px;
+  height: 180px;
+  object-fit: contain;
+}
+@media (max-width: 475px) {
+  .categoryContainer .categoryContentContainer .categoryCardImage img {
+    width: 120px;
+    height: 120px;
+  }
+}
+.categoryContainer .categoryContentContainer .cardButton {
+  opacity: 0;
+  transform-origin: bottom;
+  transition: ease 1s;
+  position: absolute;
+  bottom: 0;
+  left: 0px;
+}
+.categoryContainer .categoryContentContainer .cardButton button {
+  width: 360px;
+  height: 41px;
+  background: rgb(9, 8, 8);
+  border: none;
+  color: rgb(247, 247, 247);
+  font-size: 16px;
+  cursor: pointer;
+}
+@media (max-width: 475px) {
+  .categoryContainer .categoryContentContainer .cardButton button {
+    width: 270px;
+    height: 41px;
+    font-size: 12px;
+  }
+}
+.categoryContainer .categoryContentContainer .cardButton:hover {
+  opacity: 1;
+}
+.categoryContainer .productTitleContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  gap: 20px;
+  width: auto;
+  height: 430px;
+  padding: 0 16px;
+}
+.categoryContainer .productTitleContainer a {
+  color: rgb(9, 8, 8);
+  font-family: Epilogue-Regular;
+}
+.categoryContainer .productTitleContainer a h3 {
+  font-size: 24px;
+}
+@media (max-width: 475px) {
+  .categoryContainer .productTitleContainer a h3 {
+    font-size: 16px;
+  }
+}
+.categoryContainer .productTitleContainer a p {
+  font-size: 14px;
+}
+@media (max-width: 475px) {
+  .categoryContainer .productTitleContainer a p {
+    font-size: 12px;
+  }
+}
+.categoryContainer .productTitleContainer .priceContainer {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.categoryContainer .productTitleContainer .priceContainer span {
+  font-size: 16px;
+}
+.categoryContainer .productTitleContainer .rateContainer {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding-left: 2px;
+}
+.categoryContainer .productTitleContainer .rateContainer span {
+  font-size: 16px;
+}/*# sourceMappingURL=categoryCard.module.css.map */

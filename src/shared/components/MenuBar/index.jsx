@@ -14,6 +14,7 @@ import SearchBar from "../SearchBar";
 
 const MenuBar = () => {
   const [collapsed, setCollapsed] = useState(false);
+  const [searchVisible, setSearchVisible] = useState(false);
   const [search, setSearch] = useState("");
   const navigate = useNavigate();
 
@@ -54,15 +55,33 @@ const MenuBar = () => {
     },
     {
       key: "5",
-      label: collapsed ? "" : <SearchBar />,
+      icon: <SearchOutlined />,
+      label: collapsed ? (
+        "Search"
+      ) : searchVisible ? (
+        <Input
+          placeholder="Search..."
+          value={search}
+          onChange={(e) => setSearch(e.target.value)}
+          onPressEnter={handleSearch}
+          style={{
+            width: 200,
+            height: 32,
+            borderRadius: "5px",
+            marginLeft: 8,
+          }}
+        />
+      ) : (
+        "Search"
+      ),
       onClick: () => {
-        if (collapsed) setCollapsed(false);
+        if (!collapsed) setSearchVisible(!searchVisible);
       },
     },
   ];
 
   return (
-    <div style={{ width: collapsed ? 80 : 256 }}>
+    <div style={{ width: "100%" }}>
       <Button
         type="primary"
         onClick={toggleCollapsed}
@@ -78,7 +97,7 @@ const MenuBar = () => {
 
       <Menu
         defaultSelectedKeys={["1"]}
-        mode="inline"
+        mode="horizontal" // YATAY MENÜ
         theme="light"
         inlineCollapsed={collapsed}
         items={menuItems}

@@ -1,9 +1,15 @@
+$xs: 368px;
 $sm: 475px;
 $sm_icon: 476px;
 $md: 768px;
 $lg: 992px;
 $xl: 1200px;
 
+@mixin xs {
+  @media (max-width: $xs) {
+    @content;
+  }
+}
 @mixin sm {
   @media (max-width: $sm) {
     @content;

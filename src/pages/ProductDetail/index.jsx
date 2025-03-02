@@ -1,5 +1,7 @@
 import React from "react";
 import Styles from "@/pages/ProductDetail/productDetail.module.scss";
+import CustomContainer from "@/styles/base/customContainer.module.scss";
+import { InfinitySpin } from "react-loader-spinner";
 import { useGetProductByIdQuery } from "@/redux/api/products";
 import { addToBasket } from "@/redux/features/basketSlice";
 import RenderIf from "@/shared/components/RenderIf";
@@ -22,7 +24,15 @@ const ProductDetail = () => {
   return (
     <div className={Styles.productContainer}>
       <RenderIf condition={isFetching}>
-        <h2>Loading...</h2>
+        <div className={Styles.loadingContainer}>
+          <h2>Loading...</h2>
+          <InfinitySpin
+            visible={true}
+            width="200"
+            color="#4fa94d"
+            ariaLabel="infinity-spin-loading"
+          />
+        </div>
       </RenderIf>
       <RenderIf condition={!isFetching && isError}>
         <h2>{error?.data?.message || "Not api connected"}</h2>
@@ -43,7 +53,9 @@ const ProductDetail = () => {
           <h1>Product detail</h1>
         </div>
         {product?.id && (
-          <div className={Styles.productWrapper}>
+          <div
+            className={`${Styles.productWrapper} ${CustomContainer.container}`}
+          >
             <div className={Styles.productImage}>
               <img src={product.image} alt={product.image} />
             </div>

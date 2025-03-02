@@ -1,0 +1,146 @@
+@use "../../../styles/partials/fonts" as *;
+@use "../../../styles/partials/mixins" as *;
+@use "../../../styles/partials/variables" as *;
+
+.categoryContainer {
+  @include w-h(360px, 480px);
+  @include flexDirection(flex, column, null, 10px);
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border-radius: $br-m;
+  margin-top: 50px;
+  @include sm {
+    @include w-h(270px, 480px);
+  }
+  .categoryContentContainer {
+    @include w-h(360px, 480px);
+    background: $input-color;
+    padding: 10px;
+    position: relative;
+    @include sm {
+      @include w-h(270px, 480px);
+    }
+    .percentIconsContainer {
+      @include align(flex, space-between, start);
+      .cardPercent {
+        @include flex-center;
+        color: $bg-color;
+        font-size: $fs-md;
+        @include w-h(55px, 26px);
+        background: $span-color;
+        border-radius: $br-m;
+        @include sm {
+          @include w-h(40px, auto);
+          font-size: $fs-xs;
+        }
+      }
+      .cardIcons {
+        button {
+          @include w-h(34px, 34px);
+          @include flex-center;
+          border-radius: 50%;
+          background-color: #fff;
+          border: none;
+          cursor: pointer;
+
+          @include sm {
+            @include w-h(25px, 25px);
+          }
+          img {
+            @include sm {
+              @include w-h(20px, 20px);
+              .changeColor {
+                fill: red;
+              }
+            }
+          }
+        }
+
+        @include flexDirection(flex, column, end, 8px);
+
+        a {
+          @include w-h(34px, 34px);
+          @include flex-center;
+          border-radius: 50%;
+          background-color: #fff;
+          @include sm {
+            display: none;
+          }
+        }
+      }
+    }
+    .categoryCardImage {
+      position: absolute;
+      top: 40px;
+      left: 80px;
+      @include sm {
+        position: absolute;
+        top: 60px;
+        left: 72px;
+      }
+      img {
+        @include w-h(190px, 180px);
+        object-fit: contain;
+        @include sm {
+          @include w-h(120px, 120px);
+        }
+      }
+    }
+    .cardButton {
+      opacity: 0;
+      transform-origin: bottom;
+      transition: ease 1s;
+      position: absolute;
+      bottom: 0;
+      left: 0px;
+      button {
+        @include w-h(360px, 41px);
+        background: $primary-color;
+        border: none;
+        color: $bg-color;
+        font-size: $fs-md;
+        cursor: pointer;
+        @include sm {
+          @include w-h(270px, 41px);
+          font-size: $fs-xs;
+        }
+      }
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+  .productTitleContainer {
+    @include flexMulti(flex, column, center, start, null, 20px);
+    @include w-h(auto, 430px);
+    padding: 0 $pa-m;
+    a {
+      color: $primary-color;
+      font-family: Epilogue-Regular;
+      h3 {
+        font-size: $fs-xl;
+        @include sm {
+          font-size: $fs-md;
+        }
+      }
+      p {
+        font-size: $fs-sm;
+        @include sm {
+          font-size: $fs-xs;
+        }
+      }
+    }
+    .priceContainer {
+      @include flex-space(flex, center, 10px);
+      span {
+        font-size: $fs-md;
+      }
+    }
+    .rateContainer {
+      @include flex-space(flex, center, 10px);
+      padding-left: 2px;
+      span {
+        font-size: $fs-md;
+      }
+    }
+  }
+}

@@ -7,6 +7,10 @@
   justify-content: space-around;
   align-items: center;
   border-bottom: 2px solid rgb(224, 224, 224);
+  position: fixed;
+  z-index: 1000;
+  min-width: 100%;
+  background: rgb(247, 247, 247);
 }
 @media (max-width: 475px) {
   .headerNav {
@@ -15,6 +19,13 @@
     align-items: center;
     padding: 25px 15px;
     position: relative;
+    height: 200px;
+  }
+}
+@media (max-width: 475px) {
+  .headerNav .headerLogoContainer {
+    position: absolute;
+    top: 28px;
   }
 }
 @media (max-width: 475px) {
@@ -30,6 +41,15 @@
     display: flex;
   }
 }
+.headerNav .headerLogoContainer .searchMenuContainer {
+  display: none;
+}
+@media (max-width: 475px) {
+  .headerNav .headerLogoContainer .searchMenuContainer {
+    display: flex;
+    align-items: center;
+  }
+}
 @media (max-width: 475px) {
   .headerNav .headerList {
     display: none;
@@ -39,6 +59,7 @@
   display: flex;
   align-items: center;
   gap: 30px;
+  font-family: Epilogue-Regular;
 }
 .headerNav .headerList ul li a {
   color: rgb(9, 8, 8);
@@ -71,54 +92,95 @@
   position: absolute;
   right: 4%;
 }
-.headerNav .headerContactContainer .headerBasketIcons {
+.headerNav .headerContactContainer .headerIcons {
   display: flex;
   align-items: center;
-  gap: 30px;
+  gap: 50px;
   position: relative;
 }
 @media (max-width: 475px) {
-  .headerNav .headerContactContainer .headerBasketIcons {
+  .headerNav .headerContactContainer .headerIcons {
     position: absolute;
-    top: 64px;
-    right: 30px;
+    top: 66px;
+    right: 10px;
   }
 }
-.headerNav .headerContactContainer .headerBasketIcons a {
+@media (max-width: 368px) {
+  .headerNav .headerContactContainer .headerIcons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    position: absolute;
+    top: 70px;
+    right: 18px;
+  }
+}
+.headerNav .headerContactContainer .headerIcons a {
   display: flex;
+  align-items: center;
+  gap: 20px;
 }
 @media (max-width: 475px) {
-  .headerNav .headerContactContainer .headerBasketIcons img {
+  .headerNav .headerContactContainer .headerIcons img {
     width: 25px;
     height: 25px;
   }
 }
-.headerNav .headerContactContainer .headerBasketIcons .wishlistCount {
+.headerNav .headerContactContainer .headerIcons .wishlistIcon {
+  position: absolute;
+}
+.headerNav .headerContactContainer .headerIcons .wishlistIcon .wishlistCount {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 20px;
   height: 23px;
   border-radius: 50%;
   background: rgb(219, 47, 17);
+  color: rgb(247, 247, 247);
   position: absolute;
   top: -13px;
-  left: 13px;
+  right: 0px;
 }
-.headerNav .headerContactContainer .headerBasketIcons .wishlistCount span {
+.headerNav .headerContactContainer .headerIcons .wishlistIcon .wishlistCount span {
   position: absolute;
   top: 2px;
   right: 6px;
   color: rgb(247, 247, 247);
   font-size: 16px;
 }
-.headerNav .headerContactContainer .headerBasketIcons .basketCount {
+.headerNav .headerContactContainer .headerIcons .basketIcon {
+  position: absolute;
+}
+.headerNav .headerContactContainer .headerIcons .basketIcon .basketCount {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 20px;
   height: 23px;
   border-radius: 50%;
   background: rgb(219, 47, 17);
+  color: rgb(247, 247, 247);
   position: absolute;
   top: -13px;
   right: 0px;
 }
-.headerNav .headerContactContainer .headerBasketIcons .basketCount span {
+@media (max-width: 475px) {
+  .headerNav .headerContactContainer .headerIcons .basketIcon .basketCount {
+    position: absolute;
+    top: -13px;
+    right: 53px;
+  }
+}
+@media (max-width: 368px) {
+  .headerNav .headerContactContainer .headerIcons .basketIcon .basketCount {
+    position: absolute;
+    top: 22px;
+    right: -8px;
+  }
+}
+.headerNav .headerContactContainer .headerIcons .basketIcon .basketCount span {
   position: absolute;
   top: 2px;
   right: 6px;

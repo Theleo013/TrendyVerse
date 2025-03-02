@@ -37,11 +37,12 @@ const ProfileMenu = () => {
     },
   ];
 
+  const fontSize = window.innerWidth < 475 ? "25px" : "30px";
   return (
     <Dropdown menu={{ items }} trigger={["click"]}>
       <a onClick={(e) => e.preventDefault()}>
         <Space>
-          <UserOutlined style={{ fontSize: "30px" }} />
+          <UserOutlined style={{ fontSize }} />
         </Space>
       </a>
     </Dropdown>

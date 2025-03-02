@@ -1,5 +1,6 @@
 import React from "react";
 import Styles from "@/pages/Checkout/checkout.module.scss";
+import CustomContainer from "@/styles/base/customContainer.module.scss";
 import { Form, Input, Button, Spin, Alert } from "antd";
 import { useSelector } from "react-redux";
 import { usePerformCheckoutMutation } from "@/redux/api/checkoutApi";
@@ -55,7 +56,9 @@ const Checkout = () => {
       {isSuccess && (
         <Alert message="Checkout successful!" type="success" showIcon />
       )}
-      <div className={Styles.checkoutContentContainer}>
+      <div
+        className={`${Styles.checkoutContentContainer} ${CustomContainer.container}`}
+      >
         <div className={Styles.checkoutFormWrapper}>
           <h1>Checkout</h1>
 

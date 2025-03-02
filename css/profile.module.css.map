@@ -1,1 +1,1 @@
-{"version":3,"sourceRoot":"","sources":[],"names":[],"mappings":"","file":"profile.module.css"}
+{"version":3,"sourceRoot":"","sources":["../src/styles/partials/_fonts.scss","../src/pages/Profile/profile.module.scss","../src/styles/partials/_variables.scss","../src/styles/partials/_mixins.scss"],"names":[],"mappings":"AAAA;EACE;EACA;;ACEF;EACE,SC4BQ;;AD3BR;EEoGA,OFnGe;EEoGf,QFpGsB","file":"profile.module.css"}
