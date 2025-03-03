@@ -3,12 +3,11 @@
 @use "../../../styles/partials/variables" as *;
 
 .categoryMenuContainer {
-  @include flex-space(flex, center, 20px);
+  @include space(flex, space-between, center, 20px);
   @include sm {
     @include flexDirection(flex, column, center, null);
     flex-wrap: wrap;
   }
-  justify-content: space-between;
   .contentWrapper {
     @include w-h(170px, 145px);
     @include flexMulti(flex, column, center, center, center, 20px);

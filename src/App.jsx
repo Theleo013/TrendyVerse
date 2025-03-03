@@ -1,27 +1,28 @@
-import React from "react";
+import React, { lazy, Suspense } from "react";
 import {
   createBrowserRouter,
   createRoutesFromElements,
   Route,
 } from "react-router-dom";
-import { urls } from "@/shared/urls";
 import { RouterProvider } from "react-router";
-import Home from "@/pages/Home";
+import { urls } from "@/shared/urls";
 import Layout from "@/shared/Layout";
-import Basket from "@/pages/Basket";
 import { ToastContainer } from "react-toastify";
-import Register from "@/pages/Register";
-import Login from "@/pages/Login";
-import Profile from "@/pages/Profile";
-import Checkout from "@/pages/Checkout";
-import Wishlist from "@/pages/Wishlist";
-import ProductDetail from "@/pages/ProductDetail";
-import About from "@/pages/About";
-import Contact from "@/pages/Contact";
 import ProtectedRoute from "@/shared/components/ProtectedRoute";
-import CategoryPage from "@/pages/CategoryPage";
-import PageNotFound from "@/pages/PageNotFound";
 import ProtectedRouteProfile from "@/shared/components/ProtectedRouteProfile";
+
+const Home = lazy(() => import("@/pages/Home"));
+const Contact = lazy(() => import("@/pages/Contact"));
+const About = lazy(() => import("@/pages/About"));
+const Basket = lazy(() => import("@/pages/Basket"));
+const Register = lazy(() => import("@/pages/Register"));
+const Login = lazy(() => import("@/pages/Login"));
+const Profile = lazy(() => import("@/pages/Profile"));
+const Checkout = lazy(() => import("@/pages/Checkout"));
+const Wishlist = lazy(() => import("@/pages/Wishlist"));
+const ProductDetail = lazy(() => import("@/pages/ProductDetail"));
+const CategoryPage = lazy(() => import("@/pages/CategoryPage"));
+const PageNotFound = lazy(() => import("@/pages/PageNotFound"));
 
 function App() {
   const router = createBrowserRouter(
@@ -67,7 +68,9 @@ function App() {
   );
   return (
     <React.Fragment>
-      <RouterProvider router={router} />
+      <Suspense fallback={null}>
+        <RouterProvider router={router} />
+      </Suspense>
       <ToastContainer />
     </React.Fragment>
   );

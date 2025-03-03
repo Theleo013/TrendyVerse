@@ -22,7 +22,6 @@ const Header = () => {
             <img src="/assets/main-logo.svg" alt="main-logo" />
           </Link>
           <div className={Styles.menuBar}>
-            {/* <MenuBar /> */}
             <BurgerMenu />
           </div>
           <div className={Styles.searchMenuContainer}>
@@ -56,7 +55,7 @@ const Header = () => {
               <Link to={urls.WISHLIST}>
                 <div
                   className={Styles.wishlistIcon}
-                  style={user ? { position: "absolute", top: "3px" } : {}}
+                  // style={user ? { position: "absolute", top: "3px" } : {}}
                 >
                   <img src="/assets/icons/heart-icon.svg" alt="heart-icon" />
                   {wishlist.length > 0 && (
@@ -71,7 +70,7 @@ const Header = () => {
               <Link to={urls.BASKET}>
                 <div
                   className={Styles.basketIcon}
-                  style={user ? { position: "absolute", top: "3px" } : {}}
+                  // style={user ? { position: "absolute", top: "3px" } : {}}
                 >
                   <img src="/assets/icons/cart-icon.svg" alt="cart-icon" />
                   {basket.length > 0 && (

@@ -188,11 +188,11 @@
       }
       .newArrivalWrapper {
         @include space(flex, space-between, center, 30px);
+        width: 100%;
         @include sm {
           @include space(flex, center, center, 10px);
           flex-wrap: wrap;
         }
-        width: 100%;
         .ps5Container {
           @include w-h(600px, 588px);
           @include flexMulti(flex, column, end, start, start, 20px);

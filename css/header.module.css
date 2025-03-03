@@ -20,12 +20,13 @@
     padding: 25px 15px;
     position: relative;
     height: 200px;
+    width: 100%;
   }
 }
 @media (max-width: 475px) {
   .headerNav .headerLogoContainer {
-    position: absolute;
-    top: 28px;
+    position: relative;
+    top: 0;
   }
 }
 @media (max-width: 475px) {
@@ -77,9 +78,9 @@
   gap: 20px;
 }
 .headerNav .headerContactContainer .headerInput {
-  position: relative;
   display: flex;
   align-items: center;
+  position: relative;
 }
 @media (max-width: 475px) {
   .headerNav .headerContactContainer .headerInput {
@@ -102,14 +103,15 @@
 .headerNav .headerContactContainer .headerIcons {
   display: flex;
   align-items: center;
-  gap: 50px;
+  gap: 20px;
   position: relative;
 }
 @media (max-width: 475px) {
   .headerNav .headerContactContainer .headerIcons {
-    position: absolute;
-    top: 66px;
-    right: 10px;
+    top: 0;
+    right: 0;
+    display: flex;
+    flex-direction: row;
   }
 }
 @media (max-width: 368px) {
@@ -118,9 +120,7 @@
     flex-direction: column;
     align-items: center;
     gap: 15px;
-    position: absolute;
-    top: 70px;
-    right: 33px;
+    top: 25px;
   }
 }
 .headerNav .headerContactContainer .headerIcons a {
@@ -135,7 +135,7 @@
   }
 }
 .headerNav .headerContactContainer .headerIcons .wishlistIcon {
-  position: absolute;
+  position: relative;
 }
 .headerNav .headerContactContainer .headerIcons .wishlistIcon .wishlistCount {
   display: flex;
@@ -157,17 +157,22 @@
   color: rgb(247, 247, 247);
   font-size: 16px;
 }
+@media (max-width: 368px) {
+  .headerNav .headerContactContainer .headerIcons .wishlistIcon {
+    top: 66px !important;
+  }
+}
 .headerNav .headerContactContainer .headerIcons .basketIcon {
-  position: absolute;
+  position: relative;
 }
 @media (max-width: 475px) {
   .headerNav .headerContactContainer .headerIcons .basketIcon {
-    top: 3px;
+    top: 0;
   }
 }
 @media (max-width: 368px) {
   .headerNav .headerContactContainer .headerIcons .basketIcon {
-    top: 44px !important;
+    top: 60px !important;
   }
 }
 .headerNav .headerContactContainer .headerIcons .basketIcon .basketCount {
@@ -183,20 +188,6 @@
   top: -13px;
   right: 0px;
 }
-@media (max-width: 475px) {
-  .headerNav .headerContactContainer .headerIcons .basketIcon .basketCount {
-    position: absolute;
-    top: -13px;
-    right: 0px;
-  }
-}
-@media (max-width: 368px) {
-  .headerNav .headerContactContainer .headerIcons .basketIcon .basketCount {
-    position: absolute;
-    top: -17px;
-    right: -1px;
-  }
-}
 .headerNav .headerContactContainer .headerIcons .basketIcon .basketCount span {
   position: absolute;
   top: 2px;
@@ -204,10 +195,32 @@
   color: rgb(247, 247, 247);
   font-size: 16px;
 }
+.headerNav .headerContactContainer .profileMenu {
+  position: relative;
+  top: -3px;
+}
+.headerNav .headerContactContainer .profileMenu img {
+  width: 30px;
+  height: 30px;
+}
+@media (max-width: 475px) {
+  .headerNav .headerContactContainer .profileMenu {
+    position: relative;
+    top: -3px;
+  }
+  .headerNav .headerContactContainer .profileMenu img {
+    width: 25px;
+    height: 25px;
+  }
+}
 @media (max-width: 368px) {
   .headerNav .headerContactContainer .profileMenu {
-    position: absolute;
-    top: 80px;
-    right: -25px;
+    position: relative;
+    top: -70px;
+    right: 0;
+  }
+  .headerNav .headerContactContainer .profileMenu img {
+    width: 25px;
+    height: 25px;
   }
 }/*# sourceMappingURL=header.module.css.map */

@@ -56,14 +56,6 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 100px;
-  }
-}
-@media (max-width: 475px) {
-  .productContainer .prductContentContainer .productWrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     gap: 20px;
     padding: 25px 15px;
   }

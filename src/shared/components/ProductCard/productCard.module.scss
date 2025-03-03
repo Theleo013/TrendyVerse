@@ -28,6 +28,8 @@
         }
       }
       .cardIcons {
+        @include flexDirection(flex, column, end, 8px);
+
         button {
           @include w-h(34px, 34px);
           @include flex-center;
@@ -47,9 +49,6 @@
             }
           }
         }
-
-        @include flexDirection(flex, column, end, 8px);
-
         a {
           @include w-h(34px, 34px);
           @include flex-center;
