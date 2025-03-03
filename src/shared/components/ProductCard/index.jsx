@@ -1,5 +1,5 @@
 import React from "react";
-import Styles from "@/shared/components/productCard/productCard.module.scss";
+import Styles from "@/shared/components/ProductCard/productCard.module.scss";
 import StarRate from "../StarRate";
 import { Link } from "react-router-dom";
 import { addToBasket } from "@/redux/features/basketSlice";

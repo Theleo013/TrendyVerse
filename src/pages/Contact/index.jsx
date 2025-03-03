@@ -135,7 +135,12 @@ const Contact = () => {
             </div>
             <div className={Styles.contactSubmit}>
               <Form.Item label={null}>
-                <Button type="primary" htmlType="submit" disabled={isLoading}>
+                <Button
+                  className={Styles.contactButton}
+                  type="primary"
+                  htmlType="submit"
+                  disabled={isLoading}
+                >
                   {isLoading ? <Spin /> : "Submit"}
                 </Button>
               </Form.Item>

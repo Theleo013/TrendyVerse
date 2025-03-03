@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Styled from "./BurgerMenu.module.scss";
+import Styled from "./burgerMenu.module.scss";
 
 const BurgerMenu = () => {
   const [open, setOpen] = useState(false);

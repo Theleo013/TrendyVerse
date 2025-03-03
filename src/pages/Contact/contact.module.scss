@@ -70,6 +70,9 @@
         @include sm {
           @include w-h(215px, auto);
         }
+        .contactButton {
+          background-color: $span-color;
+        }
       }
     }
   }
