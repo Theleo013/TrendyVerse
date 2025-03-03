@@ -110,4 +110,7 @@
     width: 215px;
     height: auto;
   }
+}
+.contactContainer .contactContentContainer .contactFormWrapper .contactSubmit .contactButton {
+  background-color: rgb(219, 68, 68);
 }/*# sourceMappingURL=contact.module.css.map */
