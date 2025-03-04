@@ -79,11 +79,12 @@ const Header = () => {
                 </div>
               </Link>
             </div>
-            {user ? (
-              <div className={Styles.profileMenu}>
-                <ProfileMenu />
-              </div>
-            ) : null}
+            <div
+              className={Styles.profileMenu}
+              style={!user ? { opacity: 0, visibility: "hidden" } : {}}
+            >
+              <ProfileMenu />
+            </div>
           </div>
         </div>
       </nav>

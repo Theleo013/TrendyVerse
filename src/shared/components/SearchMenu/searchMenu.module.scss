@@ -6,8 +6,8 @@
 
 .searchMenu {
   position: absolute;
-  top: 7em;
-  left: 4px;
+  top: 5em;
+  left: 0px;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -57,7 +57,7 @@
 .menu {
   position: absolute;
   width: 240px;
-  top: 122px;
+  top: 86px;
   left: 60px;
   display: flex;
   flex-direction: row;
@@ -65,6 +65,7 @@
   transform: translateX(-200%);
   transition: transform 0.3s ease-in-out;
   @include xs {
+    width: 210px;
     position: absolute;
     left: 50px;
   }

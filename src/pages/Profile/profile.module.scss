@@ -4,7 +4,16 @@
 
 .profileContainer {
   padding: $pa-page;
+  @include sm {
+    padding: $pa-responsive;
+  }
   .profileForm {
     @include w-h(300px, auto);
+    @include sm {
+      @include w-h(175px, auto);
+    }
+    .profileButton {
+      background-color: $span-color;
+    }
   }
 }

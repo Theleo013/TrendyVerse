@@ -69,6 +69,16 @@
 .basketContainer .basketProduct .basketTitle .titlePrice {
   padding-left: 195px;
 }
+@media (max-width: 475px) {
+  .basketContainer .basketProduct .basketTitle .titlePrice {
+    padding-left: 130px;
+  }
+}
+@media (max-width: 368px) {
+  .basketContainer .basketProduct .basketTitle .titlePrice {
+    padding-left: 90px;
+  }
+}
 .basketContainer .basketProduct .basketItems {
   display: flex;
   flex-direction: column;
@@ -90,7 +100,13 @@
 }
 @media (max-width: 475px) {
   .basketContainer .basketProduct .basketItems .basketItemContainer .basketContentContainer {
-    width: 251px;
+    width: 182px;
+    height: auto;
+  }
+}
+@media (max-width: 368px) {
+  .basketContainer .basketProduct .basketItems .basketItemContainer .basketContentContainer {
+    width: 143px;
     height: auto;
   }
 }
@@ -98,6 +114,12 @@
   width: 80px;
   height: 115px;
   object-fit: contain;
+}
+@media (max-width: 475px) {
+  .basketContainer .basketProduct .basketItems .basketItemContainer .basketContentContainer .contentImage .imageContainer img {
+    width: 50px;
+    height: 115px;
+  }
 }
 .basketContainer .basketProduct .basketItems .basketItemContainer .basketContentContainer .contentImage .removeButton button {
   border: none;
@@ -107,6 +129,18 @@
 .basketContainer .basketProduct .basketItems .basketItemContainer .basketContentContainer .contentTitle {
   width: 195px;
   height: auto;
+}
+@media (max-width: 475px) {
+  .basketContainer .basketProduct .basketItems .basketItemContainer .basketContentContainer .contentTitle {
+    width: 185px;
+    height: auto;
+  }
+}
+@media (max-width: 368px) {
+  .basketContainer .basketProduct .basketItems .basketItemContainer .basketContentContainer .contentTitle {
+    width: 80px;
+    height: auto;
+  }
 }
 .basketContainer .basketProduct .basketItems .basketItemContainer .basketContentContainer .contentTitle span {
   font-size: 16px;
@@ -162,6 +196,14 @@
   justify-content: space-between;
   align-items: center;
 }
+@media (max-width: 368px) {
+  .basketContainer .basketProduct .basketSummary {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 20px;
+  }
+}
 .basketContainer .basketProduct .basketSummary .clearButton button {
   width: 120px;
   height: 40px;
@@ -174,7 +216,9 @@
 }
 @media (max-width: 475px) {
   .basketContainer .basketProduct .basketSummary .clearButton button {
-    font-size: 14px;
+    width: 85px;
+    height: 27px;
+    font-size: 12px;
   }
 }
 @media (max-width: 368px) {

@@ -51,6 +51,12 @@
       }
       .titlePrice {
         padding-left: 195px;
+        @include sm {
+          padding-left: 130px;
+        }
+        @include xs {
+          padding-left: 90px;
+        }
       }
     }
     .basketItems {
@@ -64,7 +70,10 @@
         .basketContentContainer {
           @include flex-space(flex, center, 10px);
           @include sm {
-            @include w-h(251px, auto);
+            @include w-h(182px, auto);
+          }
+          @include xs {
+            @include w-h(143px, auto);
           }
 
           .contentImage {
@@ -72,6 +81,9 @@
               img {
                 @include w-h(80px, 115px);
                 object-fit: contain;
+                @include sm {
+                  @include w-h(50px, 115px);
+                }
               }
             }
             .removeButton {
@@ -84,6 +96,12 @@
           }
           .contentTitle {
             @include w-h(195px, auto);
+            @include sm {
+              @include w-h(185px, auto);
+            }
+            @include xs {
+              @include w-h(80px, auto);
+            }
             span {
               font-size: $fs-md;
               font-family: Epilogue-Regular;
@@ -126,6 +144,9 @@
     }
     .basketSummary {
       @include align(flex, space-between, center);
+      @include xs {
+        @include flexDirection(flex, column, start, 20px);
+      }
       .clearButton {
         button {
           @include w-h(120px, 40px);
@@ -136,7 +157,9 @@
           border: 1px solid $link-color;
           cursor: pointer;
           @include sm {
-            font-size: $fs-sm;
+            @include w-h(85px, 27px);
+
+            font-size: $fs-xs;
           }
           @include xs {
             font-size: $fs-xs;

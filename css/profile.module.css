@@ -5,7 +5,21 @@
 .profileContainer {
   padding: 200px 80px;
 }
+@media (max-width: 475px) {
+  .profileContainer {
+    padding: 25px 15px;
+  }
+}
 .profileContainer .profileForm {
   width: 300px;
   height: auto;
+}
+@media (max-width: 475px) {
+  .profileContainer .profileForm {
+    width: 175px;
+    height: auto;
+  }
+}
+.profileContainer .profileForm .profileButton {
+  background-color: rgb(219, 68, 68);
 }/*# sourceMappingURL=profile.module.css.map */

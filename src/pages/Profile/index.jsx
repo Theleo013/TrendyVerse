@@ -37,7 +37,11 @@ const Profile = () => {
               <Input disabled />
             </Form.Item>
             <Form.Item>
-              <Button type="primary" htmlType="submit">
+              <Button
+                className={Styles.profileButton}
+                type="primary"
+                htmlType="submit"
+              >
                 Save Changes
               </Button>
             </Form.Item>

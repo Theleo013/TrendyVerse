@@ -3,6 +3,7 @@
 @use "../../styles/partials/variables" as *;
 
 .contactContainer {
+  @include flexDirection(flex, column, center, null);
   padding: $pa-page;
   @include sm {
     padding: $pa-responsive;
@@ -10,6 +11,7 @@
   }
   .contactNavigateLinks {
     @include flex-space(flex, start, 20px);
+    width: 100%;
     .linkToHome {
       color: $link-color;
       font-family: Epilogue-Regular;

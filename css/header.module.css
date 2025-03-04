@@ -10,6 +10,7 @@
   position: fixed;
   z-index: 1000;
   min-width: 100%;
+  min-height: 140px;
   background: rgb(247, 247, 247);
 }
 @media (max-width: 475px) {
@@ -20,7 +21,16 @@
     padding: 25px 15px;
     position: relative;
     height: 200px;
-    width: 100%;
+  }
+}
+@media (max-width: 368px) {
+  .headerNav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 15px;
+    position: relative;
+    height: 200px;
   }
 }
 @media (max-width: 475px) {
@@ -29,9 +39,14 @@
     top: 0;
   }
 }
+.headerNav .headerLogoContainer img {
+  width: 200px;
+  height: 30px;
+}
 @media (max-width: 475px) {
   .headerNav .headerLogoContainer img {
-    width: 200px;
+    width: 170px;
+    height: 30px;
   }
 }
 .headerNav .headerLogoContainer .menuBar {

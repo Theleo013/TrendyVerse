@@ -8,13 +8,19 @@
   position: fixed;
   z-index: 1000;
   min-width: 100%;
+  min-height: 140px;
   background: $bg-color;
   @include sm {
     @include align(flex, space-between, center);
     padding: $pa-responsive;
     position: relative;
     height: 200px;
-    width: 100%;
+  }
+  @include xs {
+    @include align(flex, space-between, center);
+    padding: $pa-responsive;
+    position: relative;
+    height: 200px;
   }
   .headerLogoContainer {
     @include sm {
@@ -22,8 +28,9 @@
       top: 0;
     }
     img {
+      @include w-h(200px, 30px);
       @include sm {
-        width: 200px;
+        @include w-h(170px, 30px);
       }
     }
     .menuBar {

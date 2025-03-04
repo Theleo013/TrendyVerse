@@ -25,7 +25,7 @@ const Home = () => {
 
   const filteredDataTop = showAll ? data.slice(0, 16) : data?.slice(4, 8);
 
-  const filteredDataExplore = showAll ? data.slice(0, 16) : data?.slice(8, 16);
+  const filteredDataExplore = showAll ? data.slice(0, 16) : data?.slice(8, 12);
 
   const PS5 = data?.find((item) => Number(item.id) === 23);
   const Hat = data?.find((item) => Number(item.id) === 24);
@@ -175,42 +175,68 @@ const Home = () => {
               className={`${Styles.newArrivalWrapper} ${CustomContainer.container}`}
             >
               <div className={Styles.ps5Container}>
-                <h4>PlayStation 5</h4>
-                <p>Black and White version of the PS5 coming out on sale.</p>
-                {PS5 && (
-                  <Link to={urls.PRODUCT_ID.replace(":id", PS5.id)}>
-                    Shop Now
-                  </Link>
-                )}
-              </div>
-              <div className={Styles.arrivalProductsContainer}>
-                <div className={Styles.womens}>
-                  <h4>Women's Collections</h4>
-                  <p>Featured woman collections that give you another vibe.</p>
-                  {Hat && (
-                    <Link to={urls.PRODUCT_ID.replace(":id", Hat.id)}>
+                <img
+                  src="/assets/images/arrivalProducts/ps5.png"
+                  alt="ps5-image"
+                />
+                <div className={Styles.ps5Content}>
+                  <h4>PlayStation 5</h4>
+                  <p>Black and White version of the PS5 coming out on sale.</p>
+                  {PS5 && (
+                    <Link to={urls.PRODUCT_ID.replace(":id", PS5.id)}>
                       Shop Now
                     </Link>
                   )}
                 </div>
-                <div className={Styles.innerProductsWrapper}>
-                  <div className={Styles.speaker}>
-                    <h4>Speakers</h4>
-                    <p>Amazon wireless speakers</p>
-                    {Speakers && (
-                      <Link to={urls.PRODUCT_ID.replace(":id", Speakers.id)}>
+              </div>
+              <div className={Styles.arrivalProductsContainer}>
+                <div className={Styles.hat}>
+                  <img
+                    src="/assets/images/arrivalProducts/woman.png"
+                    alt="hat-image"
+                  />
+                  <div className={Styles.hatContent}>
+                    <h4>Women's Collections</h4>
+                    <p>
+                      Featured woman collections that give you another vibe.
+                    </p>
+                    {Hat && (
+                      <Link to={urls.PRODUCT_ID.replace(":id", Hat.id)}>
                         Shop Now
                       </Link>
                     )}
                   </div>
+                </div>
+                <div className={Styles.innerProductsWrapper}>
+                  <div className={Styles.speaker}>
+                    <img
+                      src="/assets/images/arrivalProducts/speakers.png"
+                      alt="speakers-image"
+                    />
+                    <div className={Styles.speakerContent}>
+                      <h4>Speakers</h4>
+                      <p>Amazon wireless speakers</p>
+                      {Speakers && (
+                        <Link to={urls.PRODUCT_ID.replace(":id", Speakers.id)}>
+                          Shop Now
+                        </Link>
+                      )}
+                    </div>
+                  </div>
                   <div className={Styles.parfume}>
-                    <h4>Perfume</h4>
-                    <p>Gucci intense oud edp</p>
-                    {Parfume && (
-                      <Link to={urls.PRODUCT_ID.replace(":id", Parfume.id)}>
-                        Shop Now
-                      </Link>
-                    )}
+                    <img
+                      src="/assets/images/arrivalProducts/parfume.png"
+                      alt="parfume-image"
+                    />
+                    <div className={Styles.parfumeContent}>
+                      <h4>Perfume</h4>
+                      <p>Gucci intense oud edp</p>
+                      {Parfume && (
+                        <Link to={urls.PRODUCT_ID.replace(":id", Parfume.id)}>
+                          Shop Now
+                        </Link>
+                      )}
+                    </div>
                   </div>
                 </div>
               </div>

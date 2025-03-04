@@ -6,7 +6,7 @@
 
 .burgerMenu {
   position: absolute;
-  top: 5em;
+  top: 3em;
   left: 12px;
   display: flex;
   flex-direction: column;
@@ -52,7 +52,7 @@
 .menu {
   position: absolute;
   width: 240px;
-  top: 91px;
+  top: 55px;
   left: 60px;
   display: flex;
   flex-direction: row;
@@ -62,6 +62,9 @@
   @include xs {
     position: absolute;
     left: 40px;
+    a {
+      font-size: $fs-xs !important;
+    }
   }
 
   &.open {

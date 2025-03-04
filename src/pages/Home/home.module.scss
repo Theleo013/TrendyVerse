@@ -60,7 +60,7 @@
       width: 100%;
     }
     .topSellingContainer {
-      @include flexDirection(flex, column, null, 50px);
+      @include flexDirection(flex, column, center, 50px);
       padding: 100px 0;
       border-top: $br-6;
       margin-top: 30px;
@@ -69,6 +69,7 @@
 
       .topSellingTitle {
         @include align(flex, space-between, center);
+        width: 100%;
         @include sm {
           @include flexDirection(flex, column, start, 20px);
           flex-wrap: wrap;
@@ -89,13 +90,16 @@
       @include w-h(100%, 500px);
       background-color: $primary-color;
       padding: 0 50px;
+      position: relative;
       @include sm {
-        @include align(flex, center, center);
-        flex-wrap: wrap;
+        @include flexDirection(flex, column, center, null);
       }
       .flashContentContainer {
         @include flexDirection(flex, column, start, 22px);
+        z-index: 1000;
         @include sm {
+          @include flexDirection(flex, column, center, 22px);
+          text-align: center;
           padding-top: $pa-m;
           position: relative;
         }
@@ -105,9 +109,13 @@
           font-family: Epilogue-Regular;
         }
         h2 {
-          @include w-h(260px, 121px);
-          color: $bg-color;
+          // @include w-h(260px, auto);
           font-family: Epilogue-Regular;
+          font-size: $fs-2xl;
+          color: $bg-color;
+          @include sm {
+            font-size: $fs-lg;
+          }
         }
         .timer {
           color: $bg-color;
@@ -126,8 +134,9 @@
           }
           @include sm {
             position: absolute;
+            @include w-h(110px, 35px);
+            font-size: $fs-xs;
             top: 410px;
-            left: 0;
           }
         }
       }
@@ -138,8 +147,8 @@
           position: relative;
           img {
             position: absolute;
-            top: -40px;
-            left: 50px;
+            top: 53px;
+            right: 206px;
             width: 200px;
           }
         }
@@ -194,101 +203,87 @@
           flex-wrap: wrap;
         }
         .ps5Container {
-          @include w-h(600px, 588px);
-          @include flexMulti(flex, column, end, start, start, 20px);
-          padding: 30px;
-          background-image: url("/assets/images/arrivalProducts/ps5.png");
+          @include w-h(100%, 588px);
+          @include flexMulti(flex, column, end, center, start, null);
+          padding: 40px 0;
           background-color: $primary-color;
-          object-fit: contain;
-          background-repeat: no-repeat;
-          background-position: bottom;
+          position: relative;
           @include sm {
-            object-fit: fill;
-            @include w-h(399px, null);
+            @include w-h(100%, 340px);
           }
-
-          h4 {
-            font-family: Epilogue-Regular;
-
-            font-size: $fs-lg;
-            color: $bg-color;
-          }
-          p {
-            font-family: Epilogue-Regular;
-
-            font-size: $fs-sm;
-            color: $bg-color;
-          }
-          a {
-            font-size: $fs-sm;
-            color: $bg-color;
-            font-family: Epilogue-Regular;
-            &:hover {
-              color: $hover-color;
-            }
-          }
-        }
-        .arrivalProductsContainer {
-          @include flexDirection(flex, column, center, 20px);
-          .womens {
-            @include w-h(560px, 284px);
-            @include flexMulti(flex, column, end, start, start, 20px);
-            padding: 30px;
-            background-image: url("/assets/images/arrivalProducts/woman.png");
-            background-color: $primary-color;
+          img {
             object-fit: contain;
-            background-repeat: no-repeat;
-            background-position: right;
+            position: absolute;
+            bottom: 0;
             @include sm {
-              @include w-h(399px, auto);
+              @include w-h(300px, auto);
             }
+          }
+          .ps5Content {
+            @include flexDirection(flex, column, start, 20px);
+            z-index: 1000;
+
             h4 {
               font-family: Epilogue-Regular;
-
               font-size: $fs-lg;
               color: $bg-color;
             }
             p {
+              @include w-h(290px, auto);
               font-family: Epilogue-Regular;
-
               font-size: $fs-sm;
               color: $bg-color;
             }
             a {
-              font-family: Epilogue-Regular;
-
               font-size: $fs-sm;
               color: $bg-color;
+              font-family: Epilogue-Regular;
               &:hover {
                 color: $hover-color;
               }
             }
           }
-          .innerProductsWrapper {
-            @include space(flex, space-between, center, 20px);
+        }
+        .arrivalProductsContainer {
+          @include flexDirection(flex, column, center, 20px);
+          @include w-h(100%, 588px);
+
+          .hat {
+            @include w-h(100%, 284px);
+            @include flexMulti(flex, column, end, center, start, null);
+            padding: 30px 0;
+            background-color: $primary-color;
+            position: relative;
             @include sm {
-              @include w-h(399px, auto);
+              @include w-h(100%, 160px);
             }
-            .speaker {
-              @include flexMulti(flex, column, end, start, start, 20px);
-              padding: 30px;
-              @include w-h(270px, 284px);
-              background-image: url("/assets/images/arrivalProducts/speakers.png");
-              background-color: $primary-color;
+            img {
               object-fit: contain;
-              background-repeat: no-repeat;
-              background-position: center;
+              position: absolute;
+              top: 0;
+              right: 0;
+              @include sm {
+                position: absolute;
+                @include w-h(243px, auto);
+              }
+            }
+            .hatContent {
+              @include flexDirection(flex, column, start, 20px);
+              z-index: 1000;
               h4 {
                 font-family: Epilogue-Regular;
-
                 font-size: $fs-lg;
                 color: $bg-color;
               }
               p {
+                @include w-h(290px, auto);
                 font-family: Epilogue-Regular;
-
                 font-size: $fs-sm;
                 color: $bg-color;
+                @include sm {
+                  @include w-h(290px, auto);
+                  font-size: $fs-xs;
+                }
               }
               a {
                 font-family: Epilogue-Regular;
@@ -300,34 +295,107 @@
                 }
               }
             }
+          }
+          .innerProductsWrapper {
+            @include space(flex, space-between, center, null);
+            @include w-h(100%, null);
+            position: relative;
+            @include sm {
+              @include w-h(100%, null);
+            }
+            .speaker {
+              @include flexMulti(flex, column, end, center, start, null);
+              padding: 40px 0;
+              @include w-h(270px, 284px);
+              background-color: $primary-color;
+              position: relative;
+              @include sm {
+                @include w-h(100%, 230px);
+              }
+              img {
+                position: absolute;
+                @include w-h(183px, 183px);
+                @include sm {
+                  @include w-h(120px, 120px);
+                  position: absolute;
+                  top: 35px;
+                }
+              }
+              .speakerContent {
+                @include flexDirection(flex, column, start, 20px);
+                z-index: 1000;
+                h4 {
+                  font-family: Epilogue-Regular;
+                  font-size: $fs-lg;
+                  color: $bg-color;
+                  @include sm {
+                    font-size: $fs-md;
+                  }
+                }
+                p {
+                  font-family: Epilogue-Regular;
+                  font-size: $fs-sm;
+                  color: $bg-color;
+                  @include sm {
+                    @include w-h(140px, auto);
+                    font-size: $fs-xs;
+                  }
+                }
+                a {
+                  font-family: Epilogue-Regular;
+
+                  font-size: $fs-sm;
+                  color: $bg-color;
+                  &:hover {
+                    color: $hover-color;
+                  }
+                }
+              }
+            }
             .parfume {
               @include w-h(270px, 284px);
-              @include flexMulti(flex, column, end, start, start, 20px);
-              padding: 30px;
-              background-image: url("/assets/images/arrivalProducts/parfume.png");
+              @include flexMulti(flex, column, end, center, start, null);
+              padding: 40px 0;
               background-color: $primary-color;
-              object-fit: contain;
-              background-repeat: no-repeat;
-              background-position: center;
-              h4 {
-                font-family: Epilogue-Regular;
-
-                font-size: $fs-lg;
-                color: $bg-color;
+              position: relative;
+              @include sm {
+                @include w-h(100%, 230px);
               }
-              p {
-                font-family: Epilogue-Regular;
-
-                font-size: $fs-sm;
-                color: $bg-color;
+              img {
+                position: absolute;
+                @include w-h(183px, 183px);
+                @include sm {
+                  @include w-h(120px, 120px);
+                  position: absolute;
+                  top: 35px;
+                }
               }
-              a {
-                font-family: Epilogue-Regular;
+              .parfumeContent {
+                @include flexDirection(flex, column, start, 20px);
+                z-index: 1000;
+                h4 {
+                  font-family: Epilogue-Regular;
 
-                font-size: $fs-sm;
-                color: $bg-color;
-                &:hover {
-                  color: $hover-color;
+                  font-size: $fs-lg;
+                  color: $bg-color;
+                }
+                p {
+                  font-family: Epilogue-Regular;
+                  font-size: $fs-sm;
+                  color: $bg-color;
+                  @include sm {
+                    @include w-h(140px, auto);
+                    font-size: $fs-xs;
+                  }
+                }
+                a {
+                  font-family: Epilogue-Regular;
+
+                  font-size: $fs-sm;
+                  color: $bg-color;
+                  &:hover {
+                    color: $hover-color;
+                  }
                 }
               }
             }

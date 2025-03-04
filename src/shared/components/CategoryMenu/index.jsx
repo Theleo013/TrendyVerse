@@ -6,9 +6,7 @@ import { urls } from "@/shared/urls";
 
 const CategoryMenu = () => {
   return (
-    <div
-      className={`${Styles.categoryMenuContainer} ${CustomContainer.container}`}
-    >
+    <div className={Styles.categoryMenuContainer}>
       <Link
         to={urls.CATEGORY.replace(":categoryName", "phones")}
         className={Styles.contentWrapper}

@@ -217,7 +217,6 @@
       "views": "916"
     }
   ],
-
   "categories": {
     "phones": [
       {
@@ -376,21 +375,34 @@
       }
     ]
   },
-
   "user": [
     {
       "username": "leo",
       "email": "elcinelcin57@gmail.com",
       "password": "w5491se",
       "confirm": "w5491se",
-      "id": 1
+      "id": "1"
     },
     {
       "username": "peyman",
       "email": "peyman@gmail.com",
       "password": "12345678",
       "confirm": "12345678",
-      "id": 2
+      "id": "2"
+    },
+    {
+      "id": "471e",
+      "username": "test",
+      "email": "test@gmail.com",
+      "password": "test1234",
+      "confirm": "test1234"
+    },
+    {
+      "id": "0deb",
+      "username": "test",
+      "email": "test@gmail.com",
+      "password": "test",
+      "confirm": "test"
     }
   ],
   "contact": [
@@ -404,7 +416,7 @@
       "user": {
         "introduction": "zzz"
       },
-      "id": 1
+      "id": "1"
     }
   ]
 }

@@ -4,7 +4,7 @@
 }
 .burgerMenu {
   position: absolute;
-  top: 5em;
+  top: 3em;
   left: 12px;
   display: flex;
   flex-direction: column;
@@ -43,7 +43,7 @@
 .menu {
   position: absolute;
   width: 240px;
-  top: 91px;
+  top: 55px;
   left: 60px;
   display: flex;
   flex-direction: row;
@@ -55,6 +55,9 @@
   .menu {
     position: absolute;
     left: 40px;
+  }
+  .menu a {
+    font-size: 12px !important;
   }
 }
 .menu.open {
@@ -70,4 +73,4 @@
 }
 .menu a:hover {
   color: rgb(252, 163, 17);
-}/*# sourceMappingURL=burgerMenu.module.css.map */
+}/*# sourceMappingURL=burgermenu.module.css.map */
