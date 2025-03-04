@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import Styled from "./burgerMenu.module.scss";
+import { Link } from "react-router-dom";
+import { urls } from "@/shared/urls";
 
 const BurgerMenu = () => {
   const [open, setOpen] = useState(false);
@@ -16,10 +18,10 @@ const BurgerMenu = () => {
       </button>
 
       <nav className={`${Styled.menu} ${open ? Styled.open : ""}`}>
-        <a href="/"> Home</a>
-        <a href="/contact"> Contact</a>
-        <a href="/about"> About</a>
-        <a href="/register"> Sign Up</a>
+        <Link to={urls.HOME}> Home</Link>
+        <Link to={urls.CONTACT}> Contact</Link>
+        <Link to={urls.ABOUT}> About</Link>
+        <Link to={urls.REGISTER}> Sign Up</Link>
       </nav>
     </>
   );
