@@ -3,7 +3,7 @@ import { axiosBaseQuery } from "@/redux/api/axiosBase";
 
 export const checkoutApi = createApi({
   reducerPath: "checkoutApi",
-  baseQuery: axiosBaseQuery({ baseUrl: "http://localhost:3001" }),
+  baseQuery: axiosBaseQuery({ baseUrl: "https://dbjson-server.vercel.app" }),
   endpoints: (builder) => ({
     performCheckout: builder.mutation({
       query: (orderData) => ({
