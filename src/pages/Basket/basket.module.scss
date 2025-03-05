@@ -52,10 +52,10 @@
       .titlePrice {
         padding-left: 195px;
         @include sm {
-          padding-left: 100px;
+          padding-left: 94px;
         }
         @include xs {
-          padding-left: 90px;
+          padding-left: 48px;
         }
       }
     }
@@ -70,10 +70,10 @@
         .basketContentContainer {
           @include flex-space(flex, center, 10px);
           @include sm {
-            @include w-h(152px, auto);
+            @include w-h(145px, auto);
           }
           @include xs {
-            @include w-h(143px, auto);
+            @include w-h(100px, auto);
           }
 
           .contentImage {
@@ -120,7 +120,7 @@
           @include w-h(63px, auto);
           @include sm {
             @include w-h(33px, auto);
-            font-size: $fs-md;
+            font-size: $fs-sm;
           }
         }
         .quantityContainer {
@@ -142,7 +142,7 @@
         .totalContainer {
           @include sm {
             @include w-h(37px, auto);
-            font-size: $fs-md;
+            font-size: $fs-sm;
           }
         }
       }

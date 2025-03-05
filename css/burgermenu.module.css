@@ -42,6 +42,7 @@
 .menu {
   position: absolute;
   width: 240px;
+  bottom: 105px;
   left: 50px;
   display: flex;
   flex-direction: row;

@@ -71,12 +71,12 @@
 }
 @media (max-width: 475px) {
   .basketContainer .basketProduct .basketTitle .titlePrice {
-    padding-left: 100px;
+    padding-left: 94px;
   }
 }
 @media (max-width: 368px) {
   .basketContainer .basketProduct .basketTitle .titlePrice {
-    padding-left: 90px;
+    padding-left: 48px;
   }
 }
 .basketContainer .basketProduct .basketItems {
@@ -100,13 +100,13 @@
 }
 @media (max-width: 475px) {
   .basketContainer .basketProduct .basketItems .basketItemContainer .basketContentContainer {
-    width: 152px;
+    width: 145px;
     height: auto;
   }
 }
 @media (max-width: 368px) {
   .basketContainer .basketProduct .basketItems .basketItemContainer .basketContentContainer {
-    width: 143px;
+    width: 100px;
     height: auto;
   }
 }
@@ -165,7 +165,7 @@
   .basketContainer .basketProduct .basketItems .basketItemContainer .priceContainer {
     width: 33px;
     height: auto;
-    font-size: 16px;
+    font-size: 14px;
   }
 }
 .basketContainer .basketProduct .basketItems .basketItemContainer .quantityContainer {
@@ -194,7 +194,7 @@
   .basketContainer .basketProduct .basketItems .basketItemContainer .totalContainer {
     width: 37px;
     height: auto;
-    font-size: 16px;
+    font-size: 14px;
   }
 }
 .basketContainer .basketProduct .basketSummary {
