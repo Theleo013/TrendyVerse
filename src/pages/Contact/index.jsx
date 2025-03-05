@@ -56,7 +56,7 @@ const Contact = () => {
         </Link>
         /
         <Link className={Styles.linkToAbout} to={urls.ABOUt}>
-          About
+          Contact
         </Link>
       </div>
       <div
@@ -103,13 +103,13 @@ const Contact = () => {
                 name={["request", "name"]}
                 rules={[{ required: true }]}
               >
-                <Input placeholder="Your Name" />
+                <Input className={Styles.inputName} placeholder="Your Name" />
               </Form.Item>
               <Form.Item
                 name={["request", "email"]}
                 rules={[{ type: "email" }]}
               >
-                <Input placeholder="Your Email" />
+                <Input className={Styles.inputEmail} placeholder="Your Email" />
               </Form.Item>
 
               <Form.Item
@@ -122,6 +122,7 @@ const Contact = () => {
                 ]}
               >
                 <Input
+                  className={Styles.inputPhone}
                   placeholder="Phone Number"
                   addonBefore={prefixSelector}
                   style={{ width: "100%" }}

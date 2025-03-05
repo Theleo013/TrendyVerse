@@ -3,12 +3,13 @@
 @use "../../../styles/partials/variables" as *;
 
 .searchBar {
+  @include space(flex, null, null, 3px);
   @include sm {
     .searchInput {
-      @include w-h(300px, 30px);
+      @include w-h(300px, 25px);
     }
     .searchButton {
-      @include w-h(30px, 30px);
+      @include w-h(25px, 25px);
     }
   }
 }

@@ -17,7 +17,7 @@
   .headerNav {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: start;
     padding: 25px 15px;
     position: relative;
     height: 200px;
@@ -33,35 +33,41 @@
     height: 200px;
   }
 }
+.headerNav .menuContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 15px;
+}
 @media (max-width: 475px) {
-  .headerNav .headerLogoContainer {
+  .headerNav .menuContainer .headerLogo {
     position: relative;
     top: 0;
   }
 }
-.headerNav .headerLogoContainer img {
+.headerNav .menuContainer .headerLogo img {
   width: 200px;
   height: 30px;
 }
 @media (max-width: 475px) {
-  .headerNav .headerLogoContainer img {
+  .headerNav .menuContainer .headerLogo img {
     width: 170px;
     height: 30px;
   }
 }
-.headerNav .headerLogoContainer .menuBar {
+.headerNav .menuContainer .burgerMenuContainer {
   display: none;
 }
 @media (max-width: 475px) {
-  .headerNav .headerLogoContainer .menuBar {
+  .headerNav .menuContainer .burgerMenuContainer {
     display: flex;
   }
 }
-.headerNav .headerLogoContainer .searchMenuContainer {
+.headerNav .menuContainer .searchMenuContainer {
   display: none;
 }
 @media (max-width: 475px) {
-  .headerNav .headerLogoContainer .searchMenuContainer {
+  .headerNav .menuContainer .searchMenuContainer {
     display: flex;
     align-items: center;
   }
@@ -135,7 +141,6 @@
     flex-direction: column;
     align-items: center;
     gap: 15px;
-    top: 25px;
   }
 }
 .headerNav .headerContactContainer .headerIcons a {
@@ -174,7 +179,7 @@
 }
 @media (max-width: 368px) {
   .headerNav .headerContactContainer .headerIcons .wishlistIcon {
-    top: 66px !important;
+    top: 54px !important;
   }
 }
 .headerNav .headerContactContainer .headerIcons .basketIcon {
@@ -187,7 +192,7 @@
 }
 @media (max-width: 368px) {
   .headerNav .headerContactContainer .headerIcons .basketIcon {
-    top: 60px !important;
+    top: 49px !important;
   }
 }
 .headerNav .headerContactContainer .headerIcons .basketIcon .basketCount {
@@ -231,7 +236,7 @@
 @media (max-width: 368px) {
   .headerNav .headerContactContainer .profileMenu {
     position: relative;
-    top: -70px;
+    top: -80px;
     right: 0;
   }
   .headerNav .headerContactContainer .profileMenu img {

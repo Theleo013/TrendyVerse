@@ -11,7 +11,7 @@
   min-height: 140px;
   background: $bg-color;
   @include sm {
-    @include align(flex, space-between, center);
+    @include align(flex, space-between, start);
     padding: $pa-responsive;
     position: relative;
     height: 200px;
@@ -22,25 +22,29 @@
     position: relative;
     height: 200px;
   }
-  .headerLogoContainer {
-    @include sm {
-      position: relative;
-      top: 0;
-    }
-    img {
-      @include w-h(200px, 30px);
+  .menuContainer {
+    @include flexDirection(flex, column, start, 15px);
+    .headerLogo {
       @include sm {
-        @include w-h(170px, 30px);
+        position: relative;
+        top: 0;
+      }
+      img {
+        @include w-h(200px, 30px);
+        @include sm {
+          @include w-h(170px, 30px);
+        }
       }
     }
-    .menuBar {
+    .burgerMenuContainer {
       display: none;
     }
     @include sm {
-      .menuBar {
+      .burgerMenuContainer {
         display: flex;
       }
     }
+
     .searchMenuContainer {
       display: none;
     }
@@ -51,6 +55,7 @@
       }
     }
   }
+
   .headerList {
     @include sm {
       display: none;
@@ -105,7 +110,7 @@
       @include xs {
         @include flexDirection(flex, column, center, null);
         gap: 15px;
-        top: 25px;
+        // top: 25px;
       }
       a {
         @include flex-space(flex, center, 20px);
@@ -135,7 +140,7 @@
           }
         }
         @include xs {
-          top: 66px !important;
+          top: 54px !important;
         }
       }
       .basketIcon {
@@ -144,7 +149,7 @@
           top: 0;
         }
         @include xs {
-          top: 60px !important;
+          top: 49px !important;
         }
         .basketCount {
           @include flex-center;
@@ -180,7 +185,7 @@
       }
       @include xs {
         position: relative;
-        top: -70px;
+        top: -80px;
         right: 0;
         img {
           @include w-h(25px, 25px);

@@ -5,15 +5,12 @@
 .aboutContainer {
   @include flexDirection(flex, column, center, 50px);
   padding: $pa-page;
-  position: relative;
   @include sm {
     padding: $pa-responsive;
   }
   .aboutNavigateLinks {
     @include flex-space(flex, start, 20px);
-    position: absolute;
-    left: 100px;
-
+    width: 100%;
     .linkToHome {
       color: $link-color;
       font-family: Epilogue-Regular;

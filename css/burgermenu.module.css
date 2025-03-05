@@ -3,9 +3,8 @@
   src: url(/assets/fonts/Epilogue-Regular.ttf);
 }
 .burgerMenu {
-  position: absolute;
-  top: 3em;
-  left: 12px;
+  position: relative;
+  left: 10px;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -43,8 +42,7 @@
 .menu {
   position: absolute;
   width: 240px;
-  top: 55px;
-  left: 60px;
+  left: 50px;
   display: flex;
   flex-direction: row;
   gap: 15px;
@@ -52,10 +50,6 @@
   transition: transform 0.3s ease-in-out;
 }
 @media (max-width: 368px) {
-  .menu {
-    position: absolute;
-    left: 40px;
-  }
   .menu a {
     font-size: 12px !important;
   }

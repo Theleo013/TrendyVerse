@@ -95,13 +95,31 @@
     gap: 10px;
   }
 }
+@media (max-width: 475px) {
+  .contactContainer .contactContentContainer .contactFormWrapper .contactInfo .inputName {
+    width: 250px;
+    height: auto;
+  }
+}
+@media (max-width: 475px) {
+  .contactContainer .contactContentContainer .contactFormWrapper .contactInfo .inputEmail {
+    width: 250px;
+    height: auto;
+  }
+}
+@media (max-width: 475px) {
+  .contactContainer .contactContentContainer .contactFormWrapper .contactInfo .inputPhone {
+    width: 250px;
+    height: auto;
+  }
+}
 .contactContainer .contactContentContainer .contactFormWrapper .contactIntroduction {
   width: 616px;
   height: auto;
 }
 @media (max-width: 475px) {
   .contactContainer .contactContentContainer .contactFormWrapper .contactIntroduction {
-    width: 255px;
+    width: 250px;
     height: auto;
   }
 }
@@ -111,7 +129,7 @@
 }
 @media (max-width: 475px) {
   .contactContainer .contactContentContainer .contactFormWrapper .contactSubmit {
-    width: 215px;
+    width: 207px;
     height: auto;
   }
 }

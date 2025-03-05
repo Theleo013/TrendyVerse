@@ -57,15 +57,7 @@ const SearchBar = () => {
   };
 
   return (
-    <div
-      className={Styles.searchBar}
-      style={{
-        position: "relative",
-        display: "flex",
-        alignItems: "center",
-        gap: "8px",
-      }}
-    >
+    <div className={Styles.searchBar}>
       <AutoComplete
         popupMatchSelectWidth={252}
         style={{ flex: 1 }}

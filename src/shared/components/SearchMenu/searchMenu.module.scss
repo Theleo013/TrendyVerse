@@ -5,9 +5,7 @@
 // SearchMenu.module.scss
 
 .searchMenu {
-  position: absolute;
-  top: 5em;
-  left: 0px;
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -56,19 +54,17 @@
 
 .menu {
   position: absolute;
+  left: 50px;
   width: 240px;
-  top: 86px;
-  left: 60px;
+  height: 17px;
   display: flex;
   flex-direction: row;
   gap: 15px;
   transform: translateX(-200%);
   transition: transform 0.3s ease-in-out;
-  @include xs {
-    width: 210px;
-    position: absolute;
-    left: 50px;
-  }
+  // @include xs {
+  //   position: absolute;
+  // }
 
   &.open {
     transform: translateX(0);

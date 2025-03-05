@@ -4,7 +4,6 @@
 
 .categoryPageContainer {
   @include flexDirection(flex, column, center, 50px);
-  position: relative;
   padding: $pa-page;
   @include sm {
     padding: $pa-responsive;
@@ -14,8 +13,7 @@
   }
   .categoryNavigateLinks {
     @include flex-space(flex, center, 20px);
-    position: absolute;
-    left: 200px;
+    width: 100%;
     .categoryLinkHome {
       color: $link-color;
       font-family: Epilogue-Regular;

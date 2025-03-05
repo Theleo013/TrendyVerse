@@ -71,7 +71,7 @@
 }
 @media (max-width: 475px) {
   .basketContainer .basketProduct .basketTitle .titlePrice {
-    padding-left: 130px;
+    padding-left: 100px;
   }
 }
 @media (max-width: 368px) {
@@ -100,7 +100,7 @@
 }
 @media (max-width: 475px) {
   .basketContainer .basketProduct .basketItems .basketItemContainer .basketContentContainer {
-    width: 182px;
+    width: 152px;
     height: auto;
   }
 }
@@ -118,13 +118,19 @@
 @media (max-width: 475px) {
   .basketContainer .basketProduct .basketItems .basketItemContainer .basketContentContainer .contentImage .imageContainer img {
     width: 50px;
-    height: 115px;
+    height: 75px;
   }
 }
 .basketContainer .basketProduct .basketItems .basketItemContainer .basketContentContainer .contentImage .removeButton button {
   border: none;
   background: transparent;
   cursor: pointer;
+}
+@media (max-width: 475px) {
+  .basketContainer .basketProduct .basketItems .basketItemContainer .basketContentContainer .contentImage .removeButton button img {
+    width: 25px;
+    height: 25px;
+  }
 }
 .basketContainer .basketProduct .basketItems .basketItemContainer .basketContentContainer .contentTitle {
   width: 195px;

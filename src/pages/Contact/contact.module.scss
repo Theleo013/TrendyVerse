@@ -60,17 +60,32 @@
         @include sm {
           @include flexDirection(flex, column, start, 10px);
         }
+        .inputName {
+          @include sm {
+            @include w-h(250px, auto);
+          }
+        }
+        .inputEmail {
+          @include sm {
+            @include w-h(250px, auto);
+          }
+        }
+        .inputPhone {
+          @include sm {
+            @include w-h(250px, auto);
+          }
+        }
       }
       .contactIntroduction {
         @include w-h(616px, auto);
         @include sm {
-          @include w-h(255px, auto);
+          @include w-h(250px, auto);
         }
       }
       .contactSubmit {
         @include w-h(616px, auto);
         @include sm {
-          @include w-h(215px, auto);
+          @include w-h(207px, auto);
         }
         .contactButton {
           background-color: $span-color;

@@ -5,9 +5,10 @@
 // BurgerMenu.module.scss
 
 .burgerMenu {
-  position: absolute;
-  top: 3em;
-  left: 12px;
+  // position: absolute;
+  // top: 55px;
+  position: relative;
+  left: 10px;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -52,16 +53,17 @@
 .menu {
   position: absolute;
   width: 240px;
-  top: 55px;
-  left: 60px;
+  // top: 0px;
+  // bottom: 50px;
+  left: 50px;
   display: flex;
   flex-direction: row;
   gap: 15px;
   transform: translateX(-200%);
   transition: transform 0.3s ease-in-out;
   @include xs {
-    position: absolute;
-    left: 40px;
+    // position: absolute;
+    // left: 40px;
     a {
       font-size: $fs-xs !important;
     }

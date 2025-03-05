@@ -17,11 +17,13 @@ const Header = () => {
   return (
     <header>
       <nav className={Styles.headerNav}>
-        <div className={Styles.headerLogoContainer}>
-          <Link to={urls.HOME}>
-            <img src="/assets/main-logo.svg" alt="main-logo" />
-          </Link>
-          <div className={Styles.menuBar}>
+        <div className={Styles.menuContainer}>
+          <div className={Styles.headerLogo}>
+            <Link to={urls.HOME}>
+              <img src="/assets/main-logo.svg" alt="main-logo" />
+            </Link>
+          </div>
+          <div className={Styles.burgerMenuContainer}>
             <BurgerMenu />
           </div>
           <div className={Styles.searchMenuContainer}>
@@ -53,10 +55,7 @@ const Header = () => {
           <div className={Styles.headerIcons}>
             <div>
               <Link to={urls.WISHLIST}>
-                <div
-                  className={Styles.wishlistIcon}
-                  // style={user ? { position: "absolute", top: "3px" } : {}}
-                >
+                <div className={Styles.wishlistIcon}>
                   <img src="/assets/icons/heart-icon.svg" alt="heart-icon" />
                   {wishlist.length > 0 && (
                     <span className={Styles.wishlistCount}>
@@ -68,10 +67,7 @@ const Header = () => {
             </div>
             <div>
               <Link to={urls.BASKET}>
-                <div
-                  className={Styles.basketIcon}
-                  // style={user ? { position: "absolute", top: "3px" } : {}}
-                >
+                <div className={Styles.basketIcon}>
                   <img src="/assets/icons/cart-icon.svg" alt="cart-icon" />
                   {basket.length > 0 && (
                     <span className={Styles.basketCount}>{basket?.length}</span>

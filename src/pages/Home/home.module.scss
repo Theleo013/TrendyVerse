@@ -247,6 +247,9 @@
         .arrivalProductsContainer {
           @include flexDirection(flex, column, center, 20px);
           @include w-h(100%, 588px);
+          @include sm {
+            @include w-h(100%, 400px);
+          }
 
           .hat {
             @include w-h(100%, 284px);
@@ -303,6 +306,10 @@
             @include sm {
               @include w-h(100%, null);
             }
+            @include xs {
+              @include w-h(100%, null);
+              @include flexDirection(flex, column, center, 10px);
+            }
             .speaker {
               @include flexMulti(flex, column, end, center, start, null);
               padding: 40px 0;
@@ -310,6 +317,9 @@
               background-color: $primary-color;
               position: relative;
               @include sm {
+                @include w-h(170px, 230px);
+              }
+              @include xs {
                 @include w-h(100%, 230px);
               }
               img {
@@ -320,10 +330,18 @@
                   position: absolute;
                   top: 35px;
                 }
+                @include xs {
+                  @include w-h(150px, 150px);
+                  position: absolute;
+                  top: 35px;
+                }
               }
               .speakerContent {
                 @include flexDirection(flex, column, start, 20px);
                 z-index: 1000;
+                @include xs {
+                  width: 86%;
+                }
                 h4 {
                   font-family: Epilogue-Regular;
                   font-size: $fs-lg;
@@ -359,6 +377,9 @@
               background-color: $primary-color;
               position: relative;
               @include sm {
+                @include w-h(170px, 230px);
+              }
+              @include xs {
                 @include w-h(100%, 230px);
               }
               img {
@@ -369,10 +390,18 @@
                   position: absolute;
                   top: 35px;
                 }
+                @include xs {
+                  @include w-h(150px, 150px);
+                  position: absolute;
+                  top: 35px;
+                }
               }
               .parfumeContent {
                 @include flexDirection(flex, column, start, 20px);
                 z-index: 1000;
+                @include xs {
+                  width: 86%;
+                }
                 h4 {
                   font-family: Epilogue-Regular;
 
