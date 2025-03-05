@@ -51,6 +51,9 @@
   transition: transform 0.3s ease-in-out;
 }
 @media (max-width: 368px) {
+  .menu {
+    bottom: 85px;
+  }
   .menu a {
     font-size: 12px !important;
   }

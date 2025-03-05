@@ -61,8 +61,7 @@
   transform: translateX(-200%);
   transition: transform 0.3s ease-in-out;
   @include xs {
-    // position: absolute;
-    // left: 40px;
+    bottom: 85px;
     a {
       font-size: $fs-xs !important;
     }

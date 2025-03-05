@@ -3,12 +3,14 @@
 @use "../../styles/partials/variables" as *;
 
 .checkoutConatiner {
-  @include flexDirection(flex, column, null, 50px);
+  @include flexDirection(flex, column, center, 50px);
   padding: $pa-page;
-  width: 100%;
+  @include sm {
+    padding: $pa-responsive;
+  }
   .navigateLinks {
     @include space(flex, null, center, 10px);
-
+    width: 100%;
     .toBasket {
       color: $link-color;
       font-size: $fs-md;
@@ -21,7 +23,10 @@
     }
   }
   .checkoutContentContainer {
-    @include align(flex, space-evenly, center);
+    @include align(flex, space-evenly, flex-start);
+    @include sm {
+      @include flexDirection(flex, column, flex-start, 20px);
+    }
     .checkoutFormWrapper {
       @include flexDirection(flex, column, start, 30px);
 
@@ -30,44 +35,76 @@
         font-size: $fs-2xl;
         font-family: Epilogue-Regular;
       }
+      .form {
+        @include sm {
+          @include w-h(310px, auto);
+        }
+        label {
+          font-size: $fs-sm;
+          font-family: Epilogue-Regular;
+        }
+      }
     }
     .checkoutDataWrapper {
-      @include w-h(400px, 600px);
+      // @include w-h(400px, 600px);
       @include flexDirection(flex, column, start, 20px);
-
+      @include sm {
+        // width: 0;
+      }
       .checkoutData {
         overflow-y: auto;
         div {
           @include space(flex, space-evenly, center, 50px);
+          @include sm {
+            @include space(flex, space-evenly, center, 30px);
+          }
         }
         img {
-          @include w-h(80px, 115px);
+          @include w-h(70px, 115px);
           object-fit: contain;
+          @include sm {
+            @include w-h(60px, 100px);
+          }
         }
         span {
           color: $primary-color;
           font-size: $fs-md;
           font-family: Epilogue-Regular;
+          @include sm {
+            font-size: $fs-sm;
+          }
         }
       }
       .checkoutTotalWrapper {
         @include flexDirection(flex, column, start, 20px);
         .checkoutshipping {
           @include space(flex, space-evenly, center, 281px);
+          @include sm {
+            @include space(flex, space-evenly, center, 217px);
+          }
         }
         .checkoutTotal {
           @include space(flex, space-evenly, center, 309px);
           border-top: $br-6;
           padding-top: $pa-l;
+          @include sm {
+            @include space(flex, space-evenly, center, 241px);
+          }
         }
         span {
           color: $primary-color;
           font-size: $fs-md;
           font-family: Epilogue-Regular;
+          @include sm {
+            font-size: $fs-sm;
+          }
         }
       }
       .chooseBank {
-        @include space(flex, space-evenly, center, 235px);
+        @include space(flex, space-evenly, center, 241px);
+        @include sm {
+          @include space(flex, space-evenly, center, 192px);
+        }
         .bankImageWrapper {
           @include space(flex, space-evenly, center, 20px);
         }
@@ -75,9 +112,15 @@
           color: $primary-color;
           font-size: $fs-md;
           font-family: Epilogue-Regular;
+          @include sm {
+            font-size: $fs-sm;
+          }
         }
         img {
           @include w-h(42px, 28px);
+          @include sm {
+            @include w-h(30px, 20px);
+          }
         }
       }
       .payOrder {
@@ -88,6 +131,10 @@
           color: $bg-color;
           border: none;
           cursor: pointer;
+          @include sm {
+            @include w-h(160px, 35px);
+            font-size: $fs-sm;
+          }
         }
       }
     }

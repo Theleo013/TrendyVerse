@@ -62,7 +62,12 @@ const Checkout = () => {
         <div className={Styles.checkoutFormWrapper}>
           <h1>Checkout</h1>
 
-          <Form form={form} layout="vertical" onFinish={onFinish}>
+          <Form
+            className={Styles.form}
+            form={form}
+            layout="vertical"
+            onFinish={onFinish}
+          >
             <Form.Item
               label="Full Name"
               name="firstName"
@@ -70,7 +75,7 @@ const Checkout = () => {
                 { required: true, message: "Please input your full name!" },
               ]}
             >
-              <Input placeholder="John Doe" />
+              <Input placeholder="Mirza Mirzayev" />
             </Form.Item>
 
             <Form.Item
@@ -80,7 +85,7 @@ const Checkout = () => {
                 { required: true, message: "Please input your country!" },
               ]}
             >
-              <Input placeholder="USA" />
+              <Input placeholder="Azarbaijan" />
             </Form.Item>
 
             <Form.Item
@@ -88,7 +93,7 @@ const Checkout = () => {
               name="city"
               rules={[{ required: true, message: "Please input your city!" }]}
             >
-              <Input placeholder="New York" />
+              <Input placeholder="Baku" />
             </Form.Item>
 
             <Form.Item
@@ -118,7 +123,7 @@ const Checkout = () => {
                 { required: true, message: "Please input your phone number!" },
               ]}
             >
-              <Input placeholder="+1 234 567 890" />
+              <Input placeholder="+994-000-00-00" />
             </Form.Item>
 
             <Form.Item
@@ -136,7 +141,7 @@ const Checkout = () => {
                 { required: true, message: "Please input your post code!" },
               ]}
             >
-              <Input placeholder="10001" />
+              <Input placeholder="AZ0000" />
             </Form.Item>
 
             <Form.Item
@@ -150,12 +155,6 @@ const Checkout = () => {
               ]}
             >
               <Input placeholder="XXXX-XXXX-XXXX-XXXX" />
-            </Form.Item>
-
-            <Form.Item style={{ textAlign: "center" }}>
-              <Button type="primary" htmlType="submit" disabled={isLoading}>
-                Submit Order
-              </Button>
             </Form.Item>
           </Form>
         </div>
