@@ -44,6 +44,7 @@
     align-items: center;
     gap: 10px;
     flex-wrap: wrap;
+    margin: 0;
   }
 }
 .aboutContainer .aboutMainContent .aboutContentWrapper {
@@ -76,9 +77,22 @@
     font-size: 12px;
   }
 }
+@media (max-width: 368px) {
+  .aboutContainer .aboutMainContent .aboutContentWrapper p {
+    width: 288px;
+    height: auto;
+    font-size: 12px;
+  }
+}
 @media (max-width: 475px) {
   .aboutContainer .aboutMainContent .aboutMainImage img {
     width: 320px;
+    height: auto;
+  }
+}
+@media (max-width: 368px) {
+  .aboutContainer .aboutMainContent .aboutMainImage img {
+    width: 288px;
     height: auto;
   }
 }

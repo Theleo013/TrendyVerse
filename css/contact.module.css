@@ -97,19 +97,19 @@
 }
 @media (max-width: 475px) {
   .contactContainer .contactContentContainer .contactFormWrapper .contactInfo .inputName {
-    width: 250px;
+    width: 240px;
     height: auto;
   }
 }
 @media (max-width: 475px) {
   .contactContainer .contactContentContainer .contactFormWrapper .contactInfo .inputEmail {
-    width: 250px;
+    width: 240px;
     height: auto;
   }
 }
 @media (max-width: 475px) {
   .contactContainer .contactContentContainer .contactFormWrapper .contactInfo .inputPhone {
-    width: 250px;
+    width: 240px;
     height: auto;
   }
 }
@@ -119,7 +119,7 @@
 }
 @media (max-width: 475px) {
   .contactContainer .contactContentContainer .contactFormWrapper .contactIntroduction {
-    width: 250px;
+    width: 240px;
     height: auto;
   }
 }
@@ -129,7 +129,7 @@
 }
 @media (max-width: 475px) {
   .contactContainer .contactContentContainer .contactFormWrapper .contactSubmit {
-    width: 207px;
+    width: 100px;
     height: auto;
   }
 }

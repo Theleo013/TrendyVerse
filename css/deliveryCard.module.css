@@ -16,6 +16,16 @@
     flex-direction: column;
     align-items: center;
     gap: 20px;
+    margin-top: 90px;
+  }
+}
+@media (max-width: 475px) and (max-width: 368px) {
+  .servicesContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    margin-top: 250px;
   }
 }
 .servicesContainer .servicesWrapper {

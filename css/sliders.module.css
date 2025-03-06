@@ -80,4 +80,10 @@
     width: 320px;
     height: 460px;
   }
+}
+@media (max-width: 368px) {
+  .aboutSliderContainer {
+    width: 288px;
+    height: 130px;
+  }
 }/*# sourceMappingURL=sliders.module.css.map */

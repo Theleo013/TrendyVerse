@@ -136,7 +136,6 @@
   flex-direction: column;
   align-items: start;
   gap: 22px;
-  z-index: 1000;
 }
 @media (max-width: 475px) {
   .homeContainer .ProductCardContainer .flashProductContainer .flashContentContainer {
@@ -192,7 +191,7 @@
     top: 410px;
   }
 }
-.homeContainer .ProductCardContainer .flashProductContainer .flashImage {
+.homeContainer .ProductCardContainer .flashProductContainer .flashImage img {
   width: 600px;
   height: 420px;
 }
@@ -203,9 +202,10 @@
   }
   .homeContainer .ProductCardContainer .flashProductContainer .flashImage img {
     position: absolute;
-    top: 53px;
-    right: 206px;
-    width: 200px;
+    bottom: 167px;
+    left: -88px;
+    width: 182px;
+    height: 126px;
   }
 }
 .homeContainer .ProductCardContainer .exploreProductsContainer {
