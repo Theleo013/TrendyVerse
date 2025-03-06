@@ -29,7 +29,33 @@ export const authApi = createApi({
         }
       },
     }),
+
+    registeredUser: builder.query({
+      query: (credentials) => ({
+        url: `user?username=${credentials.username}&email=${credentials.email}`,
+        method: "GET",
+      }),
+      transformResponse: (response) => {
+        if (response.length === 1) {
+          console.log("registered data:", response);
+          return {
+            success: false,
+            user: response[0],
+            token: `fake-token-${response[0].id}`,
+            message: "This username or email has already been used",
+          };
+        } else {
+          return {
+            success: true,
+          };
+        }
+      },
+    }),
   }),
 });
 
-export const { useRegisterUserMutation, useLazyLoginUserQuery } = authApi;
+export const {
+  useRegisterUserMutation,
+  useLazyLoginUserQuery,
+  useLazyRegisteredUserQuery,
+} = authApi;

@@ -1,9 +1,10 @@
 import React from "react";
 import Styles from "@/shared/components/DeliveryCard/deliveryCard.module.scss";
+import CustomContainer from "@/styles/base/customContainer.module.scss";
 
 const DeliveryCard = () => {
   return (
-    <div className={Styles.servicesContainer}>
+    <div className={`${Styles.servicesContainer} ${CustomContainer.container}`}>
       <div className={Styles.servicesWrapper}>
         <img src="/assets/icons/Delivery.svg" alt="delivery-icon" />
         <h4>FREE AND FAST DELIVERY</h4>

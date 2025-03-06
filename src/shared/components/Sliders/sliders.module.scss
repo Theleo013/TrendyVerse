@@ -59,4 +59,7 @@
   @include sm {
     @include w-h(320px, 460px);
   }
+  @include xs {
+    @include w-h(288px, 130px);
+  }
 }

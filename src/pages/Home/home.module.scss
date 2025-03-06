@@ -96,7 +96,6 @@
       }
       .flashContentContainer {
         @include flexDirection(flex, column, start, 22px);
-        z-index: 1000;
         @include sm {
           @include flexDirection(flex, column, center, 22px);
           text-align: center;
@@ -141,15 +140,17 @@
         }
       }
       .flashImage {
-        @include w-h(600px, 420px);
+        img {
+          @include w-h(600px, 420px);
+        }
         @include sm {
           padding-top: $pa-m;
           position: relative;
           img {
             position: absolute;
-            top: 53px;
-            right: 206px;
-            width: 200px;
+            bottom: 167px;
+            left: -88px;
+            @include w-h(182px, 126px);
           }
         }
       }

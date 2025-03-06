@@ -1,27 +1,37 @@
 import React from "react";
 import { Form, Input, Button } from "antd";
-import { Link, useNavigate } from "react-router-dom";
+import { data, Link, useNavigate } from "react-router-dom";
 import Styles from "@/pages/Register/register.module.scss";
 import CustomContainer from "@/styles/base/customContainer.module.scss";
 import { urls } from "@/shared/urls";
-import { useRegisterUserMutation } from "@/redux/api/auth";
+import {
+  useLazyRegisteredUserQuery,
+  useRegisterUserMutation,
+} from "@/redux/api/auth";
 
 const Register = () => {
   const [form] = Form.useForm();
   const navigate = useNavigate();
   const [registerUser, { isLoading, error }] = useRegisterUserMutation();
+  const [registeredUser] = useLazyRegisteredUserQuery();
 
-  const onFinish = (values) => {
-    registerUser(values)
-      .unwrap()
-      .then((res) => {
-        console.log("Registration successful:", res);
+  const onFinish = async (values) => {
+    try {
+      const { username, email } = values;
+      const response = await registeredUser({ username, email }).unwrap();
+      console.log("response", response);
+
+      if (!response.success) {
+        alert(response.message);
+      } else {
+        const res = await registerUser(values).unwrap();
         navigate(urls.LOGIN);
-      })
-      .catch((err) => {
-        console.error("Registration error:", err);
-      });
+      }
+    } catch (err) {
+      alert(error);
+    }
   };
+
   const formItemLayout = {
     labelCol: {
       xs: { span: 24 },
@@ -78,7 +88,25 @@ const Register = () => {
             <Form.Item
               name="email"
               label={<span className={Styles.registerlabel}>Email</span>}
-              rules={[{ required: true, message: "Please input your E-mail!" }]}
+              rules={[
+                { required: true, message: "Please input your E-mail!" },
+                {
+                  validator(value) {
+                    if (
+                      !value ||
+                      value.includes("@gmail.com") ||
+                      value.includes("@hotmail.com") ||
+                      value.includes("@mail.ru") ||
+                      value.include("@ymail.com")
+                    ) {
+                      return Promise.resolve();
+                    }
+                    return Promise.reject(
+                      new Error("Please enter a valid email address")
+                    );
+                  },
+                },
+              ]}
             >
               <Input autoComplete="off" />
             </Form.Item>
@@ -88,6 +116,7 @@ const Register = () => {
               label={<span className={Styles.registerlabel}>Password</span>}
               rules={[
                 { required: true, message: "Please input your password!" },
+                { min: 8, message: "Please use a minimum 8-digit password." },
               ]}
             >
               <Input.Password autoComplete="off" />
@@ -104,6 +133,7 @@ const Register = () => {
                   required: true,
                   message: "Please confirm your password!",
                 },
+                { min: 8, message: "Please use a minimum 8-digit password." },
                 ({ getFieldValue }) => ({
                   validator(_, value) {
                     if (!value || getFieldValue("password") === value) {

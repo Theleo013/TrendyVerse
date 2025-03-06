@@ -242,9 +242,8 @@ const Home = () => {
               </div>
             </div>
           </div>
-          <div>
-            <DeliveryCard />
-          </div>
+          <DeliveryCard />
+          {/* <div></div> */}
         </div>
       </RenderIf>
     </div>

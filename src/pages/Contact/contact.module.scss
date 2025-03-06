@@ -62,30 +62,30 @@
         }
         .inputName {
           @include sm {
-            @include w-h(250px, auto);
+            @include w-h(240px, auto);
           }
         }
         .inputEmail {
           @include sm {
-            @include w-h(250px, auto);
+            @include w-h(240px, auto);
           }
         }
         .inputPhone {
           @include sm {
-            @include w-h(250px, auto);
+            @include w-h(240px, auto);
           }
         }
       }
       .contactIntroduction {
         @include w-h(616px, auto);
         @include sm {
-          @include w-h(250px, auto);
+          @include w-h(240px, auto);
         }
       }
       .contactSubmit {
         @include w-h(616px, auto);
         @include sm {
-          @include w-h(207px, auto);
+          @include w-h(100px, auto);
         }
         .contactButton {
           background-color: $span-color;

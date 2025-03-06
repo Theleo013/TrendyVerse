@@ -21,6 +21,9 @@ const authSlice = createSlice({
   },
   extraReducers: (builder) => {
     builder
+
+      //loginUser
+
       .addMatcher(authApi.endpoints.loginUser.matchPending, (state) => {
         state.loading = true;
         state.error = null;
@@ -40,6 +43,33 @@ const authSlice = createSlice({
       )
       .addMatcher(
         authApi.endpoints.loginUser.matchRejected,
+        (state, action) => {
+          state.error = action.error.message;
+          state.loading = false;
+        }
+      )
+
+      //RegisteredUser
+
+      .addMatcher(authApi.endpoints.registeredUser.matchPending, (state) => {
+        state.loading = true;
+        state.error = null;
+      })
+      .addMatcher(
+        authApi.endpoints.registeredUser.matchFulfilled,
+        (state, action) => {
+          if (action.payload.success) {
+            state.user = action.payload.user;
+            state.token = action.payload.token;
+            state.loading = false;
+          } else {
+            state.error = action.payload.message;
+            state.loading = false;
+          }
+        }
+      )
+      .addMatcher(
+        authApi.endpoints.registeredUser.matchRejected,
         (state, action) => {
           state.error = action.error.message;
           state.loading = false;

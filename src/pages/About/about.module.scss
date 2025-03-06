@@ -28,6 +28,7 @@
     @include sm {
       @include flexDirection(flex, column, center, 10px);
       flex-wrap: wrap;
+      margin: 0;
     }
     .aboutContentWrapper {
       @include flexDirection(flex, column, start, 30px);
@@ -50,12 +51,20 @@
 
           font-size: $fs-xs;
         }
+        @include xs {
+          @include w-h(288px, auto);
+
+          font-size: $fs-xs;
+        }
       }
     }
     .aboutMainImage {
       img {
         @include sm {
           @include w-h(320px, auto);
+        }
+        @include xs {
+          @include w-h(288px, auto);
         }
       }
     }

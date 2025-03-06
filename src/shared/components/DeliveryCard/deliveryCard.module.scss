@@ -10,6 +10,11 @@
   @include sm {
     @include sm {
       @include flexDirection(flex, column, center, 20px);
+      margin-top: 90px;
+    }
+    @include xs {
+      @include flexDirection(flex, column, center, 20px);
+      margin-top: 250px;
     }
   }
   .servicesWrapper {

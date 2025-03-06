@@ -125,7 +125,7 @@ const Contact = () => {
                   className={Styles.inputPhone}
                   placeholder="Phone Number"
                   addonBefore={prefixSelector}
-                  style={{ width: "100%" }}
+                  // style={{ width: "100%" }}
                 />
               </Form.Item>
             </div>
