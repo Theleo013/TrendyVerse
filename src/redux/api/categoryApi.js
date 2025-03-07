@@ -3,7 +3,7 @@ import { axiosBaseQuery } from "@/redux/api/axiosBase";
 
 export const categoryApi = createApi({
   reducerPath: "categoryApi",
-  baseQuery: axiosBaseQuery({ baseUrl: "https://dbjson-server.vercel.app/" }),
+  baseQuery: axiosBaseQuery({ baseUrl: "https://db-json-f558.onrender.com/" }),
   keepUnusedDataFor: 1000,
   endpoints: (builder) => ({
     getCategories: builder.query({

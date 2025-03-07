@@ -2,7 +2,7 @@ import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 
 export const contactApi = createApi({
   reducerPath: "contact",
-  baseQuery: fetchBaseQuery({ baseUrl: "https://dbjson-server.vercel.app" }),
+  baseQuery: fetchBaseQuery({ baseUrl: "https://db-json-f558.onrender.com/" }),
   tagTypes: ["Contact"],
   endpoints: (builder) => ({
     contactForm: builder.mutation({

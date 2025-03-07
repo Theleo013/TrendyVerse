@@ -3,7 +3,7 @@ import { axiosBaseQuery } from "@/redux/api/axiosBase";
 
 export const productsApi = createApi({
   reducerPath: "productsApi",
-  baseQuery: axiosBaseQuery({ baseUrl: "https://dbjson-server.vercel.app/" }),
+  baseQuery: axiosBaseQuery({ baseUrl: "https://db-json-f558.onrender.com/" }),
   keepUnusedDataFor: 1000,
   endpoints: (builder) => ({
     getProducts: builder.query({

@@ -91,13 +91,13 @@ const Register = () => {
               rules={[
                 { required: true, message: "Please input your E-mail!" },
                 {
-                  validator(value) {
+                  validator(_, value) {
                     if (
                       !value ||
                       value.includes("@gmail.com") ||
                       value.includes("@hotmail.com") ||
                       value.includes("@mail.ru") ||
-                      value.include("@ymail.com")
+                      value.includes("@ymail.com")
                     ) {
                       return Promise.resolve();
                     }
