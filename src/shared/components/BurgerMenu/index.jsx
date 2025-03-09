@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import Styled from "./burgerMenu.module.scss";
 import { Link } from "react-router-dom";
 import { urls } from "@/shared/urls";
+import { useSelector } from "react-redux";
+const { user } = useSelector((state) => state.auth);
 
 const BurgerMenu = () => {
   const [open, setOpen] = useState(false);
@@ -21,7 +23,7 @@ const BurgerMenu = () => {
         <Link to={urls.HOME}> Home</Link>
         <Link to={urls.CONTACT}> Contact</Link>
         <Link to={urls.ABOUT}> About</Link>
-        <Link to={urls.REGISTER}> Sign Up</Link>
+        {user ? null : <Link to={urls.REGISTER}> Sign Up</Link>}
       </nav>
     </>
   );

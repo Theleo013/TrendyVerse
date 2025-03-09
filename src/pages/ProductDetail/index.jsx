@@ -45,7 +45,10 @@ const ProductDetail = () => {
             Home
           </Link>
           /
-          <Link className={Styles.productLinkProduct} to={urls.PRODUCT_ID}>
+          <Link
+            className={Styles.productLinkProduct}
+            to={`/product/${productId}`}
+          >
             Product
           </Link>
         </div>
