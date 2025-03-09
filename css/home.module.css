@@ -318,7 +318,7 @@
   flex-direction: column;
   align-items: start;
   gap: 20px;
-  z-index: 1000;
+  z-index: 100;
 }
 .homeContainer .ProductCardContainer .newArrivalContainer .newArrivalWrapper .ps5Container .ps5Content h4 {
   font-family: Epilogue-Regular;
@@ -381,7 +381,7 @@
 @media (max-width: 475px) {
   .homeContainer .ProductCardContainer .newArrivalContainer .newArrivalWrapper .arrivalProductsContainer .hat img {
     position: absolute;
-    width: 243px;
+    width: 240px;
     height: auto;
   }
 }
@@ -390,7 +390,7 @@
   flex-direction: column;
   align-items: start;
   gap: 20px;
-  z-index: 1000;
+  z-index: 100;
 }
 .homeContainer .ProductCardContainer .newArrivalContainer .newArrivalWrapper .arrivalProductsContainer .hat .hatContent h4 {
   font-family: Epilogue-Regular;
@@ -490,7 +490,7 @@
   flex-direction: column;
   align-items: start;
   gap: 20px;
-  z-index: 1000;
+  z-index: 100;
 }
 @media (max-width: 368px) {
   .homeContainer .ProductCardContainer .newArrivalContainer .newArrivalWrapper .arrivalProductsContainer .innerProductsWrapper .speaker .speakerContent {
@@ -577,7 +577,7 @@
   flex-direction: column;
   align-items: start;
   gap: 20px;
-  z-index: 1000;
+  z-index: 100;
 }
 @media (max-width: 368px) {
   .homeContainer .ProductCardContainer .newArrivalContainer .newArrivalWrapper .arrivalProductsContainer .innerProductsWrapper .parfume .parfumeContent {

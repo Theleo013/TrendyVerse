@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import Styles from "@/shared/components/SearchBar/searchBar.module.scss";
 import { AutoComplete, Input, Button } from "antd";
 import { useLazySearchProductsQuery } from "@/redux/api/products";
@@ -11,6 +11,7 @@ const SearchBar = () => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [triggerSearch, { data: products }] = useLazySearchProductsQuery();
   const navigate = useNavigate();
+  const searchBarRef = useRef(null);
 
   const handleSearch = async (value) => {
     setSearchText(value);
@@ -56,8 +57,25 @@ const SearchBar = () => {
     }
   };
 
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (
+        searchBarRef.current &&
+        !searchBarRef.current.contains(event.target)
+      ) {
+        setIsDropdownOpen(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
+
   return (
-    <div className={Styles.searchBar}>
+    <div ref={searchBarRef} className={Styles.searchBar}>
       <AutoComplete
         popupMatchSelectWidth={252}
         style={{ flex: 1 }}

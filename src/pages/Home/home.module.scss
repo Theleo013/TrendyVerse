@@ -222,7 +222,7 @@
           }
           .ps5Content {
             @include flexDirection(flex, column, start, 20px);
-            z-index: 1000;
+            z-index: 100;
 
             h4 {
               font-family: Epilogue-Regular;
@@ -268,12 +268,12 @@
               right: 0;
               @include sm {
                 position: absolute;
-                @include w-h(243px, auto);
+                @include w-h(240px, auto);
               }
             }
             .hatContent {
               @include flexDirection(flex, column, start, 20px);
-              z-index: 1000;
+              z-index: 100;
               h4 {
                 font-family: Epilogue-Regular;
                 font-size: $fs-lg;
@@ -339,7 +339,7 @@
               }
               .speakerContent {
                 @include flexDirection(flex, column, start, 20px);
-                z-index: 1000;
+                z-index: 100;
                 @include xs {
                   width: 86%;
                 }
@@ -399,7 +399,7 @@
               }
               .parfumeContent {
                 @include flexDirection(flex, column, start, 20px);
-                z-index: 1000;
+                z-index: 100;
                 @include xs {
                   width: 86%;
                 }

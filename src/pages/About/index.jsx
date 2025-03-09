@@ -81,9 +81,7 @@ const About = () => {
       <div className={Styles.aboutCardSection}>
         <AboutSlider />
       </div>
-      <div>
-        <DeliveryCard />
-      </div>
+      <DeliveryCard />
     </div>
   );
 };

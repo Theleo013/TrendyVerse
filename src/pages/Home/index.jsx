@@ -22,9 +22,7 @@ const Home = () => {
   const [showAll, setShowAll] = React.useState(false);
 
   const filteredDataMain = showAll ? data.slice(0, 16) : data?.slice(0, 4);
-
   const filteredDataTop = showAll ? data.slice(0, 16) : data?.slice(4, 8);
-
   const filteredDataExplore = showAll ? data.slice(0, 16) : data?.slice(8, 12);
 
   const PS5 = data?.find((item) => Number(item.id) === 23);
@@ -32,6 +30,22 @@ const Home = () => {
   const Speakers = data?.find((item) => Number(item.id) === 25);
   const Parfume = data?.find((item) => Number(item.id) === 26);
   const JBL = data?.find((item) => Number(item.id) === 27);
+
+  useEffect(() => {
+    const savedScroll = sessionStorage.getItem("homeScrollPosition");
+    if (savedScroll) {
+      window.scrollTo(0, parseInt(savedScroll, 10));
+    }
+
+    const handleScroll = () => {
+      sessionStorage.setItem("homeScrollPosition", window.scrollY.toString());
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   return (
     <div className={Styles.homeContainer}>

@@ -51,7 +51,7 @@
         }
 
         img {
-          @include w-h(200px, auto);
+          @include w-h(140px, auto);
           object-fit: contain;
           @include sm {
             @include w-h(120px, 120px);
