@@ -12,13 +12,9 @@
   }
   .prductContentContainer {
     @include flexDirection(flex, column, center, 100px);
-
-    position: relative;
     .productNavigateLinks {
       @include flex-space(flex, center, 20px);
-      position: absolute;
-      top: -50px;
-      left: 0;
+      width: 100%;
       .productLinkHome {
         color: $link-color;
         font-family: Epilogue-Regular;
@@ -51,7 +47,7 @@
         @include align(flex, center, center);
         background-color: $bg-color2;
         @include sm {
-          @include w-h(220px, 220px);
+          @include w-h(227px, 190px);
         }
 
         img {
@@ -107,7 +103,7 @@
             border: 1px solid $link-color;
             cursor: pointer;
             @include sm {
-              @include w-h(166px, 28px);
+              @include w-h(162px, 28px);
               font-size: $fs-md;
             }
           }

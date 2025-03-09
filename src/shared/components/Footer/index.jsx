@@ -1,6 +1,7 @@
 import React from "react";
 import Styles from "@/shared/components/Footer/footer.module.scss";
 import { Link } from "react-router-dom";
+import { urls } from "@/shared/urls";
 
 const Footer = () => {
   return (
@@ -12,10 +13,10 @@ const Footer = () => {
             <Link>Subscribe</Link>
             <Link>Get 10% off your first order</Link>
           </div>
-          <div className={Styles.inputContainer}>
+          {/* <div className={Styles.inputContainer}>
             <input placeholder="Enter your email" type="text" />
             <img src="/assets/icons/send-icon.svg" alt="send-icon" />
-          </div>
+          </div> */}
         </div>
         <div className={Styles.sectionSupport}>
           <h3>Support</h3>
@@ -25,18 +26,18 @@ const Footer = () => {
         </div>
         <div className={Styles.sectionAccount}>
           <h3>Account</h3>
-          <Link>My Account</Link>
-          <Link>Login / Register</Link>
-          <Link>Cart</Link>
-          <Link>Wishlist</Link>
-          <Link>Shop</Link>
+          <Link to={urls.PROFILE}>My Account</Link>
+          <Link to={urls.REGISTER}>Login / Register</Link>
+          <Link to={urls.BASKET}>Cart</Link>
+          <Link to={urls.WISHLIST}>Wishlist</Link>
+          <Link to={urls.HOME}>Shop</Link>
         </div>
         <div className={Styles.sectionQuickLink}>
           <h3>Quick Link</h3>
           <Link>Privacy Policy</Link>
           <Link>Terms Of Use</Link>
           <Link>FAQ</Link>
-          <Link>Contact</Link>
+          <Link to={urls.CONTACT}>Contact</Link>
         </div>
         <div className={Styles.sectionSocial}>
           <div className={Styles.description}>
@@ -47,8 +48,16 @@ const Footer = () => {
             <img src="/assets/icons/GithubQR.png" alt="GithubQR" />
           </div>
           <div className={Styles.social}>
-            <img src="/assets/icons/Github.svg" alt="github" />
-            <img src="/assets/icons/Linkedin.png" alt="linkedin" />
+            <Link to={"https://github.com/Theleo013"}>
+              <img src="/assets/icons/Github.svg" alt="github" />
+            </Link>
+            <Link
+              to={
+                "https://www.linkedin.com/in/el%C3%A7in-m%C9%99mm%C9%99dov-915188305/"
+              }
+            >
+              <img src="/assets/icons/Linkedin.png" alt="linkedin" />
+            </Link>
             <img src="/assets/icons/X_icon.svg" alt="X" />
             <img src="/assets/icons/Facebook.png" alt="facebook" />
           </div>

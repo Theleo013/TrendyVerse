@@ -20,15 +20,12 @@
   flex-direction: column;
   align-items: center;
   gap: 100px;
-  position: relative;
 }
 .productContainer .prductContentContainer .productNavigateLinks {
   display: flex;
   align-items: center;
   gap: 20px;
-  position: absolute;
-  top: -50px;
-  left: 0;
+  width: 100%;
 }
 .productContainer .prductContentContainer .productNavigateLinks .productLinkHome {
   color: rgb(163, 161, 161);
@@ -70,8 +67,8 @@
 }
 @media (max-width: 475px) {
   .productContainer .prductContentContainer .productWrapper .productImage {
-    width: 220px;
-    height: 220px;
+    width: 227px;
+    height: 190px;
   }
 }
 .productContainer .prductContentContainer .productWrapper .productImage img {
@@ -147,8 +144,8 @@
 }
 @media (max-width: 475px) {
   .productContainer .prductContentContainer .productWrapper .productContent .productPriceWrapper button {
-    width: 166px;
+    width: 162px;
     height: 28px;
     font-size: 16px;
   }
-}/*# sourceMappingURL=productDetail.module.css.map */
+}/*# sourceMappingURL=productdetail.module.css.map */
