@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 
 const Timer = () => {
-  const [timeLeft, setTimeLeft] = useState(24 * 60 * 60); // 24 saat (saniye cinsinden)
+  const [timeLeft, setTimeLeft] = useState(24 * 60 * 60);
 
   useEffect(() => {
     if (timeLeft <= 0) return;
@@ -13,7 +13,6 @@ const Timer = () => {
     return () => clearInterval(interval);
   }, [timeLeft]);
 
-  // Geri sayımı saat:dakika:saniye formatına çevirme
   const formatTime = (seconds) => {
     const hrs = Math.floor(seconds / 3600);
     const mins = Math.floor((seconds % 3600) / 60);
