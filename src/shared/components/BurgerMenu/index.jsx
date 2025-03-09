@@ -3,11 +3,10 @@ import Styled from "./burgerMenu.module.scss";
 import { Link } from "react-router-dom";
 import { urls } from "@/shared/urls";
 import { useSelector } from "react-redux";
-const { user } = useSelector((state) => state.auth);
 
 const BurgerMenu = () => {
   const [open, setOpen] = useState(false);
-
+  const { user } = useSelector((state) => state.auth);
   return (
     <>
       <button
