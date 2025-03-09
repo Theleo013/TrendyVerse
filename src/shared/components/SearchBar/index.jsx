@@ -44,14 +44,23 @@ const SearchBar = () => {
     }
   }, [products, searchText]);
 
+  // Ürün seçildiğinde, ürün detayına gitmek yerine input alanına ürün başlığını aktarıyoruz.
   const onSelect = (productId) => {
-    navigate(`/product/${productId}`);
-    setSearchText("");
+    const selectedProduct = products.find((p) => p.id === productId);
+    if (selectedProduct) {
+      setSearchText(selectedProduct.title);
+    }
     setIsDropdownOpen(false);
   };
 
+ 
   const handleSearchButtonClick = () => {
-    if (searchText.trim()) {
+    const matchedProduct = products?.find(
+      (p) => p.title.toLowerCase() === searchText.toLowerCase()
+    );
+    if (matchedProduct) {
+      navigate(`/product/${matchedProduct.id}`);
+    } else if (searchText.trim()) {
       triggerSearch(searchText);
       setIsDropdownOpen(true);
     }
