@@ -2,7 +2,7 @@ import React from "react";
 import Styles from "@/pages/ProductDetail/productDetail.module.scss";
 import CustomContainer from "@/styles/base/customContainer.module.scss";
 import { InfinitySpin } from "react-loader-spinner";
-import { useGetProductByIdQuery } from "@/redux/api/products";
+import { useGetProductByTitleQuery } from "@/redux/api/products";
 import { addToBasket } from "@/redux/features/basketSlice";
 import RenderIf from "@/shared/components/RenderIf";
 import { Link, Navigate, useParams } from "react-router-dom";
@@ -11,16 +11,18 @@ import { useDispatch } from "react-redux";
 import { urls } from "@/shared/urls";
 
 const ProductDetail = () => {
-  const { id: productId } = useParams();
+  const { title: productTitle } = useParams();
+  console.log("product Title", productTitle);
 
   const {
-    data: product,
+    data: productData,
     isFetching,
     isError,
     error,
-  } = useGetProductByIdQuery(Number(productId));
+  } = useGetProductByTitleQuery(productTitle);
+  const product = Array.isArray(productData) ? productData[0] : productData;
   const dispatch = useDispatch();
-
+  console.log("product:", product);
   return (
     <div className={Styles.productContainer}>
       <RenderIf condition={isFetching}>
@@ -47,7 +49,10 @@ const ProductDetail = () => {
           /
           <Link
             className={Styles.productLinkProduct}
-            to={`/product/${productId}`}
+            to={urls.PRODUCT_DETAIL.replace(
+              ":title",
+              encodeURIComponent(productTitle)
+            )}
           >
             Product
           </Link>
@@ -55,7 +60,7 @@ const ProductDetail = () => {
         <div className={Styles.productHeadingText}>
           {product && <h1>Product detail</h1>}
         </div>
-        {product?.id && (
+        {product && (
           <div
             className={`${Styles.productWrapper} ${CustomContainer.container}`}
           >

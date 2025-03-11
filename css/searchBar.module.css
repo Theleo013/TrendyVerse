@@ -6,6 +6,12 @@
   display: flex;
   gap: 3px;
 }
+.searchBar .searchInput {
+  border: 2px solid rgb(224, 224, 224) !important;
+}
+.searchBar .searchInput::placeholder {
+  color: rgb(79, 79, 79);
+}
 @media (max-width: 475px) {
   .searchBar .searchInput {
     width: 300px;

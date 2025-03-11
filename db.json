@@ -215,6 +215,78 @@
       "desc": " Enjoy your music with massive JBL Original Pro Sound. The new 3-way speakers deliver higher sensitivity of our acoustic design sharpens clarity while lowering distortion for monstrous bass and a rich audio spectrums",
       "price": "314",
       "views": "916"
+    },
+    {
+      "id": "28",
+      "image": "/assets/images/categoryImages/ZenBook.jpg",
+      "title": "Asus ZenBook S 14",
+      "desc": "The Asus Zenbook S 14 is one of the few laptops powered by a Lunar Lake chip",
+      "price": "990",
+      "views": "243"
+    },
+    {
+      "id": "29",
+      "image": "/assets/images/categoryImages/HW20.jpg",
+      "title": "Smart Watch HW20 Pro",
+      "desc": "HW20 Smart Watch offers IP68 waterproof, round design, and men's styles. Track heart rate, sleep, and get call reminders",
+      "price": "81",
+      "views": "837"
+    },
+    {
+      "id": "30",
+      "image": "/assets/images/categoryImages/T800.jpg",
+      "title": "Smart Watch T800 Ultra",
+      "desc": "The T800 Ultra Smart Watch is a multifunctional personal assistant made to simplify tasks in addition to being a tool for remaining connected and in shape",
+      "price": "12",
+      "views": "381"
+    },
+    {
+      "id": "31",
+      "image": "/assets/images/categoryImages/X7-Pro.jpg",
+      "title": "Smart Watch X7 Pro",
+      "desc": "Square Aluminum X7 Pro Smart Watch 45mm Series 7 IP68 Full Waterproof, For Personal Use. X7 Pro Smart Watch Series 7 for Android & iPhone has features design",
+      "price": "12",
+      "views": "381"
+    },
+    {
+      "id": "32",
+      "image": "/assets/images/categoryImages/Panasonic.jpg",
+      "title": "Panasonic DMC-G7",
+      "desc": "The camera features a 16 MP Live MOS Sensor in combination with a Venus Engine 9 Image Processor. The camera can shoot continuously at up to 8 fps",
+      "price": "764",
+      "views": "620"
+    },
+    {
+      "id": "33",
+      "image": "/assets/images/categoryImages/Canon-EOS.jpg",
+      "title": "Canon EOS M50",
+      "desc": "Discover Canon's EOS M50 4K mirrorless camera. Produce incredible high-resolution, cinematic video footage with a unique look and feel",
+      "price": "990",
+      "views": "204"
+    },
+    {
+      "id": "34",
+      "image": "/assets/images/categoryImages/PSHeadPhone.jpg",
+      "title": "Sony PlayStation Gold",
+      "desc": " The Headset from Sony delivers depth and audio clarity, which elevates your gaming experience with customizable game modes created by developers exclusively for PlayStation",
+      "price": "60",
+      "views": "662"
+    },
+    {
+      "id": "35",
+      "image": "/assets/images/categoryImages/CA-037.jpg",
+      "title": "CA-037 Bluetooth Headset",
+      "desc": " Our headset supports 3.5mm AUX IN, allowing you to connect it to various devices for a versatile audio experience. Whether you want to enjoy music, watch movies",
+      "price": "13",
+      "views": "859"
+    },
+    {
+      "id": "36",
+      "image": "/assets/images/categoryImages/Recci-Wired.jpg",
+      "title": "Recci Wired Gaming",
+      "desc": "REP-L19 wired gaming earphone game experience immersive. Comfortable to wear ergonomic design. Plug and pull microphone pole to meet the teams game voice requirements",
+      "price": "130",
+      "views": "572"
     }
   ],
   "categories": {
@@ -360,7 +432,7 @@
       {
         "id": "2",
         "image": "/assets/images/products/GP11Gamepad.png",
-        "title": "GP11ShooterUSBGamepad",
+        "title": "GP11 Shooter USB Gamepad",
         "desc": "For PC / PS3- Ergonomic shape & weight favored by esports athletes- Feel Comfortable in your hands for hours of gaming",
         "price": "660",
         "views": "132"
@@ -368,7 +440,7 @@
       {
         "id": "3",
         "image": "/assets/images/products/HavitJoystick.png",
-        "title": "HAVITHV-G92Gamepad",
+        "title": "HAVITHV-G92 Gamepad",
         "desc": "The Havit HV-G92 gamepad allows you to use the familiar layout and buttons to enjoy console control when playing games on your PC",
         "price": "120",
         "views": "88"

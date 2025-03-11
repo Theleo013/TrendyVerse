@@ -59,7 +59,7 @@ function App() {
           />
           <Route path={urls.CHECKOUT} element={<Checkout />} />
           <Route path={urls.WISHLIST} element={<Wishlist />} />
-          <Route path={urls.PRODUCT_ID} element={<ProductDetail />} />
+          <Route path={urls.PRODUCT_DETAIL} element={<ProductDetail />} />
           <Route path={urls.CATEGORY} element={<CategoryPage />} />
           <Route path={urls.NOT_fOUND} element={<PageNotFound />} />
         </Route>

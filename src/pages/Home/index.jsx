@@ -25,11 +25,22 @@ const Home = () => {
   const filteredDataTop = showAll ? data.slice(0, 16) : data?.slice(4, 8);
   const filteredDataExplore = showAll ? data.slice(0, 16) : data?.slice(8, 12);
 
-  const PS5 = data?.find((item) => Number(item.id) === 23);
-  const Hat = data?.find((item) => Number(item.id) === 24);
-  const Speakers = data?.find((item) => Number(item.id) === 25);
-  const Parfume = data?.find((item) => Number(item.id) === 26);
-  const JBL = data?.find((item) => Number(item.id) === 27);
+  const PS5 = data
+    ?.filter((item) => Number(item.id) === 23)
+    .map((item) => item.title)[0];
+  const Hat = data
+    ?.filter((item) => Number(item.id) === 24)
+    .map((item) => item.title)[0];
+  const Speakers = data
+    ?.filter((item) => Number(item.id) === 25)
+    .map((item) => item.title)[0];
+  const Parfume = data
+    ?.filter((item) => Number(item.id) === 26)
+    .map((item) => item.title)[0];
+
+  const JBL = data
+    ?.filter((item) => Number(item.id) === 27)
+    .map((item) => item.title)[0];
 
   useEffect(() => {
     const savedScroll = sessionStorage.getItem("homeScrollPosition");
@@ -139,7 +150,9 @@ const Home = () => {
                 <Timer />
               </div>
               {JBL && (
-                <Link to={urls.PRODUCT_ID.replace(":id", JBL.id)}>Buy Now</Link>
+                <Link to={urls.PRODUCT_DETAIL.replace(":title", JBL)}>
+                  Buy Now
+                </Link>
               )}
             </div>
             <div className={Styles.flashImage}>
@@ -197,7 +210,7 @@ const Home = () => {
                   <h4>PlayStation 5</h4>
                   <p>Black and White version of the PS5 coming out on sale.</p>
                   {PS5 && (
-                    <Link to={urls.PRODUCT_ID.replace(":id", PS5.id)}>
+                    <Link to={urls.PRODUCT_DETAIL.replace(":title", PS5)}>
                       Shop Now
                     </Link>
                   )}
@@ -215,7 +228,7 @@ const Home = () => {
                       Featured woman collections that give you another vibe.
                     </p>
                     {Hat && (
-                      <Link to={urls.PRODUCT_ID.replace(":id", Hat.id)}>
+                      <Link to={urls.PRODUCT_DETAIL.replace(":title", Hat)}>
                         Shop Now
                       </Link>
                     )}
@@ -231,7 +244,9 @@ const Home = () => {
                       <h4>Speakers</h4>
                       <p>Amazon wireless speakers</p>
                       {Speakers && (
-                        <Link to={urls.PRODUCT_ID.replace(":id", Speakers.id)}>
+                        <Link
+                          to={urls.PRODUCT_DETAIL.replace(":title", Speakers)}
+                        >
                           Shop Now
                         </Link>
                       )}
@@ -246,7 +261,9 @@ const Home = () => {
                       <h4>Perfume</h4>
                       <p>Gucci intense oud edp</p>
                       {Parfume && (
-                        <Link to={urls.PRODUCT_ID.replace(":id", Parfume.id)}>
+                        <Link
+                          to={urls.PRODUCT_DETAIL.replace(":title", Parfume)}
+                        >
                           Shop Now
                         </Link>
                       )}

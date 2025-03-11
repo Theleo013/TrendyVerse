@@ -9,51 +9,75 @@ const SearchBar = () => {
   const [options, setOptions] = useState([]);
   const [searchText, setSearchText] = useState("");
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const [isProductSelected, setIsProductSelected] = useState(false);
   const [triggerSearch, { data: products }] = useLazySearchProductsQuery();
   const navigate = useNavigate();
   const searchBarRef = useRef(null);
 
-  const handleSearch = async (value) => {
+  const handleSearch = (value) => {
     setSearchText(value);
+    if (isProductSelected) return;
     if (!value.trim()) {
       setOptions([]);
       setIsDropdownOpen(false);
       return;
     }
-
     triggerSearch(value);
     setIsDropdownOpen(true);
   };
 
   useEffect(() => {
-    if (products?.length) {
-      const filteredOptions = products.filter((product) =>
+    if (!searchText.trim()) {
+      setOptions([]);
+      setIsDropdownOpen(false);
+      return;
+    }
+    if (products && products.length > 0) {
+      const uniqueProducts = Array.from(
+        new Map(
+          products.map((item) => [item.title.toLowerCase(), item])
+        ).values()
+      );
+      const filteredOptions = uniqueProducts.filter((product) =>
         product.title.toLowerCase().startsWith(searchText.toLowerCase())
       );
-
       setOptions(
         filteredOptions.map((product) => ({
-          value: product.id,
-          label: <span>{product.title}</span>,
+          value: product.title.toString(),
+          label: <div style={{ cursor: "pointer" }}>{product.title}</div>,
         }))
       );
-      setIsDropdownOpen(true);
+      setIsDropdownOpen(filteredOptions.length > 0);
     } else {
       setOptions([]);
       setIsDropdownOpen(false);
     }
   }, [products, searchText]);
 
-  const onSelect = (productId) => {
-    navigate(`/product/${productId}`);
-    setSearchText("");
+  const onSelect = (value) => {
+    setSearchText(value);
     setIsDropdownOpen(false);
+    setIsProductSelected(true);
   };
 
   const handleSearchButtonClick = () => {
-    if (searchText.trim()) {
+    if (!searchText.trim()) return;
+
+    const matchedProduct = products?.find(
+      (product) => product.title.toLowerCase() === searchText.toLowerCase()
+    );
+
+    if (matchedProduct) {
+      const formattedTitle = encodeURIComponent(
+        matchedProduct.title.toLowerCase()
+      );
+      navigate(`/product/${formattedTitle}`);
+      setSearchText("");
+      setIsDropdownOpen(false);
+      setIsProductSelected(false);
+    } else {
       triggerSearch(searchText);
-      setIsDropdownOpen(true);
+      setIsDropdownOpen(false);
     }
   };
 
@@ -66,12 +90,8 @@ const SearchBar = () => {
         setIsDropdownOpen(false);
       }
     };
-
-    document.addEventListener("mousedown", handleClickOutside);
-
-    return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
-    };
+    document.addEventListener("click", handleClickOutside);
+    return () => document.removeEventListener("click", handleClickOutside);
   }, []);
 
   return (
@@ -83,7 +103,10 @@ const SearchBar = () => {
         onSearch={handleSearch}
         onSelect={onSelect}
         value={searchText}
-        onChange={setSearchText}
+        onChange={(value) => {
+          setSearchText(value);
+          setIsProductSelected(false);
+        }}
         open={isDropdownOpen}
         defaultActiveFirstOption={false}
         filterOption={false}

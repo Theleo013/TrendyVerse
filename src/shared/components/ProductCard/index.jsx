@@ -6,6 +6,8 @@ import { addToBasket } from "@/redux/features/basketSlice";
 import { useDispatch } from "react-redux";
 import { addToWishlist } from "@/redux/features/wishlistSlice";
 import heartRedIcon from "/assets/icons/heartRed-icon.svg";
+import { urls } from "@/shared/urls";
+
 const ProductCard = ({
   image,
   title,
@@ -39,7 +41,7 @@ const ProductCard = ({
           </div>
         </div>
         <div className={Styles.cardImage}>
-          <Link to={`/product/${id}`}>
+          <Link to={`/product/${title}`}>
             <img src={image} alt={image} />
           </Link>
         </div>

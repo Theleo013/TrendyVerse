@@ -41,7 +41,7 @@ const CategoryCard = ({
           </div>
         </div>
         <div className={Styles.categoryCardImage}>
-          <Link>
+          <Link to={urls.PRODUCT_DETAIL.replace(":title", title)}>
             <img src={image} alt={image} />
           </Link>
         </div>
@@ -58,7 +58,7 @@ const CategoryCard = ({
       </div>
 
       <div className={Styles.productTitleContainer}>
-        <Link>
+        <Link to={urls.PRODUCT_DETAIL.replace(":title", title)}>
           <h3>{title}</h3>
         </Link>
         <Link>

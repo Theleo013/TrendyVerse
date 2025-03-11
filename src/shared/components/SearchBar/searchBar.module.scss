@@ -4,6 +4,12 @@
 
 .searchBar {
   @include space(flex, null, null, 3px);
+  .searchInput {
+    border: $br-1 !important;
+    &::placeholder {
+      color: $list-color;
+    }
+  }
   @include sm {
     .searchInput {
       @include w-h(300px, 25px);

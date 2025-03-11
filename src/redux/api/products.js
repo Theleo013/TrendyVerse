@@ -14,10 +14,10 @@ export const productsApi = createApi({
         };
       },
     }),
-    getProductById: builder.query({
-      query(id) {
+    getProductByTitle: builder.query({
+      query(title) {
         return {
-          url: `products/${id}`,
+          url: `products?title_like=${title}`,
           method: "GET",
         };
       },
@@ -35,6 +35,6 @@ export const productsApi = createApi({
 
 export const {
   useGetProductsQuery,
-  useGetProductByIdQuery,
+  useGetProductByTitleQuery,
   useLazySearchProductsQuery,
 } = productsApi;

@@ -8,7 +8,7 @@ export const urls = {
   BASKET: "/basket",
   CHECKOUT: "/checkout",
   WISHLIST: "/wishlist",
-  PRODUCT_ID: "/product/:id",
+  PRODUCT_DETAIL: "/product/:title",
   CATEGORY: "/category/:categoryName",
   NOT_fOUND: "*",
 };
