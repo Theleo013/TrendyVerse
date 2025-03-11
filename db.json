@@ -452,13 +452,6 @@
       "id": "0deb",
       "username": "test",
       "email": "test@gmail.com",
-      "password": "test",
-      "confirm": "test"
-    },
-    {
-      "id": "bb9b",
-      "username": "test12",
-      "email": "test12@gmail.com",
       "password": "12345678",
       "confirm": "12345678"
     }

@@ -19,7 +19,12 @@ const Header = () => {
       <nav className={Styles.headerNav}>
         <div className={Styles.menuContainer}>
           <div className={Styles.headerLogo}>
-            <Link to={urls.HOME}>
+            <Link
+              to={urls.HOME}
+              onClick={() => {
+                window.scrollTo({ top: 0, behavior: "smooth" });
+              }}
+            >
               <img src="/assets/main-logo.svg" alt="main-logo" />
             </Link>
           </div>
@@ -33,7 +38,12 @@ const Header = () => {
         <div className={Styles.headerList}>
           <ul>
             <li>
-              <Link to={urls.HOME}>Home</Link>
+              <Link
+                to={urls.HOME}
+                onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+              >
+                Home
+              </Link>
             </li>
             <li>
               <Link to={urls.CONTACT}>Contact</Link>
