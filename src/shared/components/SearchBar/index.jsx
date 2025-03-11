@@ -54,24 +54,13 @@ const SearchBar = () => {
     }
   }, [products, searchText]);
 
-<<<<<<< HEAD
   const onSelect = (value) => {
     setSearchText(value);
-=======
-  // Ürün seçildiğinde, ürün detayına gitmek yerine input alanına ürün başlığını aktarıyoruz.
-  const onSelect = (productId) => {
-    const selectedProduct = products.find((p) => p.id === productId);
-    if (selectedProduct) {
-      setSearchText(selectedProduct.title);
-    }
->>>>>>> bc750bacd90237111e86caa7fa0bcd6d743a1b73
     setIsDropdownOpen(false);
     setIsProductSelected(true);
   };
 
- 
   const handleSearchButtonClick = () => {
-<<<<<<< HEAD
     if (!searchText.trim()) return;
 
     const matchedProduct = products?.find(
@@ -87,14 +76,6 @@ const SearchBar = () => {
       setIsDropdownOpen(false);
       setIsProductSelected(false);
     } else {
-=======
-    const matchedProduct = products?.find(
-      (p) => p.title.toLowerCase() === searchText.toLowerCase()
-    );
-    if (matchedProduct) {
-      navigate(`/product/${matchedProduct.id}`);
-    } else if (searchText.trim()) {
->>>>>>> bc750bacd90237111e86caa7fa0bcd6d743a1b73
       triggerSearch(searchText);
       setIsDropdownOpen(false);
     }
