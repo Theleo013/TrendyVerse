@@ -1,5 +1,5 @@
 import React from "react";
-import Styles from "@/pages/ProductDetail/productDetail.module.scss";
+import Styles from "@/pages/ProductDetail/productdetail.module.scss";
 import CustomContainer from "@/styles/base/customContainer.module.scss";
 import { InfinitySpin } from "react-loader-spinner";
 import { useGetProductByTitleQuery } from "@/redux/api/products";
