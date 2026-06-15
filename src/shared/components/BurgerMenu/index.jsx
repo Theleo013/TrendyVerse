@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Styled from "./burgerMenu.module.scss";
+import Styled from "./burgermenu.module.scss";
 import { Link } from "react-router-dom";
 import { urls } from "@/shared/urls";
 import { useSelector } from "react-redux";
