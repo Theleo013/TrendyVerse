@@ -11,12 +11,11 @@
   //   display: flex;
   // }
   .loadingContainer {
-   .loadingContainer {
-  @include flex-space(flex, center, 30px);
+    @include flex-space(flex, center, 30px);
   min-height: 100vh;
+  width: 100%;
   align-items: center;
   justify-content: center;
-}
   }
 
   .ProductCardContainer {
